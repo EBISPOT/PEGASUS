@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# PEG metadata preparation
+# PEG Metadata preparation
 
 Let's translate `docs/intro.md` to French.
 
