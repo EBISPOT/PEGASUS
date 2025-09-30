@@ -1,27 +1,26 @@
 ---
-slug: workshop2024
-title: PEG Workshop 2024
+slug: perspective
+title: Perspective
 authors: [yueji]
 tags: [ASHG-2025]
 ---
 
-# 🌏 Shaping Together: PEG Workshop 2024 → ASHG 2025  
+# 🔍 From GWAS Hits to PEGs  
 
-In September 2024, we hosted a workshop on Predicted Effector Gene (PEG) lists — key data for linking GWAS signals to biology.
+Millions of GWAS associations have been reported — but which genes are the true Predicted Effector Genes (PEGs)?  
 
-Talks from the Knowledge Portal Network, Open Targets, GWAS Catalog, ClinGen, and others sparked ideas we are carrying forward.
+In April 2025, our **Nature Genetics Perspective** (with the GWAS Catalog) reviewed 169 publications (2012–2022, across 157 traits).  
 
-We explored:  
-- 🔑 Different approaches to building PEG lists  
-- 🔑 Challenges in sharing, updating, and reusing them  
-- 🔑 First steps toward a community standard for reporting PEG data  
+### What did we learn?  
+⚡ PEG prediction methods are highly inconsistent  
+⚡ Evidence types and reporting standards vary widely  
+⚡ The field urgently needs a common PEG standard  
 
-👉 Missed it? Materials & recordings are available: [Workshop Materials](https://kp4cd.org/2024_PEG_workshop)  
+### What’s next?  
+At **ASHG 2025**, we’re bringing a new PEG standard designed to make PEG data **FAIR** — Findable, Accessible, Interoperable, and Reusable.  
 
-Follow along as we count down to ASHG 2025, where we’ll share the outcomes through our poster and ancillary session.  
+📍 **Save the date in Boston**  
+- 🗓️ Ancillary Session: **Oct 17 | 11:45 am – 1:15 pm | Room 259A**  
+- 📌 Poster: **Oct 16 | 2:30 pm – 4:30 pm | Exhibit & Poster Hall, Lower Level**  
 
-📍 **Save the date in Boston:**  
-- 🗓️ Ancillary Session: Oct 17 | 11:45 am – 1:15 pm | Room 259A  
-- 📌 Poster: Oct 16 | 2:30 pm – 4:30 pm | Exhibit & Poster Hall, Lower Level  
-
-Join us to shape the future of effector gene prediction and PEG standards: [Join Us](https://forms.gle/rRcvmoiiy5BRHx1x5)  
+👉 Join us to shape the future of effector gene prediction and PEG standards: [Sign up here](https://forms.gle/rRcvmoiiy5BRHx1x5)  
