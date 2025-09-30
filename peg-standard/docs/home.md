@@ -40,8 +40,8 @@ Our working group community ...
 ## 📚 What You’ll Find in This Documentation  
 
 - **PEG Standard**
-   - [PEG Evidence Matrix Standard](./peg-standard/PEG%20Matrix%20Standard/)
-   - [PEG Metadata Standard](./peg-standard/peg-metadata.md)
+   - [PEG Evidence Matrix Standard](./peg-standard/PEG-matrix-standard/peg-matrix.md)
+   - [PEG Metadata Standard](./peg-standard/PEG-metadata/peg-metadata.md)
    - [PEG List Standard](./peg-standard/peg-list.md)
 
 - **PEG Data example**
