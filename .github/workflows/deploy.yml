@@ -19,18 +19,20 @@ jobs:
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: peg_standard/package-lock.json  # 👈 point to lockfile in subdir
 
       - name: Install dependencies
         working-directory: peg_standard
         run: npm ci
+        
       - name: Build website
+        working-directory: peg_standard
         run: npm run build
 
       - name: Upload Build Artifact
-        working-directory: peg_standard
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: peg_standard/build
 
   deploy:
     name: Deploy to GitHub Pages
