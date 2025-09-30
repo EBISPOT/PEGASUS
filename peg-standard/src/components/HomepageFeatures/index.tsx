@@ -38,10 +38,6 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-<div className="alert alert--warning" role="alert">
-  🚧 This page is under active development — content may change as the PEG Standard evolves.
-</div>
-
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
