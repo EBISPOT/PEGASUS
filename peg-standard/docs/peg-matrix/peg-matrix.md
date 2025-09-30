@@ -170,7 +170,7 @@ All variant-centric evidence columns are **optional**. However, we suggest to in
       e.g. <code>GWAS_pvalue</code>,
       <code>EXP_AdiposeTissue_TPM</code>,
       <code>QTL_eQTL_pancreas</code>,<code>TPWAS_TWAS_pvalue</code>. 
-      The category must be from the [controlled list](./peg-evidence-sec/#peg-evidence-categories) and defined in the metadata file.</td>
+      The category must be from the [controlled list](../peg-evidence.md) and defined in the metadata file.</td>
       <td class="req req-opt">optional</td>
       <td>[variant-centric evidence examples](./peg-matrix-example.md#variant-centric-evidence-examples);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md#gene-centric-evidence-examples)</td>
     </tr>

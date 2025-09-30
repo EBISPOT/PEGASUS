@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+bluesky:
+  label: Bluesky
+  permalink: /bluesky
+  description: Bluesky tag description
 
 hello:
   label: Hello
   permalink: /hello
   description: Hello tag description
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+linkedin:
+  label: LinkedIn
+  permalink: /linkedin
+  description: LinkedIn tag description
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+ASHG-2025:
+  label: ASHG-2025
+  permalink: /ashg-2025
+  description: ASHG-2025 tag description
