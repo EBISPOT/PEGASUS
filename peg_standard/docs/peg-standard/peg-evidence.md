@@ -27,6 +27,7 @@ To ensure **clarity** and **interoperability**, we group these diverse evidence 
 | Finemapping and credible sets | FM | Finemapping results, or variant is in a credible set with high posterior probability of being causal. | 
 | Colocalisation | COLOC | Variant affects multiple traits (e.g. a complex trait and gene expression data) at the same locus. |
 | Molecular QTL | QTL | eQTL, sQTL, pQTL. Variant affects gene expression or splicing or protein level. |
+| Mendelian Randomization (MR) | MR | Uses genetic variants as proxies for exposures to test their causal effect on outcomes.|
 | Regulatory region | REG | Variant lies in open chromatin or enhancer/promoter elements in relevant tissue. |
 | Chromatin interaction | 3D | Variant physically contacts gene promoter via 3D structure. |
 | Predicted functional impact | FUNC | Variant predicted to disrupt gene/protein function or regulatory motifs. | 
@@ -44,7 +45,6 @@ To ensure **clarity** and **interoperability**, we group these diverse evidence 
 | Expression | EXP | Gene is differentially expressed in relevant tissue or patients. e.g. the gene is highly expressed in phenotype-related tissues than others |
 | Perturbation | PERTURB | Gene perturbation causes phenotype-relevant effects in lab or model organisms (knock out animal/cell line, human organoid). |
 | Biological Knowledge Inference | KNOW | Gene–phenotype relationships can be inferred based on known biology, even when there is no direct genetic or experimental evidence linking the specific gene or variant to the new phenotype. No references are provided. |
-| Mendelian Randomization (MR) | MR | Gene’s predicted expression/protein levels causally affect phenotype. |
 | Genetically predicted trait association (TWAS/PWAS) | TPWAS | Gene’s genetically predicted expression or protein level is associated with phenotype. Transcriptome- or proteome-wide assocation studies |
 | Drug related | DRUG | Gene is targeted by drugs known to treat or influence phenotype. |
 

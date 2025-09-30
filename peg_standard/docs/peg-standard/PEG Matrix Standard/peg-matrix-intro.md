@@ -13,7 +13,7 @@ It includes:
 
 The matrix is designed for **pipelines**, **re-weighting**, **benchmarking**, and **cross-study comparison**.
 
-## PEG Matrix Standards
+## PEG Evidence Matrix Requirements
 The following standards define the minimal requirements for a PEG Matrix:
 
 1. **ONE phenotype per PEG matrix**  
@@ -34,7 +34,7 @@ The following standards define the minimal requirements for a PEG Matrix:
 6. **ALL genes at each locus**  
       &nbsp;&nbsp;&nbsp;&nbsp;- Include evidence for every gene, not just the top candidate.  
 
-## PEG Matrix Suggestions (Best Practices)
+## PEG Evidence Matrix Suggestions (Best Practices)
 In addition to the **MUST FOLLOW** standards above, the following suggestions are recommended to improve interoperability and interpretability of PEG matrices:
 
 1. Standard identifiers <br/>
@@ -46,23 +46,37 @@ In addition to the **MUST FOLLOW** standards above, the following suggestions ar
 3. Avoid evidence double-counting<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- When using automated pipelines that integrate multiple evidence sources (e.g., DEPICT, Open Targets), document which sources are included.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- Do not count the same evidence type in one integration analysis twice.
+___
 
+## PEG Evidence Matrix Overview
 
+The PEG Evidence Matrix brings together information on genetic **variants**, **locus**, and **genes**, alongside the **multiple streams of evidence** that connect them. It also includes **integrative analyses** that based on multiple evidence, as well as **a column for conclusions drawn**. The structure is designed to make relationships between entities clear and to enable side-by-side comparison of evidence from different sources.
 
-## Standard Content
+- Variant – Identifies the variant(s) under consideration.
+- Locus – Groups variants into locus to provide genomic context.
+- Gene – Lists all candidate genes at a locus that are assessed with supporting evidence.
+- Evidence – Captures both variant-centric and gene-centric evidence. Evidence is organised into category-specific fields, enabling systematic comparison across genes and loci.
+- Integration – Records integrative scores, assertions, or conclusions, combining multiple evidence types into higher-level interpretations.
+
+Together, these components provide a structured and transparent framework for linking genetic signals to potential effector genes, while ensuring the underlying evidence remains visible, comparable, and reproducible.
+
+![PEG Evidence Matrix demo](../img/peg-matrix-demo.png)
+
+## PEG Evidence Matrix Standard Content
+
 A PEG Evidence Matrix is composed of three major column sections. Together, these define the identifiers, raw evidence, and integrated results for each gene–locus–variant relationship.
 
-### Information
+### Genomic Identifier
 Columns that define which variant, locus, and gene are being studied in each row. These provide the unique indexing needed to anchor all evidence values.
 
-1. [PEG Evidence Matrix - Information](./peg-matrix.md#information)
-2. Metadata Standard - Information:
+1. [PEG Evidence Matrix Standard](./peg-matrix.md#genomic-identifier)
+2. [PEG Metadata Standard](../PEG_metadata/peg-metadata.md#genomic-identifier)
 
 ### Evidence
 Columns that capture the raw values from individual evidence categories. Each evidence type should be represented in a structured, machine-readable way.
-1. [PEG Evidence Matrix - Evidence](./peg-matrix.md#evidence-general-pattern)
+1. [PEG Evidence Matrix Standard](./peg-matrix.md#evidence-general-pattern)
 2. [Evidence Columns Example](./peg-matrix-example.md)
-3. Metadata Standard - Evidence
+3. [PEG Metadata Standard](../PEG_metadata/peg-metadata.md)
 4. Metadata Example – Evidence
 
 ### Integration
@@ -70,7 +84,7 @@ Columns that provide summaries or combined scores across multiple evidence categ
 These fields make explicit how different sources were weighted, merged, or ranked to prioritise candidate genes.
 1. [PEG Evidence Matrix – Integration](./peg-matrix.md#integration-evidence-general-pattern)
 2. [Integration Columns Example](./peg-matrix-example.md#integration-evidence-examples)
-3. Metadata Standard – Integration
+3. [PEG Metadata Standard](../PEG_metadata/peg-metadata.md#integration)
 4. Metadata Example – Integration
 
 ## PEG Matrix Data Example

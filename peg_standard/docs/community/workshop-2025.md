@@ -1,88 +1,55 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
+---
+# Workgroup 2025
+
+A PEG workshop was held in 2024, and the [materials](./workshops-2024.md) are available for further reference. Building on that foundation, this series of working group meetings is intended to explore the proposed standard in greater detail.
+
+## Aims of the Workshop
+
+The aim of the working group is to develop clear recommendations for PEG list reporting. This will involve a series of meetings and activities — such as defining use cases and benchmarking datasets — leading to detailed discussions on standards for PEG matrices, metadata, and PEG lists.
+
+📍 Dates & Locations: May - Oct, 2025
+Virtual: By videoconference
+
 ---
 
-# Workshop 2025
+## Agenda
+### 🟢 First Working Group Meeting — *8 May 2025* | <span style={{ fontSize: '0.7em' }}>[View video recording](https://youtu.be/AthY5W9Ov6I)</span>
 
-Let's translate `docs/intro.md` to French.
+- **Introduction** — Noel Burtt (Broad Institute)
+- **Workshop Recap** — Aoife McMahon (EMBL-EBI)  [[slides](https://docs.google.com/presentation/d/1QIhqSUIIQ5zgkDSv-UNhu1rnzuB8V4w28LrreL-qMR8/edit?usp=drive_link)]
+- **Moving from guidelines to standards for PEG data** — Laura Harris (EMBL-EBI)  [[slides](https://docs.google.com/presentation/d/1OIoIHXq77sioCqURDWTbxp683q5WxJon/edit?usp=drive_link&ouid=112735082452162867353&rtpof=true&sd=true)]
+- **Proposed WG Activities Summary & Next Steps** — Julie Jurgens (Broad Institute)  [[slides](https://docs.google.com/presentation/d/1FGWGnsrClm5Df3LXVZV7bKletOW6fWi0/edit?usp=drive_link&ouid=112735082452162867353&rtpof=true&sd=true)]
 
-## Configure i18n
+### 🟡 Second Working Group Meeting — *5 Jun 2025* | <span style={{ fontSize: '0.7em' }}>[View video recording](https://youtu.be/qSnYjfqgZe0)</span>
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+- **Working Group Roadmap** — Julie Jurgens (Broad Institute) [[slides](https://docs.google.com/presentation/d/1ZvQTM1kZdvu1yXehEp6sIN9uCH90AFPC/edit?usp=drive_link&ouid=112735082452162867353&rtpof=true&sd=true)]
+- **Data Content Standards** - Aoife McMahon (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/1yYKiU2a4EoBkAQFeUumgzLs-HYKWqevYPCVcNsUxjkI/edit?usp=drive_link)]
+- **Invitation to PEG Matrix Benchmark Activity** - Yue Ji (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/1wP58Dyah4Baeb9RHhXHtiyGAxHAEZjz5GHRmVtB-bG0/edit?usp=drive_link)]
+- Metadata Content Categories
 
-```js title="docusaurus.config.js"
-export default {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
 
-## Translate a doc
+### 🔵 Third Working Group Meeting — *9 Jul 2025* | <span style={{ fontSize: '0.7em' }}>[View video recording](https://youtu.be/A6qfAtlOEXg)</span>
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
+- **Update on benchmarking activity & High-level metadata introduction** - Aoife McMahon (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/1r_kNP-6klk-k6I8PgWPmRTh7NQSPTCZRKUFZLJ49kzM/edit?usp=drive_link)]
+- **Metadata standards** - Marcos Casado Barbero (EMBL-EBI) [[slides](https://drive.google.com/file/d/1FSW3_nitMFURG5-RP_aFQEiXeJ1i_cxf/view?usp=drive_link)]
+- **Our attempts at abstraction of metadata schema** - Yue Ji (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/1fq1Mq6h7lMLAmI34xo9l-K-X59E72k99lrySdu7lHFM/edit?usp=drive_link)]
+- Discussion: Metadata evidence categories and their suitability
 
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
 
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
+### 🟣 Fourth Working Group Meeting — *2 Sep 2025* | <span style={{ fontSize: '0.7em' }}>[View video recording](https://youtu.be/-H7WMtBBkeM)</span>
 
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
+- **Introduction & promoting/planning for ASHG Ancillary Session**  - Julie Jurgens (Broad Institute) [[slides](https://docs.google.com/presentation/d/11GMIzxjegrb0EkYmsS8NTvvZ2IKEPdN6mAlH7nSq9kY/edit?usp=drive_link)]
+- **Presentation of benchmarking results** (Matt, Abdurrahman, Sye, Karl)
+- **PEG List Standard** - Aoife McMahon (EMBL-EBI) / Laura Harris (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/1-SsSGuyE6sYL2VvDsMVMkLtbziezBiM22-KNPwkBGF8/edit?usp=drive_link)]
 
-## Start your localized site
+### Fifth working group meeting - 7 Oct 2025
 
-Start your site on the French locale:
+---
+## Meeting Materials
+#### 📑 Presentations
+- Slides: [Public Share folder](https://drive.google.com/drive/folders/1YGoHalAxMGPkRsGY6StH8YjU5THBu5XE)
 
-```bash
-npm run start -- --locale fr
-```
-
-Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
-
-:::caution
-
-In development, you can only use one locale at a time.
-
-:::
-
-## Add a Locale Dropdown
-
-To navigate seamlessly across languages, add a locale dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The locale dropdown now appears in your navbar:
-
-![Locale Dropdown](./img/localeDropdown.png)
-
-## Build your localized site
-
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
-```
+#### 📝 Workshop Notes
+- [Meeting Notes](https://docs.google.com/document/d/1vfpVCcDDpBGgLEACQ9svwU5IfR7aC4p7oJd7qxcDzy8/edit?usp=drive_link)

@@ -2,11 +2,118 @@
 sidebar_position: 4
 ---
 # PEG Data Example
+<style>{`
+  .peg-schema { 
+    width:100%; 
+    border-collapse:collapse; 
+    font-size:0.9rem;   /* slightly smaller to fit more */
+    table-layout:fixed; /* ensures columns auto-wrap */
+    white-space: normal;
+    word-break: keep-all;  
+    overflow-wrap:break-word;
+  }
+
+  .peg-schema th, .peg-schema td { 
+    border:1px solid #e5e7eb; 
+    padding:6px 8px; 
+    vertical-align:top;
+    white-space: normal;       /* allow wrapping */
+    word-break: keep-all;      /* do not break words */
+    overflow-wrap: anywhere; /* still allow wrapping at safe points */ 
+  }
+
+  .peg-schema td::before, .peg-schema th::before {
+    content: attr(data-text);
+    white-space: pre-wrap;
+    }
+
+
+  .peg-schema th { 
+    background:#f8fafc; 
+    text-align:left; 
+  }
+
+  /* Column group cell */
+  .peg-group { 
+  background:#f3f4f6; 
+  font-weight:600; 
+  text-align:center; 
+  width: 2rem;            /* very narrow column */
+  writing-mode: vertical-rl;  /* vertical text flow */
+  transform: rotate(180deg);  /* flip so it reads top-to-bottom */
+  white-space: nowrap; 
+  padding: 4px;           /* reduce padding so text fits nicely */
+}
+
+  /* Requirement tags */
+  .req { font-weight:700; }
+  .req-mand { color:#c00000; }
+  .req-rec { color:#e69138; }
+  .req-opt { color:#6d9eeb; }
+
+  /* Formats and examples */
+  .fmt { 
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace; 
+    white-space:normal;   /* allow wrapping instead of nowrap */
+  }
+  .ex { 
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace; 
+    color:#334155; 
+    white-space:normal;   /* allow wrapping */
+  }
+`}</style>
+
 
 ## PEG List
 ......
 ## PEG Metadata
-......
+### PEG Metadata in Excel (suitable for submission)
+#### Dataset description tab
+- Example 1: GWAS source is GWAS Catalog accession
+
+
+
+
+- Example 2: GWAS source is a publication
+<table class="peg-schema">
+  <thead>
+    <tr>
+      <th>peg_source</th>
+      <th>gwas_source</th>
+      <th>gwas_genome_build</th>
+      <th>trait_description</th>
+      <th>trait_ontology_id</th>
+      <th>samples</th>
+      <th>sample_size</th>
+      <th>case_control_study</th>
+      <th>sample_ancestry</th>
+      <th>sample_ancestry_category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ex">PMID:36357675</td>
+      <td class="ex"></td>
+      <td class="ex">hg38</td>
+      <td class="ex">Ascorbic acid 3-sulfate levels</td>
+      <td class="ex">EFO_0800173</td>
+      <td class="ex">6,136 Finnish ancestry individuals</td>
+      <td class="ex">6136</td>
+      <td class="ex">No</td>
+      <td class="ex">Finland</td>
+      <td class="ex">European</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Genomic Identifier tab
+#### Evidence tab
+#### Integration tab
+#### Source tab
+#### Method tab
+
+
+### PEG Metadata in YAML (suitable for reader)
 
 ## PEG Evidence Matrix
 <div className="peg-table peg-sticky-firstcol">

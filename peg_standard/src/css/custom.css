@@ -29,3 +29,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Make announcement bar larger and more obvious */
+div[class*="announcementBar"] {
+  font-size: 1.25rem;       /* increase text size */
+  font-weight: 700;         /* bold */
+  padding: 1rem 0;          /* taller bar */
+  text-align: center;       /* center text */
+}

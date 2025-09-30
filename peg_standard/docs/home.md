@@ -31,11 +31,18 @@ Our working group community ...
 ---
 
 ## 📚 What You’ll Find in This Documentation  
-- **PEG Standards** – 
-- **User Guide** – 
-- **Community** -
 
+- **PEG Standard**
+   - [PEG Evidence Matrix Standard](./peg-standard/PEG%20Matrix%20Standard/)
+   - [PEG Metadata Standard](./peg-standard/peg-metadata.md)
+   - [PEG List Standard](./peg-standard/peg-list.md)
 
+- **PEG Data example**
+
+- **Community**
+   - [Posters and Publications](./community/publications.md)
+   - [2025 workgroup](./community/workshop-2025.md)
+   - [2024 workshop](./community/workshops-2024.md)
 
 ---
 

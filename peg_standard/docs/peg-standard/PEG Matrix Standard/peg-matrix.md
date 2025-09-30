@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 # 📑 PEG Evidence Matrix Stadard
-### Information
+### Genomic Identifier
 <style>{`
   .peg-schema { 
     width:100%; 

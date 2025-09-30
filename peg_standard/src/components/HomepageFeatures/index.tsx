@@ -11,36 +11,36 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Start to know PEG',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    <>
+      If you are new to PEG, this section introduces what a Predicted Effector Gene (PEG) is, explains the differences between the PEG Evidence Matrix, PEG Metadata, and the PEG List.
+    </>),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Get Familiar with PEG Standard',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        This section introduces the core components of the PEG Standard: the Evidence Matrix as the full evidence table, the Metadata as column descriptions, and the PEG List as the summary of significant genes.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Join the PEG Community',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Here you can find past working group videos and materials, plus details on joining discussions, contributing feedback, and following the roadmap.
       </>
     ),
   },
 ];
+
+<div className="alert alert--warning" role="alert">
+  🚧 This page is under active development — content may change as the PEG Standard evolves.
+</div>
 
 function Feature({title, Svg, description}: FeatureItem) {
   return (
