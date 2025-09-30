@@ -27,17 +27,53 @@ We welcome contributions from researchers, clinicians, data scientists, and comm
 ## 👥 PEG Working Group Members  
 
 *(Family name, alphabetic order)*  
-
-- Adam, …  
-- [Add members here]  
+- Zhanna Balkhiyarova	University of Surrey
+- Marcos Casado Barbero	EMBL-EBI
+- Oleg Borisov	University of Freiburg
+- MacKenzie Brandes	Broad Institute
+- Noel Burtt	Broad Institute
+- Adam Butterworth	University of Cambridge
+- Nathalie Chami	Icahn School of Medicine at Mount Sinai
+- Daniel Considine	Open Targets Genetics
+- Maria Costanzo	Broad Institute
+- Ayse Demirkan	University of Surrey
+- Eric Fauman	Pfizer
+- Xiangyu Ge	Open Targets Genetics
+- Laura Harris	EMBL-EBI
+- Karl Heilbron	Charité Universitätsmedizin Berlin
+- Quy Hoang	Broad Institute
+- Emrah Kacar	Trinity College Dublin
+- Kanika Kanchan	NIAID/NIH
+- Lillya Kopanitsa	Wellcome Sanger Institute
+- Yong Li	University of Freiburg
+- Aoife McMahon	EMBL-EBI
+- Ellen McDonagh	EMBL-EBI/Open Targets Genetics
+- Nina Oparina	Uppsala University
+- Matt Pahl	Children's Hospital of Philadelphia
+- Santhi Ramachandran	EMBL-EBI
+- Wafaa Rashed	Ahram Canadian University-Egypt
+- Gabi Rinck	EMBL-EBI
+- Oliver Ruebenacker	Broad Institute
+- Abdurrahman Shiyanbola	University of Surrey
+- Loz Southam	Institute of Translational Genomics, Helmholtz Munich
+- Szymon Szyszkowski	Open Targets Genetics
+- Sylvanus Toikumo	University of Pennsylvania
+- Yakov Tsepilov	Wellcome Sanger Institute
+- Kyle Vogan	Nature Genetics
+- Sean Yao	Insilico Biosystems
+- Juliana Xavier de Miranda Cerqueira    	University of Tampere
+- Chi Zhang	ByteDance
+- Norann Zaghloul	NIDDK/NIH
 
 ---
 
 ## 💡 How to Get Involved  
 
-- **Attend workshops** → Stay updated on community events and standards discussions  
-- **Join the mailing list** → Participate in ongoing conversations  
-- **Contribute to documents** → Help shape the PEG standards and metadata formats  
-- **Share use cases** → Provide feedback and examples from your own work  
+- **Attend workshops** → Stay updated on community activities and standards
+- **Join the mailing list** → Follow and join ongoing discussions
+- **Left your comments on Github repo** → Share feedback directly on issues
+- **Join Github dicussion** → Take part in open conversations
+- **Contribute to documents** → Help refine PEG standards and metadata
+- **Share use cases** → Provide real-world examples from your work
 
 👉 If you’d like to join the PEG Working Group, please [get in touch](mailto:peg-wg@ebi.ac.uk).  
