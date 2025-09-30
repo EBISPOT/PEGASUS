@@ -21,11 +21,13 @@ jobs:
           cache: npm
 
       - name: Install dependencies
+        working-directory: peg_standard
         run: npm ci
       - name: Build website
         run: npm run build
 
       - name: Upload Build Artifact
+        working-directory: peg_standard
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
