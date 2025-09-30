@@ -12,6 +12,8 @@ The aim of the working group is to develop clear recommendations for PEG list re
 📍 Dates & Locations: May - Oct, 2025
 Virtual: By videoconference
 
+ℹ️ Get more details at the [communnity page](https://kp4cd.org/2024_PEG_workshop)
+
 ---
 
 ## Agenda

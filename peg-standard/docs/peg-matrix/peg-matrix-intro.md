@@ -70,24 +70,24 @@ A PEG Evidence Matrix is composed of three major column sections. Together, thes
 Columns that define which variant, locus, and gene are being studied in each row. These provide the unique indexing needed to anchor all evidence values.
 
 1. [PEG Evidence Matrix Standard](./peg-matrix.md#genomic-identifier)
-2. [PEG Metadata Standard](../PEG-metadata/peg-metadata.md#genomic-identifier)
+2. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#genomic-identifier)
 
 ### Evidence
 Columns that capture the raw values from individual evidence categories. Each evidence type should be represented in a structured, machine-readable way.
-1. [PEG Evidence Matrix Standard](./peg-matrix.md#evidence-general-pattern)
-2. [Evidence Columns Example](./peg-matrix-example.md)
-3. [PEG Metadata Standard](../PEG-metadata/peg-metadata.md)
+1. [PEG Evidence Matrix Standard](./peg-matrix.md#evidence--general-pattern)
+2. [Evidence Columns Example](./peg-matrix-example.md#variant-centric-evidence-examples)
+3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#evidence)
 4. Metadata Example – Evidence
 
 ### Integration
 Columns that provide summaries or combined scores across multiple evidence categories.
 These fields make explicit how different sources were weighted, merged, or ranked to prioritise candidate genes.
-1. [PEG Evidence Matrix – Integration](./peg-matrix.md#integration-evidence-general-pattern)
+1. [PEG Evidence Matrix – Integration](./peg-matrix.md#integration-evidence--general-pattern)
 2. [Integration Columns Example](./peg-matrix-example.md#integration-evidence-examples)
-3. [PEG Metadata Standard](../PEG-metadata/peg-metadata.md#integration)
+3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#integration)
 4. Metadata Example – Integration
 
 ## PEG Matrix Data Example
 An example PEG Evidence Matrix is available for reference. It illustrates how the Information, Evidence, and Integration columns align in a real data.
 
-[View PEG Matrix Data Example](../peg-one-example.md#peg-evidence-matrix)
+[View PEG Matrix Data Example](../peg-one-example.md)

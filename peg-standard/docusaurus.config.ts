@@ -15,10 +15,10 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://jiyue1214.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/PEG_standard/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -94,7 +94,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/jiyue1214/PEG_standard',
           label: 'GitHub',
           position: 'right',
         },
@@ -113,12 +113,24 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'PEG Standard',
-              to: '/docs/peg-standard/peg-overview',
+              label: 'Our Work',
+              to: '/docs/home',
             },
             {
-              label: 'User Guide',
-              to: '/docs/user-guide/matrix-prep',
+              label: 'PEG Standard',
+              to: '/docs/peg-overview',
+            },
+            {
+              label: 'PEG Evidence Matrix',
+              to: '/docs/peg-matrix/peg-matrix-intro',
+            },
+            {
+              label: 'PEG Metadata',
+              to: '/docs/peg-metadata/peg-metadata-intro',
+            },
+            {
+              label: 'PEG List',
+              to: '/docs/peg-list',
             },
           ],
         },
@@ -127,15 +139,11 @@ const config: Config = {
           items: [
             {
               label: 'WorkShops',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: '/docs/community/workshop-2025',
             },
             {
               label: 'Publications',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Social Media',
-              href: 'https://x.com/docusaurus',
+              href: '/docs/community/publications',
             },
           ],
         },
@@ -148,7 +156,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/jiyue1214/PEG_standard',
             },
           ],
         },
