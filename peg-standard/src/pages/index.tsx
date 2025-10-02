@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/home">
-            Start to learn what is predict effector gene (PEG)
+            Start to learn PEGASUS
           </Link>
         </div>
       </div>

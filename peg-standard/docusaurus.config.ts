@@ -71,7 +71,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-icon.jpg',
     announcementBar: {
       id: 'peg-dev',
       content: '🚧 PEG docs are under active development — content may change.',
@@ -83,7 +83,7 @@ const config: Config = {
       title: 'PEGASUS',
       logo: {
         alt: 'PEGASUS Logo',
-        src: 'img/logo.svg',
+        src: 'img/icon_2.png',
       },
       items: [
         {
