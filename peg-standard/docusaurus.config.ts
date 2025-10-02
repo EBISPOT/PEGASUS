@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://jiyue1214.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/PEG_standard/',
+  baseUrl: '/PEGASUS/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'jiyue1214', // Usually your GitHub org/user name.
-  projectName: 'peg-standard', // Usually your repo name.
+  organizationName: 'EBISPOT', // Usually your GitHub org/user name.
+  projectName: 'PEGASUS', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/jiyue1214/PEG_standard/tree/main/peg_standard/',
+            'https://github.com/EBISPOT/PEGASUS/tree/main/peg_standard/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/jiyue1214/PEG_standard/tree/main/peg_standard/blog/',
+            'https://github.com/EBISPOT/PEGASUS/tree/main/peg_standard/blog/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -94,7 +94,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/jiyue1214/PEG_standard',
+          href: 'https://github.com/EBISPOT/PEGASUS',
           label: 'GitHub',
           position: 'right',
         },
@@ -156,7 +156,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/jiyue1214/PEG_standard',
+              href: 'https://github.com/EBISPOT/PEGASUS',
             },
           ],
         },
