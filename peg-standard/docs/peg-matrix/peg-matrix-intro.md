@@ -90,4 +90,4 @@ These fields make explicit how different sources were weighted, merged, or ranke
 ## PEG Matrix Data Example
 An example PEG Evidence Matrix is available for reference. It illustrates how the Information, Evidence, and Integration columns align in a real data.
 
-[View PEG Matrix Data Example](../peg-one-example.md)
+[View PEG Matrix Data Example](../peg-toy-example.md)
