@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# PEG Metadata Standard Introduction
+# 📖 PEG Metadata Standard Introduction
 
 ## What is the PEG Metadata?
 
@@ -24,7 +24,7 @@ The PEG metadata standard is guided by a set of high-level principles to ensure 
 Together, these principles ensure that PEG metadata not only documents the data itself, but also supports reproducibility, benchmarking, and community-wide use.
 
 ## PEG Evidence Matrix and PEG Metadata
-![PEG list and metadata](../img/matrix-meta-list.png)
+![PEG list and metadata](../img/matrix-metadata.png)
 
 The PEG Evidence Matrix and the PEG Metadata are two sides of the same coin, describing the same content from different perspectives.
 
@@ -48,11 +48,11 @@ The following diagram shows how the main entities’ metadata are presented toge
 
 ## PEG Metadata Standards Overview
 
-The PEG metadata is currently organised into six tabs. The diagram below shows a simplified view of their relationships.
+The PEG metadata is currently organised into six enities. The diagram below shows a simplified view of their relationships.
 
 ![PEG metadata tabs](../img/metadata-tabs.png)
 
-Each tab contains fields that capture a different aspect of the dataset:
+Each entity contains fields that capture a different aspect of the dataset:
 
 - [**Dataset description**](./peg-metadata.md#dataset-description) - descriptors for the whole PEG matrix (trait, source of the matrix itself, publication reference, release date, creator)
 - [**Genomic Identifier**](./peg-metadata.md#genomic-identifier) – details about the variants, genes, or locus included in your dataset.
@@ -61,8 +61,8 @@ Each tab contains fields that capture a different aspect of the dataset:
 - [**Source**](./peg-metadata.md#source) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
 - [**Method**](./peg-metadata.md#method) – a description of the methodology, pipelines, or softwares used to generate the data.
 
+💡 For easy-to-fill information, we also provide an **Excel view** with **6 tabs** (one per entity type), designed to capture and present these fields clearly.  
 
+[📊 Download metadata google sheet template](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?gid=0#gid=0)
 
-
-
-## PEG Metadata Data Example
+If you have questions about any attribute for each entity, we also provide **detailed explanations** [here](./peg-metadata.md). We are more than happy to hear from you — please feel free to contact us if you have further questions.

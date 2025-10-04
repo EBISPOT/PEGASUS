@@ -5,7 +5,7 @@ sidebar_position: 1
 # 🌍 Welcome to PEG  
 
 > **PEG (Predicted Effector Gene)**   
-> Our mission is tomake PEG reporting .....
+> Our mission is to make PEG reporting mroe **FAIR**
 
 ---
 
@@ -13,7 +13,7 @@ sidebar_position: 1
 
 ![peg](./img/peg_2.webp)
 
-### What is an Effector Gene?
+### What is Predicted Effector Gene?
 
 When scientists run a genome-wide association study (GWAS), they often find many positions in the genome (variants) linked to a trait or disease. However, these variants usually don’t directly tell us which genes are involved in causing the disease. That’s because most GWAS signals fall in non-coding regions of DNA — regions that don’t directly code for proteins but may regulate nearby or distant genes.
 
@@ -22,7 +22,7 @@ When scientists run a genome-wide association study (GWAS), they often find many
 - Which gene does that variant influence?
 - And how does that gene’s altered activity contribute to disease?
 
-### Why Effector genes matter:
+### Why Predicted Effector Genes matter:
 
 - Variant → Phenotype: GWAS tells us that certain variants are statistically associated with a trait at the population level. But statistics alone don’t prove how the variant causes the phenotype.
 
@@ -62,7 +62,7 @@ We are a community of researchers, data generators, data users, and repository m
 The aim of our working group is to define clear recommendations for PEG data reporting. This involves a series of community meetings and activities such as defining use cases, benchmarking datasets, and testing new approaches.  
 
 For background and general recommendations, see our recent publication:  
-[Realizing the promise of genome-wide association studies for effector gene prediction (Costanzo et al.)](#)  
+[Realizing the promise of genome-wide association studies for effector gene prediction (Costanzo et al.)](https://rdcu.be/eoqVk)  
 
 👉 To join the working group, please [contact us](mailto:peg-wg@ebi.ac.uk).  
 
