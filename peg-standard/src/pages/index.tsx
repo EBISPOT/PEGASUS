@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/home">
-            Start to learn PEGASUS
+            Get started
           </Link>
         </div>
       </div>
