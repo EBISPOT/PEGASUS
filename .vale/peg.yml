@@ -1,0 +1,29 @@
+# ---------- PEG.Spelling ----------
+extends: spelling
+message: "'{match}' looks misspelled."
+level: warning
+ignore:
+  - PEG
+  - GWAS
+  - eQTL
+  - sQTL
+  - pQTL
+  - TWAS
+  - PoPS
+  - FGWAS
+  - Ensembl
+  - Nextflow
+  - Docusaurus
+  - Nextflow
+  - PoPS
+  - FGWAS
+---
+# ---------- PEG.Terms ----------
+extends: existence
+message: "Use 'Predicted Effector Gene (PEG)' on first mention."
+level: suggestion
+ignorecase: true
+tokens:
+  - Predicted effector gene
+  - effector gene prediction
+  - effector gene prioritization

@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/EBISPOT/PEGASUS/tree/main/peg_standard/',
+            'https://github.com/EBISPOT/PEGASUS/tree/main/peg-standard/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/EBISPOT/PEGASUS/tree/main/peg_standard/blog/',
+            'https://github.com/EBISPOT/PEGASUS/tree/main/peg-standard/blog/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
