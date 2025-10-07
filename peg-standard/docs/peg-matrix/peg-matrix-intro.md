@@ -16,32 +16,27 @@ The matrix is designed for **pipelines**, **re-weighting**, **benchmarking**, an
 ## PEG Evidence Matrix Requirements
 The following standards define the minimal requirements for a PEG Matrix:
 
-1. **ONE phenotype per PEG matrix**  
+1. **ONE trait per PEG matrix**  
       &nbsp;&nbsp;&nbsp;&nbsp;- Each matrix corresponds to a single trait or phenotype.  
 
 2. **ONE source GWAS per PEG matrix**  
-      &nbsp;&nbsp;&nbsp;&nbsp;- Anchored to a clearly defined GWAS dataset.  
+      &nbsp;&nbsp;&nbsp;&nbsp;- Anchored to a clearly defined GWAS dataset (ideally identified by GWAS Catalog accession ID).
+ 
 
-3. **ONE integrated PEG matrix**  
-      &nbsp;&nbsp;&nbsp;&nbsp;- Provide a single consolidated file, not multiple fragments.  
+3. **ONE PEG matrix**  
+      &nbsp;&nbsp;&nbsp;&nbsp;- Provided in a **machine-readable** format (e.g. tab-delimited (TSV); avoid styled or proprietary formats).  
 
-4. **ONE plain, machine-readable format**  
-      &nbsp;&nbsp;&nbsp;&nbsp;- Use tab-delimited (TSV); avoid styled or proprietary formats.  
-
-5. **ONE rule to identify sentinel variants**  
-      &nbsp;&nbsp;&nbsp;&nbsp;- Consistently define lead variants (lowest p-value SNP, fine-mapped lead).
-
-6. **ALL genes at each locus**  
-      &nbsp;&nbsp;&nbsp;&nbsp;- Include evidence for every gene, not just the top candidate.  
+4. **ALL genes at each locus**  
+      &nbsp;&nbsp;&nbsp;&nbsp;- Include evidence for every gene considered, not just the top candidate(s).
 
 ## PEG Evidence Matrix Suggestions (Best Practices)
 In addition to the **MUST FOLLOW** standards above, the following suggestions are recommended to improve interoperability and interpretability of PEG matrices:
 
-1. Standard identifiers <br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;- Use HGNC gene symbols and include Ensembl Gene IDs for unambiguous cross-referencing.
+1. Evidence summary per gene (author’s conclusion)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;-  Provide a cumulative “weight of evidence” score or summary statistic. This must be provided if the Matrix is to be represented as a PEG List.
 
-2. Evidence summary per gene<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;-  Provide a cumulative “weight of evidence” score or summary statistic.
+2. Standard identifiers<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- Use HGNC gene symbols and include Ensembl Gene IDs for unambiguous cross-referencing.
 
 3. Avoid evidence double-counting<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- When using automated pipelines that integrate multiple evidence sources (e.g., DEPICT, Open Targets), document which sources are included.<br/>
@@ -73,7 +68,7 @@ Columns that define which variant, locus, and gene are being studied in each row
 2. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#genomic-identifier)
 
 ### Evidence
-Columns that capture the raw values from individual evidence categories. Each evidence type should be represented in a structured, machine-readable way.
+Columns that capture the values from individual evidence categories. Each evidence type should be represented in a structured, machine-readable way.
 1. [PEG Evidence Matrix Standard](./peg-matrix.md#evidence--general-pattern)
 2. [Evidence Columns Example](./peg-matrix-example.md#variant-centric-evidence-examples)
 3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#evidence)
@@ -87,7 +82,5 @@ These fields make explicit how different sources were weighted, merged, or ranke
 3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#integration)
 4. Metadata Example – Integration
 
-## PEG Matrix Data Example
-An example PEG Evidence Matrix is available for reference. It illustrates how the Information, Evidence, and Integration columns align in a real data.
-
-[View PEG Matrix Data Example](../peg-toy-example.md)
+---
+* 🎠 [View PEG Matrix Toy Example](../peg-toy-example.md)

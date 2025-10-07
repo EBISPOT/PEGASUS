@@ -2,18 +2,18 @@
 sidebar_position: 1
 ---
 
-# 🌍 WELCOME TO PEG  
+# Background
 
 > **PEG (Predicted Effector Gene)**   
 > Our mission is to make PEG reporting mroe **FAIR**
 
 ---
 
-## 📖 Understanding PEG  
+## 📖 Understanding Predicted Effector Genes (PEG)
 
-![peg](./img/peg_2.webp)
+![peg](./img/peg.png)
 
-### What is Predicted Effector Gene?
+### What are Predicted Effector Genes (PEG)?
 
 When scientists run a genome-wide association study (GWAS), they often find many positions in the genome (variants) linked to a trait or disease. However, these variants usually don’t directly tell us which genes are involved in causing the disease. That’s because most GWAS signals fall in non-coding regions of DNA — regions that don’t directly code for proteins but may regulate nearby or distant genes.
 
@@ -22,16 +22,18 @@ When scientists run a genome-wide association study (GWAS), they often find many
 - Which gene does that variant influence?
 - And how does that gene’s altered activity contribute to disease?
 
-### Why Predicted Effector Genes matter:
+### Why Predicted Effector Effector Genes matter:
 
 - Variant → Phenotype: GWAS tells us that certain variants are statistically associated with a trait at the population level. But statistics alone don’t prove how the variant causes the phenotype.
 
 - Gene → Phenotype: Experimental studies (e.g., in model organisms, cell lines, or small patient cohorts) can show that altering a gene changes the phenotype. This is stronger biological evidence, but often limited in scale.
 
-When combined: Connecting a causal variant to its effector gene, and that gene to the phenotype, within a single table that integrates diverse lines of evidence and results from complex analyses, transforms population-level statistical signals into a mechanistic explanation of disease. Because genes and their products are often the direct targets of drugs and therapies, they provide the essential bridge for translating genetic discoveries into treatments as well.
+Connecting a causal variant to its effector gene, and that gene to the phenotype, within a single table that integrates diverse lines of evidence and results from complex analyses, transforms population-level statistical signals into a mechanistic explanation of a trait. Because genes and their products are often the direct targets of drugs and therapies, they also provide the essential bridge for translating genetic discoveries into treatment.
 
 ### Why Standardised PEG Reporting Matters
-More information is provided in our prespective paper - [Costanzo et al. 2025](https://rdcu.be/eoqVk)
+
+Check out our  perspective paper Realizing the promise of genome-wide association studies for effector gene
+prediction, [Costanzo et al. 2025](https://rdcu.be/eoqVk), for a more detailed explanation, but in brief:
 
 1. **Diverse evidence and methods**
    
@@ -57,7 +59,7 @@ More information is provided in our prespective paper - [Costanzo et al. 2025](h
 
 ## 👥 About Us  
 
-We are a community of researchers, data generators, data users, and repository maintainers working together to improve how Predicted Effector Genes (PEGs) are reported and shared.  
+We are a community of researchers, data generators, data users, and repository maintainers working together to improve how Predicted Effector Genes (PEGs) are reported and shared. The effort is lead by a collaboration between the Knowledge Portal Network (based at the Broad Institute, Cambridge, MA, USA) and the NHGRI-EBI GWAS Catalog (based EMBL-EBI, Cambridge, UK). 
 
 The aim of our working group is to define clear recommendations for PEG data reporting. This involves a series of community meetings and activities such as defining use cases, benchmarking datasets, and testing new approaches.  
 
@@ -77,6 +79,7 @@ More importantly, we listen to the needs of different groups, create standards t
 ## 📚 What You’ll Find in This Documentation  
 
 1. [**Introduction**](./peg-overview.md)
+
    Learn what the [PEG Evidence Matrix](./peg-matrix/peg-matrix-intro.md), [PEG List](./peg-list.md), and [PEG Metadata](./peg-metadata/peg-metadata-intro.md) are, and how they fit together.  
 
 2. **PEG Standards**  
@@ -93,4 +96,4 @@ More importantly, we listen to the needs of different groups, create standards t
 
 ---
 
-✨ *Ready to dive in? Start with the [Getting Started Guide](#).*  
+✨ *Ready to dive in? Start with the [Getting Started Guide](./peg-overview.md).*  

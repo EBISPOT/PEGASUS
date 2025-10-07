@@ -20,6 +20,8 @@ To ensure **clarity** and **interoperability**, we group these diverse evidence 
 ---
 ## PEG Evidence Categories
 
+![evidence category](./img/evidence-categories.png)
+
 ### 🔀 Variant-centric 🔀
 | Evidence categories| Abbreviation | Explanation |
 |-----------------------------------------|--------------|-------------|

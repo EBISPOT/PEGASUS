@@ -23,24 +23,13 @@ The PEG metadata standard is guided by a set of high-level principles to ensure 
 
 Together, these principles ensure that PEG metadata not only documents the data itself, but also supports reproducibility, benchmarking, and community-wide use.
 
-## PEG Evidence Matrix and PEG Metadata
-![PEG list and metadata](../img/matrix-metadata.png)
+## PEG Metadata Schema
 
-The PEG Evidence Matrix and the PEG Metadata are two sides of the same coin, describing the same content from different perspectives.
+The metadata is the description on the data in the PEG Evidence Matrix and List— it explains what each column means, where the data comes from, how it was generated, and how it should be interpreted. 
 
-- The matrix is the data itself — a structured table of variants, genes, and the evidence linking them. It is what you see and analyse.
-![PEG matrix content](../img/peg-matrix-content.png)
-
-The metadata is the description on that data — it explains what each column means, where the data comes from, how it was generated, and how it should be interpreted.
 ![PEG matrix content](../img/peg-metadata-content.png)
 
-Together, they ensure that the same information can be both analysed in detail and understood in context.
-
-## From PEG evidence matrix to PEG metadata
-
-The PEG Metadata Standard describes the same “main actors” as the PEG Evidence Matrix, but from a different perspective. To make the metadata easier to use and organise, its structure is **arranged** differently. 
-
-Because the same **Source** and **Method** details can apply to **multiple evidence streams**, we modularised them into independent tabs. Each source or method is defined once with a unique identifier, which can then be referenced across the Evidence and Integration tabs.
+Because the same **Source** and **Method** details can apply to **multiple evidence streams**, we have modularised them in the schema. Each source or method is defined once with a unique identifier, which can then be referenced across the Evidence and Integration tabs (in [a data entry form](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?pli=1&gid=0#gid=0)).
 
 The following diagram shows how the main entities’ metadata are presented together as a group (as a single tab in the Excel file), while **Method** and **Source** are kept separate to avoid duplication and improve reusability.
 
@@ -48,7 +37,15 @@ The following diagram shows how the main entities’ metadata are presented toge
 
 ## PEG Metadata Standards Overview
 
-The PEG metadata is currently organised into six enities. The diagram below shows a simplified view of their relationships.
+💡 For easy-to-fill information, we also provide an Excel view with 6 tabs (one per entity type), designed to capture and present these fields clearly.
+
+:::tip
+[📊 Download metadata google sheet template](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?gid=0#gid=0)
+:::
+
+If you have questions about any attribute for each entity, we also provide detailed explanations [here](./peg-metadata.md). We are more than happy to hear from you — please feel free to contact us if you have further questions.
+
+The PEG metadata is currently organised into six tabs. The diagram below shows a simplified view of their relationships.
 
 ![PEG metadata tabs](../img/metadata-tabs.png)
 
@@ -60,9 +57,3 @@ Each entity contains fields that capture a different aspect of the dataset:
 - [**Integration**](./peg-metadata.md#integration) – information about how different streams of evidence are combined (e.g., scoring, weighting, prioritisation).
 - [**Source**](./peg-metadata.md#source) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
 - [**Method**](./peg-metadata.md#method) – a description of the methodology, pipelines, or softwares used to generate the data.
-
-💡 For easy-to-fill information, we also provide an **Excel view** with **6 tabs** (one per entity type), designed to capture and present these fields clearly.  
-
-[📊 Download metadata google sheet template](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?gid=0#gid=0)
-
-If you have questions about any attribute for each entity, we also provide **detailed explanations** [here](./peg-metadata.md). We are more than happy to hear from you — please feel free to contact us if you have further questions.

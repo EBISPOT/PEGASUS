@@ -7,7 +7,7 @@ hide_table_of_contents: true
 The tables below show **examples** of how PEG evidence matrix columns can be named and formatted.  
 These examples are **not mandatory fields** — they are provided to demonstrate recommended naming patterns, data formats, and reporting styles.  
 
-- Projects may define additional or alternative columns as long as they follow the general conventions.  
+- Projects may define additional or alternative columns, we recommend following these general conventions.  
 - **Metadata should provide comprehensive information to understand the data type, provenance, and scale used for each column.**
 
 import Tabs from '@theme/Tabs';

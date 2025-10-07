@@ -84,7 +84,7 @@ import TabItem from '@theme/TabItem';
            <tr>
               <td>gwas_source</td>
               <td>Identifier of the GWAS source. Prefer GWAS Catalog accession (GCST); if not available, use PubMed ID or another recognised accession.</td>
-              <td><span class="req req-opt">Optional</span></td>
+              <td><span class="req req-opt">Recommended</span></td>
               <td class="fmt">GCST[0-9]+, PMID, other accession ID</td>
               <td class="ex">GCST000001</td>
             </tr>
@@ -169,7 +169,7 @@ import TabItem from '@theme/TabItem';
             <tr>
               <td>variant_type</td>
               <td>Explanation of how the main variant was selected (e.g., lead, sentinel, index, mixed).</td>
-              <td><span class="req req-mand">Mandatory</span></td>
+              <td><span class="req req-mand">Recommended</span></td>
               <td class="fmt">string</td>
               <td class="ex">lead</td>
             </tr>
@@ -183,7 +183,7 @@ import TabItem from '@theme/TabItem';
             <tr>
               <td>genome_build</td>
               <td>Genome assembly used to map variants.</td>
-              <td><span class="req req-opt">Optional</span></td>
+              <td><span class="req req-opt">Recommended</span></td>
               <td class="fmt">GRCh38, GRCh37, NCBI36, NCBI35, NCBI34</td>
               <td class="ex">GRCh38</td>
             </tr>
