@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 🌍 Welcome to PEG  
+# 🌍 WELCOME TO PEG  
 
 > **PEG (Predicted Effector Gene)**   
 > Our mission is to make PEG reporting mroe **FAIR**
