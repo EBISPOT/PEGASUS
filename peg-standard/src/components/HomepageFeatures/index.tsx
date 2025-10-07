@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Introduction to Predicted Effector Genes',
     image: 'img/meta-matrix-list.png',
-    link: '/docs/peg',
+    link: '/docs/home',
     description: (
     <>
       If you are new to PEG, this section introduces what a Predicted Effector Gene (PEG) are and explains the need for standardisation.
