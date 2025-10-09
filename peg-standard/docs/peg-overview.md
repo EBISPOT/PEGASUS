@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# PEGASUS Framework Overvew
+# PEGASUS Framework Overview
 ---
 
 ## PEGASUS Framework
