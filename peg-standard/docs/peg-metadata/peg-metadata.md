@@ -3,7 +3,7 @@ sidebar_position: 2
 hide_table_of_contents: true
 ---
 
-# 📋 PEG Metadata Standard
+# 📋 PEGASUS Metadata Standard
 
 💡 To make it easier to prepare your metadata, we provide a [**pre-prepared Google Sheet template**](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?pli=1&gid=0#gid=0), which guides you through filling in the required fields.  
 
