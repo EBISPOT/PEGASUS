@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 ---
-# 📋 PEG Evidence Matrix Standard
+# 📋 PEGASUS Evidence Matrix Standard
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-### Genomic Identifier
+### Genomic Identifiers
 <Tabs>
   <TabItem value="variant" label="Variant information">
     <table className="peg-schema">

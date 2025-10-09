@@ -2,4 +2,6 @@
 sidebar_position: 4
 ---
 
-# PEG List Standard
+# PEGASUS List 
+
+Under development - check toy example data for information

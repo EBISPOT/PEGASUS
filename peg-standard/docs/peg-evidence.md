@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# PEG Evidence Categories
+# PEGASUS Evidence Categories
 
 ## 🌟 Why do we need PEG evidence categories?
 
@@ -18,7 +18,7 @@ To ensure **clarity** and **interoperability**, we group these diverse evidence 
 * Build trust and transparency – see at a glance how predictions were made.
 
 ---
-## PEG Evidence Categories
+## PEGASUS Evidence Categories
 
 ![evidence category](./img/evidence-categories.png)
 

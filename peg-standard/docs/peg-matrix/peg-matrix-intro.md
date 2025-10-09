@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
 ---
-# 📖 PEG Evidence Matrix Introduction
+# 📖 PEGASUS Evidence Matrix Introduction
 
-## What is the PEG Evidence Matrix?
+## What is the PEGASUS Evidence Matrix?
 
-A PEG Evidence Matrix is the complete, machine-readable table underlying PEG prioritisation.
+A PEGASUS Evidence Matrix is the complete, machine-readable table underlying PEG prioritisation.
 It includes:
 
 * **All** genes considered at **each** selected GWAS locus
@@ -13,7 +13,7 @@ It includes:
 
 The matrix is designed for **pipelines**, **re-weighting**, **benchmarking**, and **cross-study comparison**.
 
-## PEG Evidence Matrix Requirements
+## PEGASUS Evidence Matrix Requirements
 The following standards define the minimal requirements for a PEG Matrix:
 
 1. **ONE trait per PEG matrix**  
@@ -29,11 +29,11 @@ The following standards define the minimal requirements for a PEG Matrix:
 4. **ALL genes at each locus**  
       &nbsp;&nbsp;&nbsp;&nbsp;- Include evidence for every gene considered, not just the top candidate(s).
 
-## PEG Evidence Matrix Suggestions (Best Practices)
+## PEGASUS Evidence Matrix Suggestions (Best Practices)
 In addition to the **MUST FOLLOW** standards above, the following suggestions are recommended to improve interoperability and interpretability of PEG matrices:
 
 1. Evidence summary per gene (author’s conclusion)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;-  Provide a cumulative “weight of evidence” score or summary statistic. This must be provided if the Matrix is to be represented as a PEG List.
+&nbsp;&nbsp;&nbsp;&nbsp;-  Provide a cumulative “weight of evidence” score or summary statistic. This must be provided if the Matrix is to be represented as a PEGASUS List.
 
 2. Standard identifiers<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- Use HGNC gene symbols and include Ensembl Gene IDs for unambiguous cross-referencing.
@@ -43,9 +43,9 @@ In addition to the **MUST FOLLOW** standards above, the following suggestions ar
 &nbsp;&nbsp;&nbsp;&nbsp;- Do not count the same evidence type in one integration analysis twice.
 ___
 
-## PEG Evidence Matrix Overview
+## PEGASUS Evidence Matrix Overview
 
-The PEG Evidence Matrix brings together information on genetic **variants**, **locus**, and **genes**, alongside the **multiple streams of evidence** that connect them. It also includes **integrative analyses** that based on multiple evidence, as well as **a column for conclusions drawn**. The structure is designed to make relationships between entities clear and to enable side-by-side comparison of evidence from different sources.
+The PEGASUS Evidence Matrix brings together information on genetic **variants**, **locus**, and **genes**, alongside the **multiple streams of evidence** that connect them. It also includes **integrative analyses** that based on multiple evidence, as well as **a column for conclusions drawn**. The structure is designed to make relationships between entities clear and to enable side-by-side comparison of evidence from different sources.
 
 - Variant – Identifies the variant(s) under consideration.
 - Locus – Groups variants into locus to provide genomic context.
@@ -57,11 +57,11 @@ Together, these components provide a structured and transparent framework for li
 
 ![PEG Evidence Matrix demo](../img/peg-matrix-demo.png)
 
-## PEG Evidence Matrix Standard Content
+## PEGASUS Evidence Matrix Standard Content
 
 A PEG Evidence Matrix is composed of three major column sections. Together, these define the identifiers, raw evidence, and integrated results for each gene–locus–variant relationship.
 
-### Genomic Identifier
+### Genomic Identifiers
 Columns that define which variant, locus, and gene are being studied in each row. These provide the unique indexing needed to anchor all evidence values.
 
 1. [PEG Evidence Matrix Standard](./peg-matrix.md#genomic-identifier)
