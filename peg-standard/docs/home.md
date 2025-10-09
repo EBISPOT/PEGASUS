@@ -4,11 +4,6 @@ sidebar_position: 1
 
 # Background
 
-> **PEG (Predicted Effector Gene)**   
-> Our mission is to make PEG reporting mroe **FAIR**
-
----
-
 ## 📖 Understanding Predicted Effector Genes (PEG)
 
 ![peg](./img/peg.png)
