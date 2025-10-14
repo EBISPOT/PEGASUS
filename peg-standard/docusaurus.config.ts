@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'PEGASUS Framework',
-  tagline: 'Predicted Effector Gene Aggregation, Standards, and Unified Schema (PEGASUS) Framework. Making post-GWAS effector gene datagene prioritisation more FAIR (findable, accessible, interoperable, reusable)',
+  title: 'Predicted Effector Gene Aggregation, Standards, and Unified Schema (PEGASUS) Framework. ',
+  tagline: 'Making post-GWAS effector gene data more FAIR (findable, accessible, interoperable, reusable)',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

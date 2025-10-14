@@ -18,16 +18,16 @@ const FeatureList: FeatureItem[] = [
     link: '/docs/home',
     description: (
     <>
-      If you are new to PEG, this section introduces what a Predicted Effector Gene (PEG) are and explains the need for standardisation.
+      What are Predicted Effector Gene (PEG) and why is there a need for standardisation?
     </>),
   },
   {
-    title: 'Get Familiar with the PEGASUS Framework',
+    title: 'The PEGASUS Framework',
     image: 'img/know-pegasus.jpg',
     link: '/docs/peg-overview',
     description: (
       <>
-        This section introduces the core components of the PEGASUS Standard: the Evidence Matrix as the full evidence table, the Metadata as provenance and column descriptions, and the PEG List as the summary of significant genes.
+        Understand the core components of the PEGASUS Framework: the Evidence Matrix as the full evidence table, the Metadata as provenance and column descriptions, and the PEG List as the summary of top genes.
       </>
     ),
   },
@@ -37,7 +37,7 @@ const FeatureList: FeatureItem[] = [
     link: '/docs/community/contact',
     description: (
       <>
-        Here you can find past working group videos and materials, plus details on joining discussions, contributing feedback, and following the roadmap.
+        Past working group videos and materials, plus details on joining discussions and contributing feedback.
       </>
     ),
   },

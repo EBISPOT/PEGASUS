@@ -1,18 +1,20 @@
 ---
 sidebar_position: 1
 ---
-# Workgroup 2025
+# Working group 2025
 
-A PEG workshop was held in 2024, and the [materials](./workshops-2024.md) are available for further reference. Building on that foundation, this series of working group meetings is intended to explore the proposed standard in greater detail.
+A PEG workshop was held in 2024, and the [materials](./workshops-2024.md) are available for further reference. Building on that foundation, this series of working group meetings is intended to developexplore athe proposed standard. in greater detail.
 
-## Aims of the Workshop
+
+## Aims of the Working group
 
 The aim of the working group is to develop clear recommendations for PEG list reporting. This will involve a series of meetings and activities — such as defining use cases and benchmarking datasets — leading to detailed discussions on standards for PEG matrices, metadata, and PEG lists.
 
 📍 Dates & Locations: May - Oct, 2025
 Virtual: By videoconference
 
-ℹ️ Get more details at the [communnity page](https://kp4cd.org/2024_PEG_workshop)
+---
+ℹ️ Get more details at the [community page](https://kp4cd.org/2024_PEG_workshop) and [2025 ASHG Poster](https://drive.google.com/file/d/1He5LgPWk-HYorcC6Bbdd9f7fTCMnov8C/view?usp=share_link)
 
 ---
 
