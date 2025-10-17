@@ -169,7 +169,7 @@ The PEGASUS List distils the matrix into a concise summary, highlighting the str
       <td class="chk"><input type="checkbox" checked disabled aria-label="QTL present" /></td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="EXP present" /></td>
       <td class="chk"><input type="checkbox" disabled aria-label="PERTUB present" /></td>
-      <td class="fmt">STRONG</td>
+      <td class="fmt">MODERATE</td>
     </tr>
   </tbody>
 </table>
