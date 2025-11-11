@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 # Working group 2025
 
@@ -48,7 +48,13 @@ Virtual: By videoconference
 - **Presentation of benchmarking results** (Matt, Abdurrahman, Sye, Karl)
 - **PEG List Standard** - Aoife McMahon (EMBL-EBI) / Laura Harris (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/1-SsSGuyE6sYL2VvDsMVMkLtbziezBiM22-KNPwkBGF8/edit?usp=drive_link)]
 
-### Fifth working group meeting - 7 Oct 2025
+### 🟠 Fifth Working Group Meeting — *7 Oct 2025* | <span style={{ fontSize: '0.7em' }}>[View video recording](https://kp4cd.org/2024_PEG_workshop#:~:text=Meeting%20Notes%20%7C-,Watch%20working%20group%20recording,-Run%20through%20of)</span>
+
+Run through of 2025 ASHG ancillary session
+- **Briefly recap landscape analysis** - Laura Harris (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/18_RB7YT66_5FkWBiAUQVIppYh1TwFgxL/edit?usp=drive_link&ouid=112735082452162867353&rtpof=true&sd=true)]
+- **Present PEGASUS framework** - Aoife McMahon (EMBL-EBI) [[slides](https://docs.google.com/presentation/d/1p7AERlsFfAe7vB1b6SYCwaw50ZPZ4ig1h3XPzD_-B9E/edit?usp=drive_link)]
+- **Benchmarking experience share** - Matt Pahl (Children's Hospital of Philadelphia) [[slides](https://docs.google.com/presentation/d/18JYykxIufVhvxWdXYy2Gj2B0K3wV9C78/edit?usp=drive_link&ouid=112735082452162867353&rtpof=true&sd=true)]
+- **Discussion guiding questions** - Laura Harris (EMBL-EBI) 
 
 ---
 ## Meeting Materials
