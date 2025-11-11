@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # 🙌 Join Us  
@@ -76,4 +76,4 @@ We welcome contributions from researchers, clinicians, data scientists, and comm
 - **Contribute to documents** → Help refine PEG standards and metadata
 - **Share use cases** → Provide real-world examples from your work
 
-👉 If you’d like to join the PEG Working Group, please [get in touch](mailto:peg-wg@ebi.ac.uk).  
+👉 If you’d like to join the PEG Working Group, please [get in touch](mailto:help@kp4cd.org).  

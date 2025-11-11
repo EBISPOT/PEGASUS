@@ -64,7 +64,7 @@ The aim of our working group is to define clear recommendations for PEG data rep
 For background and general recommendations, see our recent publication:  
 [Realizing the promise of genome-wide association studies for effector gene prediction (Costanzo et al.)](https://rdcu.be/eoqVk)  
 
-👉 To join the working group, please [contact us](mailto:peg-wg@ebi.ac.uk).  
+👉 To join the working group, please [contact us](mailto:help@kp4cd.org).  
 
 ## 🔧 Our Work  
 
