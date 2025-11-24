@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/EBISPOT/PEGASUS/main/review/peg-standard',
+            'https://github.com/EBISPOT/PEGASUS/main/review/peg-standard/docs/',
         },
         blog: {
           showReadingTime: true,
