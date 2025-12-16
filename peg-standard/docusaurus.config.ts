@@ -98,6 +98,8 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
+        },
+        {
           type: 'docsVersionDropdown',
           versions: {
             current: {
@@ -152,11 +154,11 @@ const config: Config = {
           items: [
             {
               label: 'WorkShops',
-              href: '/docs/community/workshop-2025',
+              to: '/docs/community/workshop-2025',
             },
             {
               label: 'Publications',
-              href: '/docs/community/publications',
+              to: '/docs/community/publications',
             },
           ],
         },
