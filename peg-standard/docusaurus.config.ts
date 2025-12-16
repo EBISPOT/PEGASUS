@@ -50,7 +50,7 @@ const config: Config = {
           versions: {
             current: {
               label: '0.0.1',
-              path: '0.0.1',
+              path: '',
             },
           },
         },
