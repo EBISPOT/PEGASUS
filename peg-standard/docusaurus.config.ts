@@ -101,11 +101,7 @@ const config: Config = {
         },
         {
           type: 'docsVersionDropdown',
-          versions: {
-            current: {
-              label: 'Documentation (v0.0.1)',
-            },
-          },
+          position: 'left',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
