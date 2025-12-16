@@ -46,6 +46,13 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/EBISPOT/PEGASUS/tree/review/peg-standard/',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: '0.0.1',
+              path: '0.0.1',
+            },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -74,7 +81,7 @@ const config: Config = {
     image: 'img/social-icon.jpg',
     announcementBar: {
       id: 'peg-dev',
-      content: '🚧 PEG docs are under active development — content may change.',
+      content: '🚧 PEG documentation is versioned and under active development.',
       backgroundColor: '#fffbe6',
       textColor: '#ff0000',
       isCloseable: false,
@@ -91,6 +98,12 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
+          type: 'docsVersionDropdown',
+          versions: {
+            current: {
+              label: 'Documentation (v0.0.1)',
+            },
+          },
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
