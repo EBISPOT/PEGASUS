@@ -342,7 +342,7 @@ import TabItem from '@theme/TabItem';
         <tr>
           <td>author_conclusion</td>
           <td>Indicates when values in this column reflect the authors’ conclusions for defining the PEG list. <br/>
-          NOTE: only **ONE** column per matrix can be assiged as `True`. We recommend including the string 'author_conclusion' in the appropirate column header.</td>
+          NOTE: only **ONE** column per matrix can be assiged as `True`. PEGASUS recommend including the string 'author_conclusion' in the appropirate column header.</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">Boolean (True / False)</td>
           <td class="ex"> True </td>

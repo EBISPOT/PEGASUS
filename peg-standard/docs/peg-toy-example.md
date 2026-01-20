@@ -1,7 +1,7 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
-# Toy Data (PEGASUS Framework applied)🎠 
+# Toy Data (PEGASUS Framework applied) 🎠 
 
 ## Toy data
 This toy data is an illustration of the type of data commonly found in PEG publications. It shows two loci identified by lead associations from a GWAS for the trait myocardial infarction. Each locus contains multiple nearby candidate effector genes (Gene 1–6).
@@ -14,7 +14,7 @@ Importantly, in publications this type of evidence is often scattered across the
 
 ## PEGASUS Evidence Matrix
 
-In the PEGASUS Evidence Matrix, we propose presenting all evidence in a single structured table. The following table illustrates how the same information can be reformatted into a unified matrix.
+PEGASUS Evidence Matrix propose presenting all evidence in a single structured table. The following table illustrates how the same information can be reformatted into a unified matrix.
 
 <table class="peg-schema">
   <thead>

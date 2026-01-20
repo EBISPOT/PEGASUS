@@ -2,10 +2,10 @@
 sidebar_position: 4
 hide_table_of_contents: true
 ---
-# ✍️ PEGASUS Matrix Preparation
+# PEGASUS Matrix Preparation
 
 This page provides a practical guide to prepare a PEGASUS Evidence Matrix for submission or sharing.
-For the exact column standards, see the [PEG Evidence Matrix Standard](./peg-matrix.md) and the [column examples](./peg-matrix-example.md).
+For the exact column standards, see the [PEG Evidence Matrix Standard](../peg-matrix.md) and the [column examples](./peg-matrix-example.md).
 
 :::tip
 Looking for end-to-end context? Start with the [PEG Evidence Matrix Introduction](./peg-matrix-intro.md) and the [toy example](../peg-toy-example.md#pegasus-evidence-matrix).

@@ -29,16 +29,16 @@ The following standards define the minimal requirements for a PEG Matrix:
 4. **ALL genes at each locus**  
       &nbsp;&nbsp;&nbsp;&nbsp;- Include evidence for every gene considered, not just the top candidate(s).
 
+5. **Per gene evidence summary (author’s conclusion)**  
+      &nbsp;&nbsp;&nbsp;&nbsp;- Provide a cumulative weight-of-evidence score or a qualitative conclusion. This column is mandatory and must be labelled as `author_conclusion=True` in the metadata. It acts as the primary key linking the PEG matrix and the PEG list.
+
 ## PEGASUS Evidence Matrix Suggestions (Best Practices)
 In addition to the **MUST FOLLOW** standards above, the following suggestions are recommended to improve interoperability and interpretability of PEG matrices:
 
-1. Evidence summary per gene (author’s conclusion)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;-  Provide a cumulative weight-of-evidence score or a qualitative conclusion. This column is mandatory and must be labelled as `author_conclusion=True` in the metadata. It acts as the primary key linking the PEG matrix and the PEG list.
-
-2. Standard identifiers<br/>
+1. Standard identifiers<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- Use HGNC gene symbols and include Ensembl Gene IDs for unambiguous cross-referencing.
 
-3. Avoid evidence double-counting<br/>
+2. Avoid evidence double-counting<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- When using automated pipelines that integrate multiple evidence sources (e.g., DEPICT, Open Targets), document which sources are included.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- Do not count the same evidence type in one integration analysis twice.
 ___

@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
       <tr>
         <td><b>Var_[xyz]</b></td>
         <td className="fmt">bespoke</td>
-        <td>Other columns relating to variant identification may be added, we recommend using the format <span className="fmt">VAR_[xyz]</span> and should be defined in the metadata file.</td>
+        <td>Other columns relating to variant identification may be added, PEGASUS recommend using the format <span className="fmt">VAR_[xyz]</span> and should be defined in the metadata file.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">bespoke</td>
       </tr>
@@ -93,14 +93,14 @@ import TabItem from '@theme/TabItem';
       <tr>
         <td><b>Locus ID</b></td>
         <td className="fmt">any</td>
-        <td> An internal or curated ID for the region considered. We recommend the associated variant  (<span className="fmt">chr:bp</span> or <span className="fmt">rsID</span>); internal IDs may be e.g. 'Locus 1, Locus 2'.</td>
+        <td> An internal or curated ID for the region considered. PEGASUS recommend the associated variant  (<span className="fmt">chr:bp</span> or <span className="fmt">rsID</span>); internal IDs may be e.g. 'Locus 1, Locus 2'.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">chr10:114754071:T:C</td>
       </tr>
       <tr>
         <td><b>Locus_[xyz]</b></td>
         <td className="fmt">bespoke</td>
-        <td>Other columns relating to the gene may be added, we recommend using the header format <span className="fmt">Locus_[xyz]</span>, and should be defined in the metadata file.</td>
+        <td>Other columns relating to the gene may be added, PEGASUS recommend using the header format <span className="fmt">Locus_[xyz]</span>, and should be defined in the metadata file.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">bespoke</td>
       </tr>
@@ -109,9 +109,9 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 ### Evidence — General Pattern
-All variant-centric evidence columns are **optional**. However, PEGSUS suggest to include at least **TWO** evidence to support variant-gene-phenotype relationship.
+All variant-centric evidence columns are **optional**. However, PEGASUS suggest to include at least **TWO** evidence to support variant-gene-phenotype relationship.
 
-**PEGSUS define a general reporting pattern:**
+**PEGASUS define a general reporting pattern:**
 <table class="peg-schema">
   <thead>
     <tr>
@@ -134,7 +134,7 @@ All variant-centric evidence columns are **optional**. However, PEGSUS suggest t
    </tbody>
 </table>
 
-These are not strict requirements. Different categories may call for different types of data, and users can adapt them as needed. For guidance, we provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md#variant-centric-evidence-examples), [gene-centric](./peg-matrix-example.md#gene-centric-evidence-examples), comes with suggested naming patterns and example formats.
+These are not strict requirements. Different categories may call for different types of data, and users can adapt them as needed. For guidance, PEGASUS provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md#variant-centric-evidence-examples), [gene-centric](./peg-matrix-example.md#gene-centric-evidence-examples), comes with suggested naming patterns and example formats.
 
 ### Integration Evidence — General Pattern
 
@@ -154,7 +154,7 @@ These are not strict requirements. Different categories may call for different t
       <td class="fmt">Bespoke</td>
       <td>
         Headers may follow the format <code>INT_[tag]_[details]</code>.<br/><br/>
-        <strong>INT</strong> indicates integration evidence; where `[tag]` is customised lable in the metadata; <code>[details]</code> is a user-defined suffix when multiple integrations are reported.<br/><br/>
+        <strong>INT</strong> indicates integration evidence; where `[tag]` is customised label in the metadata; <code>[details]</code> is a user-defined suffix when multiple integrations are reported.<br/><br/>
         For multi-word field names, use CamelCase (e.g., CredibleSetId).<br/><br/>
         Provenance and integration specifics can differ by row; capture them in the metadata file and, if they vary within the dataset, also in the data file.
       </td>

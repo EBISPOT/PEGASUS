@@ -3,7 +3,7 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
-# ✍️ PEGASUS Metadata Preparation
+# PEGASUS Metadata Preparation
 💡 To make data submission easier, we provide an Excel template with six tabs (one per entity type), specifically designed to help submitters capture the relevant fields efficiently.
 
 :::tip
