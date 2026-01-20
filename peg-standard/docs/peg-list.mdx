@@ -1,0 +1,40 @@
+---
+sidebar_position: 4
+---
+
+# PEGASUS List
+
+The PEG List is a concise summary of author-prioritised genes, linked transparently to the evidence used to reach that conclusion. It distils the PEG Evidence Matrix into a compact output that reports the top gene for each locus according to an author-designated integration stream.
+
+## What the PEG List captures
+
+- Shows the gene (identifier and symbol) that the authors consider most likely causal at each locus.
+- Indicates which broad evidence categories were considered when reaching that conclusion, offering a fast overview of evidence types without describing direction or strength.
+- Records the author’s chosen integration or scoring stream so that the selection logic is transparent and reproducible.
+
+## How it is derived
+
+Authors select the highest-ranked gene at each locus from the full Evidence Matrix using their specified integration approach (e.g., a combined score or decision rule). This explicit choice makes clear which integration represents the author’s conclusion and preserves a direct link back to the full evidence for reanalysis or benchmarking.
+
+## Relationship to the Evidence Matrix
+
+- The PEG List does **not** replace the Evidence Matrix; it communicates the author’s prioritisation in a compact, interpretable form.
+- Users needing detailed or quantitative interpretation should refer to the underlying matrix, which retains all evaluated genes, evidence streams, and integration logic.
+- Different user groups can work at the level that suits their needs: experimental or translational users may focus on the PEG List for hypothesis generation, while computational users may work directly with the matrix.
+- Future iterations of PEGASUS may extend the PEG List with richer evidence representations or formalised scoring, while staying compatible with the matrix.
+
+## Standard fields
+
+| Field | Description | Mandatory | Data format | Example |
+| --- | --- | --- | --- | --- |
+| variant_id | Variant identifier | Mandatory | chr:pos:ref:alt | rs1234 |
+| Gene symbol | HGNC gene symbol/Ensembl gene ID associated with the variant | Mandatory | HGNC | VTI1A |
+| `[Evidence_category_abbreviation]` | The column name represents an evidence category abbreviation from our controlled vocabulary. Values indicate whether or not evidence from this category was considered in the author conclusion integration analysis. | Mandatory | boolean | TRUE |
+| `INT_Combined_prediction (author conclusion)` | Integrated gene prioritisation outcome, derived from the integration column in the matrix where author_conclusion = TRUE. The content of the "author conclusion" integration column exclusively determines which genes are present on this PEGASUS list, selecting the top gene per locus. NOTE - if you are using other considerations to determine which genes are included on the PEGASUS list, these should be captured in a new "integration analysis", including a new "author conclusion" designated column. | Mandatory | any (String, Int, float) | Strong |
+
+## Example
+
+| Primary Variant ID (rsID) | Gene symbol (HGNC) | GWAS | PROX | QTL | FUNC | FM | COLOC | TPWAS | EXP | PERTURB | KNOW | LIT | DRUG | INT_Combined prediction (author score) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| rs1234 | VTI1A | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | STRONG |
+| rs5432 | ABO | TRUE | TRUE | TRUE | TRUE | TRUE | TRUE | FALSE | TRUE | FALSE | FALSE | FALSE | FALSE | MODERATE |

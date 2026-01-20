@@ -20,7 +20,7 @@ The following standards define the minimal requirements for a PEG Matrix:
       &nbsp;&nbsp;&nbsp;&nbsp;- Each matrix corresponds to a single trait or phenotype.  
 
 2. **ONE source GWAS per PEG matrix**  
-      &nbsp;&nbsp;&nbsp;&nbsp;- Anchored to a clearly defined GWAS dataset (ideally identified by GWAS Catalog accession ID).
+      &nbsp;&nbsp;&nbsp;&nbsp;- Anchored to a clearly defined GWAS dataset - single cohort GWAS or meta-analysis (ideally identified by GWAS Catalog accession ID).
  
 
 3. **ONE PEG matrix**  
@@ -33,7 +33,7 @@ The following standards define the minimal requirements for a PEG Matrix:
 In addition to the **MUST FOLLOW** standards above, the following suggestions are recommended to improve interoperability and interpretability of PEG matrices:
 
 1. Evidence summary per gene (author’s conclusion)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;-  Provide a cumulative “weight of evidence” score or summary statistic. This must be provided if the Matrix is to be represented as a PEGASUS List.
+&nbsp;&nbsp;&nbsp;&nbsp;-  Provide a cumulative weight-of-evidence score or a qualitative conclusion. This column is mandatory and must be labelled as `author_conclusion=True` in the metadata. It acts as the primary key linking the PEG matrix and the PEG list.
 
 2. Standard identifiers<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- Use HGNC gene symbols and include Ensembl Gene IDs for unambiguous cross-referencing.
@@ -59,28 +59,31 @@ Together, these components provide a structured and transparent framework for li
 
 ## PEGASUS Evidence Matrix Standard Content
 
-A PEG Evidence Matrix is composed of three major column sections. Together, these define the identifiers, raw evidence, and integrated results for each gene–locus–variant relationship.
+A PEG Evidence Matrix is composed of three major column sections. Together, these define the identifiers, raw evidence, and integrated results for each gene–locus–variant relationship. Each section is described below together with links to the detailed matrix column headers and associated metadata. 
+
 
 ### Genomic Identifiers
 Columns that define which variant, locus, and gene are being studied in each row. These provide the unique indexing needed to anchor all evidence values.
 
-1. [PEG Evidence Matrix Standard](./peg-matrix.md#genomic-identifier)
-2. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#genomic-identifier)
+1. [PEG Evidence Matrix Standard](./peg-matrix.md#genomic-identifiers)
+2. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=genomic-identifier)
 
 ### Evidence
 Columns that capture the values from individual evidence categories. Each evidence type should be represented in a structured, machine-readable way.
 1. [PEG Evidence Matrix Standard](./peg-matrix.md#evidence--general-pattern)
-2. [Evidence Columns Example](./peg-matrix-example.md#variant-centric-evidence-examples)
-3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#evidence)
-4. Metadata Example – Evidence
+2. [Evidence Columns Example](./peg-matrix-example.md?matrix-example-tab=variant)
+3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=evidence)
+4. [Evidence Metadata Example (Excel format) - for data submitters](../peg-toy-example.md?toy-data-tab=evidence#pegasus-metadata-in-tabular-format-suitable-for-submission)
+5. [Evidence Metadata Example (YAML format) - for metadata users](../peg-toy-example.md#pegasus-metadata-in-yaml-suitable-for-reader)
 
 ### Integration
 Columns that provide summaries or combined scores across multiple evidence categories.
 These fields make explicit how different sources were weighted, merged, or ranked to prioritise candidate genes.
 1. [PEG Evidence Matrix – Integration](./peg-matrix.md#integration-evidence--general-pattern)
-2. [Integration Columns Example](./peg-matrix-example.md#integration-evidence-examples)
-3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md#integration)
-4. Metadata Example – Integration
+2. [Integration Columns Example](./peg-matrix-example.md?matrix-example-tab=integration)
+3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=integration)
+4. [Integration Metadata Example (Excel format) - for data submitters](../peg-toy-example.md?toy-data-tab=integration#pegasus-metadata-in-tabular-format-suitable-for-submission)
+5. [Integration Metadata Example (YAML format) - for metadata users](../peg-toy-example.md#pegasus-metadata-in-yaml-suitable-for-reader)
 
 ---
-* 🎠 [View PEG Matrix Toy Example](../peg-toy-example.md)
+* 🎠 [View PEG Matrix Toy Example](../peg-toy-example.md#pegasus-evidence-matrix)

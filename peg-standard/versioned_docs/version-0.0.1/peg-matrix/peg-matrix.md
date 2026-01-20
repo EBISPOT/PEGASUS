@@ -155,16 +155,16 @@ These are not strict requirements. Different categories may call for different t
   </thead>
   <tbody>
     <tr>
-      <td><code>INT_[xyz]</code></td>
+      <td><code>INT_[details]</code></td>
       <td class="fmt">Bespoke</td>
       <td>
-        Headers may follow the format <code>INT_[xyz]</code>.<br/><br/>
-        <strong>INT</strong> denotes integration evidence; <br/> <code>[xyz]</code> can be a user-defined label.<br/><br/>
-        Provenance and specifics may vary across rows — they should be specified in the metadata file, and if variable, also in the data file.
+        Headers may follow the format <code>INT_[details]</code> (or <code>INT</code> alone).<br/><br/>
+        <strong>INT</strong> indicates integration evidence; <code>[details]</code> is a user-defined suffix when multiple integrations are reported.<br/><br/>
+        For multi-word field names, use CamelCase (e.g., CredibleSetId).<br/><br/>
+        Provenance and integration specifics can differ by row; capture them in the metadata file and, if they vary within the dataset, also in the data file.
       </td>
       <td class="req req-opt">optional</td>
       <td class="ex">[Integration evidence example](./peg-matrix-example.md)</td>
     </tr>
   </tbody>
 </table>
-

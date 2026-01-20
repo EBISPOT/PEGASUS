@@ -46,13 +46,6 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/EBISPOT/PEGASUS/tree/review/peg-standard/',
-          lastVersion: 'current',
-          versions: {
-            current: {
-              label: '0.0.1',
-              path: '',
-            },
-          },
         },
         blog: {
           showReadingTime: true,

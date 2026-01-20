@@ -8,7 +8,7 @@ sidebar_position: 6
 
 Predicted Effector Gene (PEG) lists are built from **diverse sources of evidence**, ranging from genetic associations and computational predictions to functional assays and literature curation. Each source has its own origin, methodology, and level of confidence.
 
-To ensure **clarity** and **interoperability**, we group these diverse evidence types into **standardised categories** that are widely recognised in causal gene exploration. This provides a shared framework for describing **variant–gene**, **variant–phenotype**, and **gene–phenotype** relationships within a given phenotype, in a way that is easy to explore and compare.
+To ensure **clarity** and **interoperability**, PEGASUS group these diverse evidence types into **standardised categories** that are widely recognised in effector gene exploration.
 
 <span style={{fontSize:"1.3rem", fontWeight:"600", color:"#2E86AB"}}>
 ➡️ Organising evidence into categories helps users:

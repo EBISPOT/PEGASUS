@@ -47,16 +47,3 @@ PEG lists:
 * Summarise which evidence categories were considered, using broad and intuitive categories rather than detailed experimental designs.
 
 **PEG Lists must be supported by an Evidence Matrix and described by Metadata.**
-
-An analogy:
-
-The PEG Evidence Matrix is like a detailed sightseeing map of London.
-- It shows all routes, side streets, walking paths, and even underground lines.
-- It marks landmarks, hotels, rivers, and attractions — everything you might need to explore the area.
-This corresponds to the full set of variants, locus, genes, and all evidence categories, including integrated analyses.
-
-The PEG List is like choosing the best walking route for sightseeing.
-- From all the possible paths on the map, you highlight the most reasonable route that satisfies your goals (e.g. the author’s criteria).
-It focuses on the most likely causal genes, supported by the clearest evidence, and provides a concise summary.
-
-![peg matrix analogy](./img/peg-list-analogy.png)
