@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
       </tr>
       <tr>
         <td><b>Var_[xyz]</b></td>
-        <td className="fmt">bespoke</td>
+        <td className="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
         <td>Other columns relating to variant identification may be added, PEGASUS recommend using the format <span className="fmt">VAR_[xyz]</span> and should be defined in the metadata file.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">bespoke</td>
@@ -51,14 +51,14 @@ import TabItem from '@theme/TabItem';
         <th>Example data</th>
       </tr>
       <tr>
-        <td><b>Gene ID</b></td>
+        <td><b>GeneID</b></td>
         <td className="fmt">ENSG[]</td>
         <td>The gene under consideration in this row (gene-centric evidence). The Ensembl Gene ID is recommended as the primary identifier. Other IDs can be added using <span className="fmt">GeneID_[SOURCE]</span> (e.g. <span className="fmt">GeneID_EntrezID</span>).</td>
         <td className="req req-mand">Mandatory</td>
         <td className="ex">ENSG00000151532</td>
       </tr>
       <tr>
-        <td><b>Gene symbol</b></td>
+        <td><b>GeneSymbol</b></td>
         <td className="fmt">HGNC</td>
         <td>The gene under consideration in this row, to which gene centric evidence relates. HGNC Symbol is recommended as the primary gene symbol identifier. Alternative/legacy symbols may be provided via <span className="fmt">GeneSymbol_[SOURCE]</span> (e.g. <span className="fmt">GeneSymbol_alias</span>).</td>
         <td className="req req-mand">Mandatory</td>
@@ -66,7 +66,7 @@ import TabItem from '@theme/TabItem';
       </tr>
       <tr>
         <td><b>Gene_[xyz]</b></td>
-        <td className="fmt">bespoke</td>
+        <td className="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
         <td>Additional gene-related columns (e.g. Entrez, aliases). Must be defined in metadata.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">Bespoke</td>
@@ -84,14 +84,14 @@ import TabItem from '@theme/TabItem';
         <th>Example data</th>
       </tr>
       <tr>
-        <td><b>Locus range</b></td>
+        <td><b>Locus Range</b></td>
         <td className="fmt">chr:pos:start-end</td>
         <td>The range around the primary variant considered in this analysis.</td>
         <td className="req req-rec">Recommended</td>
         <td className="ex">chr10:1000-2000</td>
       </tr>
       <tr>
-        <td><b>Locus ID</b></td>
+        <td><b>LocusID</b></td>
         <td className="fmt">any</td>
         <td> An internal or curated ID for the region considered. PEGASUS recommend the associated variant  (<span className="fmt">chr:bp</span> or <span className="fmt">rsID</span>); internal IDs may be e.g. 'Locus 1, Locus 2'.</td>
         <td className="req req-opt">Optional</td>
@@ -99,7 +99,7 @@ import TabItem from '@theme/TabItem';
       </tr>
       <tr>
         <td><b>Locus_[xyz]</b></td>
-        <td className="fmt">bespoke</td>
+        <td className="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
         <td>Other columns relating to the gene may be added, PEGASUS recommend using the header format <span className="fmt">Locus_[xyz]</span>, and should be defined in the metadata file.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">bespoke</td>
@@ -125,16 +125,19 @@ All variant-centric evidence columns are **optional**. However, PEGASUS suggest 
   <tbody>
     <tr>
       <td><code>{`Category_(stream)_[details]`}</code></td>
-      <td class="fmt">Bespoke</td>
-      <td>Headers follow the format <code>Category_(stream)_[details]</code>, these should be defined in the metadata file. Use the abbreviated category name (from the [evidence categories listed](../peg-evidence.md) in controlled list). Stream is required only if multiple evidence streams within a single category are used. See examples.<br/><br/>
-      For field names consisting of multiple words, please use CamelCase. For example, credible set id should be written as CredibleSetId.<br/><br/> If no category in the list are applicable, please use `Other_[CustomisedCategory]_(stream)_[details]`</td>
+      <td class="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
+      <td>Headers follow the format <code>Category_(stream)_[details]</code>.<br/><br/>
+      `Category`: Use the abbreviated category name from the [evidence categories listed](../peg-evidence.md) in controlled list.<br/><br/>
+      `(stream)` is optional and is only required when multiple evidence streams are used within a single category (e.g. QTL_eqtl).<br/><br/>
+      `[details]` is a user-defined suffix that reflects the content of the data.<br/><br/>
+      For any field consisting of multiple words, please use **CamelCase**. For example, credible set id should be written as `CredibleSetId`.<br/><br/> If no category in the list are applicable, please use `Other_[CustomisedCategory]_(stream)_[details]`</td>
       <td class="req req-opt">Optional</td>
       <td>[variant-centric evidence examples](./peg-matrix-example.md#variant-centric-evidence-examples);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md#gene-centric-evidence-examples)</td>
     </tr>
    </tbody>
 </table>
 
-These are not strict requirements. Different categories may call for different types of data, and users can adapt them as needed. For guidance, PEGASUS provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md#variant-centric-evidence-examples), [gene-centric](./peg-matrix-example.md#gene-centric-evidence-examples), comes with suggested naming patterns and example formats.
+PEGASUS only define column name patterns and does not impose strict requirements on the data type. For guidance, PEGASUS provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md#variant-centric-evidence-examples), [gene-centric](./peg-matrix-example.md#gene-centric-evidence-examples), comes with suggested naming patterns and example formats.
 
 ### Integration Evidence — General Pattern
 
@@ -151,12 +154,13 @@ These are not strict requirements. Different categories may call for different t
   <tbody>
     <tr>
       <td><code>INT_[tag]_[details]</code></td>
-      <td class="fmt">Bespoke</td>
+      <td class="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
       <td>
         Headers may follow the format <code>INT_[tag]_[details]</code>.<br/><br/>
-        <strong>INT</strong> indicates integration evidence; where `[tag]` is customised label in the metadata; <code>[details]</code> is a user-defined suffix when multiple integrations are reported.<br/><br/>
-        For multi-word field names, use CamelCase (e.g., CredibleSetId).<br/><br/>
-        Provenance and integration specifics can differ by row; capture them in the metadata file and, if they vary within the dataset, also in the data file.
+        <strong>INT</strong> indicates integration evidence;<br/><br/>
+        `[tag]` is customised label in the metadata;<br/><br/>
+        <code>[details]</code> is a user-defined suffix that reflects the content of the data.<br/><br/>
+        For multi-word in the `[details]`, use CamelCase (e.g., `CombinedPredictionAuthorScore`).<br/><br/>
       </td>
       <td class="req req-opt">Optional</td>
       <td class="ex">[Integration evidence example](./peg-matrix-example.md)</td>

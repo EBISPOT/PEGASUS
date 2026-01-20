@@ -19,7 +19,7 @@ The PEGASUS metadata standard is guided by a set of high-level principles to ens
 - **Transparency** – criteria for significance (e.g., thresholds for QTLs, fine-mapping, colocalisation) should be explicitly stated if it is applicable.
 - **Novelty** – metadata should specify whether de novo wet-lab evidence is included alongside computational or re-analysed evidence.
 - **Methodology** – details of prioritisation, scoring, or ranking approaches must be documented.
-- **Interoperability** – metadata capturing evidence provenance must follow a standardised structure to avoid counting duplicated evidence types within a single PEG dataset and to enable compare or integration across different PEG datasets.
+- **Interoperability** – metadata capturing evidence provenance must follow a standardised structure to enable comparison across different PEG datasets.
 
 Together, these principles ensure that PEG metadata not only documents the data itself, but also supports reproducibility, benchmarking, and community-wide use.
 

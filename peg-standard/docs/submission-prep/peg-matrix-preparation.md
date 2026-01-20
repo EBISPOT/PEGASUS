@@ -1,15 +1,13 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 hide_table_of_contents: true
 ---
-# PEGASUS Matrix Preparation
+# PEG Matrix Preparation
 
 This page provides a practical guide to prepare a PEGASUS Evidence Matrix for submission or sharing.
 For the exact column standards, see the [PEG Evidence Matrix Standard](../peg-matrix.md) and the [column examples](./peg-matrix-example.md).
 
-:::tip
-Looking for end-to-end context? Start with the [PEG Evidence Matrix Introduction](./peg-matrix-intro.md) and the [toy example](../peg-toy-example.md#pegasus-evidence-matrix).
-:::
+Need some content and examples? Start with the [PEG Evidence Matrix Introduction](./peg-matrix-intro.md) and the [toy example](../peg-toy-example.md#pegasus-evidence-matrix).
 
 ## Before you start
 Make sure you have:
@@ -21,7 +19,7 @@ Make sure you have:
 - A decision on the author conclusion integration column (if you will produce a PEG List)
 
 ## Recommended file format
-- Use a machine-readable table such as TSV or CSV
+- Use a machine-readable table such as TSV
 - Do not use merged cells or styled spreadsheets
 - Keep headers stable and consistent with metadata
 - Use a consistent missing value marker (e.g., `NA`) if possible
@@ -39,7 +37,6 @@ Minimum identifiers to include:
 - `Primary Variant ID`
 - `Gene ID`
 - `Gene symbol`
-- `Locus range` (recommended)
 
 ## Step-by-step preparation
 

@@ -112,7 +112,7 @@ import TabItem from '@theme/TabItem';
             <tr>
               <th>Field</th>
               <th>Description</th>
-              <th>Mandatory</th>
+              <th>Requirement</th>
               <th>Data_format</th>
               <th>Example</th>
             </tr>
@@ -191,7 +191,7 @@ import TabItem from '@theme/TabItem';
         <tr>
           <th>Field</th>
           <th>Description</th>
-          <th>Mandatory</th>
+          <th>Requirement</th>
           <th>Data_format / Allowed values</th>
           <th>Example</th>
         </tr>
@@ -226,7 +226,7 @@ import TabItem from '@theme/TabItem';
           <td class="ex">variant-centric</td>
         </tr>
         <tr>
-          <td>Source_tag</td>
+          <td>source_tag</td>
           <td>Identifier for the data source, created in the **[`source tab`](./peg-metadata.md#source)**.</td>
           <td><span class="req req-opt">Optional</span></td>
           <td class="fmt"> string (preferred: lowercase with underscores)</td>
@@ -261,7 +261,7 @@ import TabItem from '@theme/TabItem';
           <td class="ex">QTL_eQTL-pancreas_pvalue</td>
         </tr>
         <tr>
-          <td>Column_description</td>
+          <td>column_description</td>
           <td>Free text explanation of the content in this column.</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">string</td>
@@ -277,7 +277,7 @@ import TabItem from '@theme/TabItem';
         <tr>
           <th>Field</th>
           <th>Description</th>
-          <th>Mandatory</th>
+          <th>Requirement</th>
           <th>Data_format / Allowed values</th>
           <th>Example</th>
         </tr>
@@ -352,7 +352,8 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 
   <TabItem value="source" label="📚 Source">
-    The source metadata file mainly contains the `provenance` of source files and detailed `biosample` descriptions.
+    If all values in a column originate from the same source and a `source_tag` is used in the `evidence tab`, please reuse the same tag and ensure it complies with the requirements defined in the `source tab` here.<br/><br/>
+    The Source metadata file is primarily intended to capture the provenance of source files and to provide detailed biosample descriptions when this information is not already fully represented in the evidence matrix.
     <Tabs>
       <TabItem value="provenance" label="Provenance">
         <table class="peg-schema">
@@ -360,7 +361,7 @@ import TabItem from '@theme/TabItem';
             <tr>
               <th>Field</th>
               <th>Description</th>
-              <th>Mandatory</th>
+              <th>Requirement</th>
               <th>Data_format / Allowed values</th>
               <th>Example</th>
             </tr>
@@ -394,7 +395,7 @@ import TabItem from '@theme/TabItem';
             <tr>
               <td>version</td>
               <td>Version or release of the dataset.</td>
-              <td><span class="req req-mand">Optional</span></td>
+              <td><span class="req req-opt">Optional</span></td>
               <td class="fmt">string</td>
               <td class="ex">v8</td>
             </tr>
@@ -424,7 +425,7 @@ import TabItem from '@theme/TabItem';
               <td>Extra details to aid interpretation of the source</td>
               <td><span class="req req-opt">Optional</span></td>
               <td class="fmt">string</td>
-              <td class="ex">xxxx</td>
+              <td class="ex"> The analysis includes only samples from individuals aged 20–29. </td>
            </tr>
           </tbody>
         </table>
@@ -518,12 +519,13 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 
   <TabItem value="method" label="⚙️Method">
+    If the `method_tag` is used in the `evidence tab`, please reuse the same tag and ensure it complies with the requirements defined in the `method tab` here.<br/><br/>
     <table class="peg-schema">
       <thead>
         <tr>
           <th>Field</th>
           <th>Description</th>
-          <th>Mandatory</th>
+          <th>Requirement</th>
           <th>Data_format / Allowed values</th>
           <th>Example</th>
         </tr>
@@ -597,7 +599,7 @@ import TabItem from '@theme/TabItem';
           <td>Extra details to aid interpretation of the method</td>
           <td><span class="req req-opt">Optional</span></td>
           <td class="fmt">string</td>
-          <td class="ex">xxxx</td>
+          <td class="ex">CADD scores were used for variant annotation. Variants with low predicted impact were filtered prior to annotation.</td>
         </tr>
       </tbody>
     </table>

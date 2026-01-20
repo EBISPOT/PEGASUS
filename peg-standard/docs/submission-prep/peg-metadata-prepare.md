@@ -3,29 +3,29 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
-# PEGASUS Metadata Preparation
+# PEG Metadata Preparation
 💡 To make data submission easier, we provide an Excel template with six tabs (one per entity type), specifically designed to help submitters capture the relevant fields efficiently.
 
 :::tip
 [📊 Download metadata google sheet template](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?gid=0#gid=0)
 :::
 
-If you have questions about any attribute for each entity, we also provide detailed explanations [here](./peg-metadata.md). We are more than happy to hear from you — please feel free to contact us if you have further questions.
+If you have questions about any attribute for each entity, we also provide detailed explanations [here](../peg-metadata/peg-metadata.md). We are more than happy to hear from you — please feel free to contact us if you have further questions.
 
 The PEG metadata is currently organised into six tabs. The diagram below shows a simplified view of their relationships.
 
 Each entity contains fields that capture a different aspect of the dataset:
 
-- [**Dataset description**](./peg-metadata.md?peg-metadata-tab=dataset-description) - descriptors for the whole PEG matrix (trait, source of the matrix itself, publication reference, release date, creator)
-- [**Genomic Identifier**](./peg-metadata.md?peg-metadata-tab=genomic-identifier) – details about the variants, genes, or locus included in your dataset.
-- [**Evidence**](./peg-metadata.md?peg-metadata-tab=evidence) – supporting data types and experimental or computational evidence that link variants to genes or traits.
-- [**Integration**](./peg-metadata.md?peg-metadata-tab=integration) – information about how different streams of evidence are combined (e.g., scoring, weighting, prioritisation).
-- [**Source**](./peg-metadata.md?peg-metadata-tab=source) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
-- [**Method**](./peg-metadata.md?peg-metadata-tab=method) – a description of the methodology, pipelines, or softwares used to generate the data.
+- [**Dataset description**](../peg-metadata/peg-metadata.md?peg-metadata-tab=dataset-description) - descriptors for the whole PEG matrix (trait, source of the matrix itself, publication reference, release date, creator)
+- [**Genomic Identifier**](../peg-metadata/peg-metadata.md?peg-metadata-tab=genomic-identifier) – details about the variants, genes, or locus included in your dataset.
+- [**Evidence**](../peg-metadata/peg-metadata.md?peg-metadata-tab=evidence) – supporting data types and experimental or computational evidence that link variants to genes or traits.
+- [**Integration**](../peg-metadata/peg-metadata.md?peg-metadata-tab=integration) – information about how different streams of evidence are combined (e.g., scoring, weighting, prioritisation).
+- [**Source**](../peg-metadata/peg-metadata.md?peg-metadata-tab=source) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
+- [**Method**](../peg-metadata/peg-metadata.md?peg-metadata-tab=method) – a description of the methodology, pipelines, or softwares used to generate the data.
 
 ## How to fill the metadata template
 
-Below is a practical, step-by-step guide to help you complete the Excel/Google Sheet metadata template. The fields are explained in detail on the [Metadata Standard page](./peg-metadata.md), but the guidance here focuses on what to fill and when.
+Below is a practical, step-by-step guide to help you complete the Excel/Google Sheet metadata template. The fields are explained in detail on the [Metadata Standard page](../peg-metadata/peg-metadata.md), but the guidance here focuses on what to fill and when.
 
 ### 1) Prepare your inputs
 Before you start filling the sheet, make sure you have:
@@ -66,10 +66,12 @@ Explain how variants, genes, and loci were defined.
 ### Evidence (required)
 This is the core tab. Each row represents one evidence column in your PEG matrix.
 
-- `evidence_category` and `evidence_category_abbreviation` must come from the [controlled list](../peg-evidence.md).
-- `evidence_stream_details` should describe the analysis stream (e.g., `eQTL-pancreas`).
 - `column_header` must exactly match the evidence column name in your matrix.
-- `source_tag` and `method_tag` must refer to entries you created in Source/Method tabs.
+- `column_description` explain the data content and how to interperate the data
+- `evidence_category`, `evidence_category_abbreviation` must come from the [controlled list](../peg-evidence.md).
+- `variant_or_gene_centric` is important for `Other_[CustomisedCategory]_(stream)_[details]`.
+- `evidence_stream_tag` identifies the specific analysis stream within an evidence category. It repeats the stream defined in the `Category_(stream)_[details]` column header.
+- `source_tag` and `method_tag` are optional but highly recommended, as they provide additional detail in the **Source** and **Method** tabs and help others better understand and reuse your data.
 - Add `threshold` and `note` if the values require interpretation.
 
 ### Integration (required if you have integrated results)
@@ -80,7 +82,7 @@ Each row describes one integration output column in the PEG matrix.
 - `method_tag` is mandatory and must point to the method used for integration.
 - Use `evidence_streams_included` (pipe-delimited) to show which streams were combined.
 - Use `integrations_included` (pipe-delimited) to show which integrated analysis also included.
-- Only one row can have `author_conclusion = True` (this defines the PEG list).
+- Only one row in the integration tab can have `author_conclusion = True` (this defines the PEG list).
 
 ### Source (recommended)
 Record the origin of each evidence stream. One row = one source definition.
@@ -106,4 +108,4 @@ Describe how each evidence stream or integration was produced.
 - Only one integration column is marked `author_conclusion = True`.
 - All mandatory fields are filled.
 
-If you are unsure about any field, refer back to the [PEGASUS Metadata Standard](./peg-metadata.md) or contact us.
+If you are unsure about any field, refer back to the [PEGASUS Metadata Standard](../peg-metadata/peg-metadata.md) or contact us.
