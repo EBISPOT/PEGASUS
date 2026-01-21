@@ -108,4 +108,4 @@ Describe how each evidence stream or integration was produced.
 - Only one integration column is marked `author_conclusion = True`.
 - All mandatory fields are filled.
 
-If you are unsure about any field, refer back to the [PEGASUS Metadata Standard](../peg-metadata/peg-metadata.md) or contact us.
+If you are unsure about any field, refer back to the [PEGASUS Metadata Standard](../peg-metadata/peg-metadata.md) or [contact us](mailto:help@kp4cd.org).

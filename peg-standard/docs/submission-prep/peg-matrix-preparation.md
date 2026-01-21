@@ -5,9 +5,9 @@ hide_table_of_contents: true
 # PEG Matrix Preparation
 
 This page provides a practical guide to prepare a PEGASUS Evidence Matrix for submission or sharing.
-For the exact column standards, see the [PEG Evidence Matrix Standard](../peg-matrix.md) and the [column examples](./peg-matrix-example.md).
+For the exact column standards, see the [PEG Evidence Matrix Standard](../peg-matrix/peg-matrix.md) and the [column examples](../peg-matrix/peg-matrix-example.md).
 
-Need some content and examples? Start with the [PEG Evidence Matrix Introduction](../peg-matrix/peg-matrix-intro.md) and the [toy example](../peg-toy-example.md#pegasus-evidence-matrix).
+Need some background or examples? Start with the [PEG Evidence Matrix Introduction](../peg-matrix/peg-matrix-intro.md) and the [toy example](../peg-toy-example.md#pegasus-evidence-matrix).
 
 ## Before you start
 Make sure you have:
@@ -69,4 +69,4 @@ Minimum identifiers to include:
 - Missing values are consistent and clearly defined
 - Evidence and integration columns are documented in metadata
 
-If you are unsure about any field or naming pattern, refer to the [PEG Evidence Matrix Standard](../peg-matrix/peg-matrix.md) or the [PEGASUS Metadata Preparation guide](../peg-metadata/peg-metadata-prepare.md)
+If you are unsure about any field or naming pattern, refer to the [PEG Evidence Matrix Standard](../peg-matrix/peg-matrix.md) or [contact us](mailto:help@kp4cd.org).
