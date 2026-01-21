@@ -12,9 +12,9 @@ The bottom table summarises the supporting evidence for each gene — including 
 
 Importantly, in publications this type of evidence is often scattered across the main text and multiple supplementary tables, making it difficult to compare, integrate, or reproduce.
 
-## PEGASUS Evidence Matrix
+## PEG Evidence Matrix
 
-PEGASUS Evidence Matrix propose presenting all evidence in a single structured table. The following table illustrates how the same information can be reformatted into a unified matrix.
+PEG Evidence Matrix propose presenting all evidence in a single structured table. The following table illustrates how the same information can be reformatted into a unified matrix.
 
 <table class="peg-schema">
   <thead>
@@ -129,9 +129,9 @@ PEGASUS Evidence Matrix propose presenting all evidence in a single structured t
 </table>
 
 
-## PEGASUS List
+## PEG List
 
-The PEGASUS List distils the matrix into a concise summary, highlighting the strongest candidate gene at each locus. The PEGASUS List Foundational model records whether evidence was considered (tick = data present, blank = not assessed) and reflects the author’s integrated conclusions for top genes. 
+The PEG List distils the matrix into a concise summary, highlighting the strongest candidate gene at each locus. The PEG List Foundational model records whether evidence was considered (tick = data present, blank = not assessed) and reflects the author’s integrated conclusions for top genes. 
 
 <table class="peg-schema">
   <thead>
@@ -177,14 +177,14 @@ Tick = data/value present. Blank = not assessed. Ticks do NOT imply supportive v
 
 Author conclusions and provenance are summarised here; detailed information for each evidence category is available in the evidence matrix.
 
-## PEGASUS Metadata
+## PEG Metadata
 
-PEGASUS Metadata — Provides the detailed context behind the PEGASUS Matrix, recording column definitions, provenance, biosamples, and methods so that PEG evidence is fully interpretable and reproducible. Here, the data is presented in 
+PEG Metadata — Provides the detailed context behind the PEGASUS Matrix, recording column definitions, provenance, biosamples, and methods so that PEG evidence is fully interpretable and reproducible. Here, the data is presented in 
 * (i) tabular format suitable for submission to a resource or presentation as a supplementary table in a publication and 
 * (ii) machine readable format suitable for download from a data resource and re-use in an automated pipeline.   
 
 
-### PEGASUS Metadata in tabular format (suitable for submission)
+### PEG Metadata in tabular format (suitable for submission)
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -547,7 +547,7 @@ import TabItem from '@theme/TabItem';
 </Tabs> 
 
 
-### PEGASUS Metadata in YAML (suitable for reader)
+### PEG Metadata in YAML (suitable for reader)
 Using YAML for metadata keeps all information on one page in a structured format, so users can easily search and extract the details they need, and is both human and machine-readable. 
 
 import BrowserOnly from '@docusaurus/BrowserOnly';

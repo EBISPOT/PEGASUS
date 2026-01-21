@@ -5,8 +5,8 @@ hide_table_of_contents: true
 
 # PEG List Preparation
 
-This page provides a practical guide to prepare a PEGASUS List for submission or sharing.
-For the exact column standards, see the [PEG List Standard](../peg-list.md) and the [toy example](../peg-toy-example.md#pegasus-list).
+This page provides a practical guide to prepare a PEG List for submission or sharing.
+For the exact column standards, see the [PEG List Standard](../peg-list.md) and the [toy example](../peg-toy-example.md#peg-list).
 
 :::note
 Start from your final PEG Evidence Matrix and the metadata integration tab. The PEG List is derived from the matrix using the integration column marked `author_conclusion = True`.

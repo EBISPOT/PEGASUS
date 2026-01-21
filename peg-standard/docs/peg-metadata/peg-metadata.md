@@ -3,7 +3,7 @@ sidebar_position: 2
 hide_table_of_contents: true
 ---
 
-# 📋 PEGASUS Metadata Standard
+# 📋 PEG Metadata Standard
 
 The metadata consists of **four primary components**:
 - Dataset Description: descriptors for the whole PEG matrix (trait, source of the GWAS data and publication reference)

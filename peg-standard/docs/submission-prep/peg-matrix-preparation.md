@@ -4,10 +4,10 @@ hide_table_of_contents: true
 ---
 # PEG Matrix Preparation
 
-This page provides a practical guide to prepare a PEGASUS Evidence Matrix for submission or sharing.
+This page provides a practical guide to prepare a PEG Evidence Matrix for submission or sharing.
 For the exact column standards, see the [PEG Evidence Matrix Standard](../peg-matrix/peg-matrix.md) and the [column examples](../peg-matrix/peg-matrix-example.md).
 
-Need some background or examples? Start with the [PEG Evidence Matrix Introduction](../peg-matrix/peg-matrix-intro.md) and the [toy example](../peg-toy-example.md#pegasus-evidence-matrix).
+Need some background or examples? Start with the [PEG Evidence Matrix Introduction](../peg-matrix/peg-matrix-intro.md) and the [toy example](../peg-toy-example.md#peg-evidence-matrix).
 
 ## Before you start
 Make sure you have:
@@ -57,7 +57,7 @@ Minimum identifiers to include:
 - Keep integration logic transparent and documented
 
 ### 4) Align with metadata
-- Every evidence and integration column must appear in PEGASUS metadata
+- Every evidence and integration column must appear in PEG Metadata
 - Column headers must match exactly between matrix and metadata
 - Record sources, methods, and biosamples in metadata to make the matrix interpretable
 

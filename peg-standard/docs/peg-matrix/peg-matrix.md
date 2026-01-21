@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# 📋 PEGASUS Evidence Matrix Standard
+# 📋 PEG Evidence Matrix Standard
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

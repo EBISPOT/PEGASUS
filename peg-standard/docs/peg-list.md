@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# PEGASUS List
+# PEG List
 
 The PEG List is a concise summary of author-prioritised genes, linked transparently to the evidence used to reach that conclusion. It distils the PEG Evidence Matrix into a compact output that reports the top gene for each locus according to an author-designated integration stream.
 
