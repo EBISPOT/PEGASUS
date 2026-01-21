@@ -134,12 +134,12 @@ All variant-centric evidence columns are **optional**. However, we suggest to in
       <code>QTL_eQTL_pancreas</code>,<code>TPWAS_TWAS_pvalue</code>. 
       The category must be from the [controlled list](../peg-evidence.md) and defined in the metadata file.</td>
       <td class="req req-opt">optional</td>
-      <td>[variant-centric evidence examples](./peg-matrix-example.md#variant-centric-evidence-examples);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md#gene-centric-evidence-examples)</td>
+      <td>[variant-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=variant);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=gene)</td>
     </tr>
    </tbody>
 </table>
 
-These are not strict requirements. Different categories may call for different types of data, and users can adapt them as needed. For guidance, we provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md#variant-centric-evidence-examples), [gene-centric](./peg-matrix-example.md#gene-centric-evidence-examples), comes with suggested naming patterns and example formats.
+These are not strict requirements. Different categories may call for different types of data, and users can adapt them as needed. For guidance, we provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md?matrix-example-tab=variant), [gene-centric](./peg-matrix-example.md?matrix-example-tab=gene), comes with suggested naming patterns and example formats.
 
 ### Integration Evidence — General Pattern
 

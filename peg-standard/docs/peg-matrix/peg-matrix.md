@@ -132,12 +132,12 @@ All variant-centric evidence columns are **optional**. However, PEGASUS suggest 
       `[details]` is a user-defined suffix that reflects the content of the data.<br/><br/>
       For any field consisting of multiple words, please use **CamelCase**. For example, credible set id should be written as `CredibleSetId`.<br/><br/> If no category in the list are applicable, please use `Other_[CustomisedCategory]_(stream)_[details]`</td>
       <td class="req req-opt">Optional</td>
-      <td>[variant-centric evidence examples](./peg-matrix-example.md#variant-centric-evidence-examples);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md#gene-centric-evidence-examples)</td>
+      <td>[variant-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=variant);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=gene)</td>
     </tr>
    </tbody>
 </table>
 
-PEGASUS only define column name patterns and does not impose strict requirements on the data type. For guidance, PEGASUS provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md#variant-centric-evidence-examples), [gene-centric](./peg-matrix-example.md#gene-centric-evidence-examples), comes with suggested naming patterns and example formats.
+PEGASUS only define column name patterns and does not impose strict requirements on the data type. For guidance, PEGASUS provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md?matrix-example-tab=variant), [gene-centric](./peg-matrix-example.md?matrix-example-tab=gene), comes with suggested naming patterns and example formats.
 
 ### Integration Evidence — General Pattern
 

@@ -10,7 +10,7 @@ hide_table_of_contents: true
 [📊 Download metadata google sheet template](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?gid=0#gid=0)
 :::
 
-If you have questions about any attribute for each entity, we also provide detailed explanations [here](../peg-metadata/peg-metadata.md). We are more than happy to hear from you — please feel free to contact us if you have further questions.
+If you have questions about any attribute for each entity, we also provide detailed explanations [here](../peg-metadata/peg-metadata.md?peg-metadata-tab=dataset-description). We are more than happy to hear from you — please feel free to contact us if you have further questions.
 
 The PEG metadata is currently organised into six tabs. The diagram below shows a simplified view of their relationships.
 
