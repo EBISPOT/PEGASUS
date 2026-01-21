@@ -23,10 +23,9 @@ Detailed descriptions of each component are provided in the corresponding tabs b
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Dataset description
+## Standard Content
 <Tabs queryString="peg-metadata-tab">
 <TabItem value="dataset-description" label="📂 Dataset description">
-   The dataset description records the `PEG list source`, the `studied trait` and `GWAS source`. If the GWAS is not in the GWAS Catalog, include extra population details such as ancestry and sample size.
        <table class="peg-schema">
          <thead>
             <tr>
@@ -106,7 +105,6 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 
   <TabItem value="genomic-identifier" label="🧬 Genomic Identifier">
-    Describes how `variants` are selected, which `gene identifier` system and version are used, and how `locus` are defined and named.
         <table class="peg-schema">
           <thead>
             <tr>
@@ -227,14 +225,14 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>source_tag</td>
-          <td>Identifier for the data source, created in the **[`source tab`](./peg-metadata.md?peg-metadata-tab=source)**.</td>
+          <td>Identifier for the data source, created in the **[`source tab`](./peg-metadata.md?peg-metadata-tab=source#standard-content)**.</td>
           <td><span class="req req-opt">Optional</span></td>
           <td class="fmt"> string (preferred: lowercase with underscores)</td>
           <td class="ex">source_gtex_pancreas</td>
         </tr>
         <tr>
           <td>method_tag</td>
-          <td>Identifier for the analysis method, created in the **[`method tab`](./peg-metadata.md?peg-metadata-tab=method)**.</td>
+          <td>Identifier for the analysis method, created in the **[`method tab`](./peg-metadata.md?peg-metadata-tab=method#standard-content)**.</td>
           <td><span class="req req-opt">Optional</span></td>
           <td class="fmt">string (preferred: lowercase with underscores)</td>
           <td class="ex">method_fastqtl</td>
@@ -352,8 +350,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 
   <TabItem value="source" label="📚 Source">
-    If all values in a column originate from the same source and a `source_tag` is used in the `evidence tab`, please reuse the same tag and ensure it complies with the requirements defined in the `source tab` here.<br/><br/>
-    The Source metadata file is primarily intended to capture the provenance of source files and to provide detailed biosample descriptions when this information is not already fully represented in the evidence matrix.
+    If a `source_tag` is used for any evidence, please follow the requirements for each attribute in the source entity to provide more details. If that’s not applicable, feel free to skip this entity.
     <Tabs>
       <TabItem value="provenance" label="Provenance">
         <table class="peg-schema">
@@ -369,7 +366,7 @@ import TabItem from '@theme/TabItem';
           <tbody>
             <tr>
               <td>source_tag</td>
-              <td>Unique identifier for the source, this tag is referenced in the [evidence metadata](./peg-metadata.md??peg-metadata-tab=evidence) and [integration metadata](./peg-metadata.md??peg-metadata-tab=integration).</td>
+              <td>Unique identifier for the source, this tag is referenced in the [evidence metadata](./peg-metadata.md?peg-metadata-tab=evidence##standard-content) and [integration metadata](./peg-metadata.md?peg-metadata-tab=integration##standard-content).</td>
               <td><span class="req req-mand">Mandatory</span></td>
               <td class="fmt">any (preferred: lowercase with underscores)</td>
               <td class="ex">source_gtex_pancreas</td>
@@ -519,7 +516,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 
   <TabItem value="method" label="⚙️Method">
-    If the `method_tag` is used in the `evidence tab`, please reuse the same tag and ensure it complies with the requirements defined in the `method tab` here.<br/><br/>
+    If a `method_tag` is used for any evidence, please follow the requirements for each attribute in the method entity to provide more details. If that’s not applicable, feel free to skip this entity.
     <table class="peg-schema">
       <thead>
         <tr>

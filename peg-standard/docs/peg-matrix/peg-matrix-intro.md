@@ -66,13 +66,13 @@ A PEG Evidence Matrix is composed of three major column sections. Together, thes
 Columns that define which variant, locus, and gene are being studied in each row. These provide the unique indexing needed to anchor all evidence values.
 
 1. [PEG Evidence Matrix Standard](./peg-matrix.md#genomic-identifiers)
-2. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=genomic-identifier)
+2. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=genomic-identifier#standard-content)
 
 ### Evidence
 Columns that capture the values from individual evidence categories. Each evidence type should be represented in a structured, machine-readable way.
 1. [PEG Evidence Matrix Standard](./peg-matrix.md#evidence--general-pattern)
 2. [Evidence Columns Example](./peg-matrix-example.md?matrix-example-tab=variant)
-3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=evidence)
+3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=evidence#standard-content)
 4. [Evidence Metadata Example (Excel format) - for data submitters](../peg-toy-example.md?toy-data-tab=evidence#peg-metadata-in-tabular-format-suitable-for-submission)
 5. [Evidence Metadata Example (YAML format) - for metadata users](../peg-toy-example.md#peg-metadata-in-yaml-suitable-for-reader)
 
@@ -81,7 +81,7 @@ Columns that provide summaries or combined scores across multiple evidence categ
 These fields make explicit how different sources were weighted, merged, or ranked to prioritise candidate genes.
 1. [PEG Evidence Matrix – Integration](./peg-matrix.md#integration-evidence--general-pattern)
 2. [Integration Columns Example](./peg-matrix-example.md?matrix-example-tab=integration)
-3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=integration)
+3. [PEG Metadata Standard](../peg-metadata/peg-metadata.md?peg-metadata-tab=integration#standard-content)
 4. [Integration Metadata Example (Excel format) - for data submitters](../peg-toy-example.md?toy-data-tab=integration#peg-metadata-in-tabular-format-suitable-for-submission)
 5. [Integration Metadata Example (YAML format) - for metadata users](../peg-toy-example.md#peg-metadata-in-yaml-suitable-for-reader)
 

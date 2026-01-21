@@ -10,18 +10,18 @@ hide_table_of_contents: true
 [📊 Download metadata google sheet template](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?gid=0#gid=0)
 :::
 
-If you have questions about any attribute for each entity, we also provide detailed explanations [here](../peg-metadata/peg-metadata.md?peg-metadata-tab=dataset-description). We are more than happy to hear from you — please feel free to contact us if you have further questions.
+If you have questions about any attribute for each entity, we also provide detailed explanations [here](../peg-metadata/peg-metadata.md#standard-content). We are more than happy to hear from you — please feel free to contact us if you have further questions.
 
 The PEG metadata is currently organised into six tabs. The diagram below shows a simplified view of their relationships.
 
 Each entity contains fields that capture a different aspect of the dataset:
 
-- [**Dataset description**](../peg-metadata/peg-metadata.md?peg-metadata-tab=dataset-description) - descriptors for the whole PEG matrix (trait, source of the matrix itself, publication reference, release date, creator)
-- [**Genomic Identifier**](../peg-metadata/peg-metadata.md?peg-metadata-tab=genomic-identifier) – details about the variants, genes, or locus included in your dataset.
-- [**Evidence**](../peg-metadata/peg-metadata.md?peg-metadata-tab=evidence) – supporting data types and experimental or computational evidence that link variants to genes or traits.
-- [**Integration**](../peg-metadata/peg-metadata.md?peg-metadata-tab=integration) – information about how different streams of evidence are combined (e.g., scoring, weighting, prioritisation).
-- [**Source**](../peg-metadata/peg-metadata.md?peg-metadata-tab=source) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
-- [**Method**](../peg-metadata/peg-metadata.md?peg-metadata-tab=method) – a description of the methodology, pipelines, or softwares used to generate the data.
+- [**Dataset description**](../peg-metadata/peg-metadata.md?peg-metadata-tab=dataset-description#standard-content) - descriptors for the whole PEG matrix (trait, source of the matrix itself, publication reference, release date, creator)
+- [**Genomic Identifier**](../peg-metadata/peg-metadata.md?peg-metadata-tab=genomic-identifier#standard-content) – details about the variants, genes, or locus included in your dataset.
+- [**Evidence**](../peg-metadata/peg-metadata.md?peg-metadata-tab=evidence#standard-content) – supporting data types and experimental or computational evidence that link variants to genes or traits.
+- [**Integration**](../peg-metadata/peg-metadata.md?peg-metadata-tab=integration#standard-content) – information about how different streams of evidence are combined (e.g., scoring, weighting, prioritisation).
+- [**Source**](../peg-metadata/peg-metadata.md?peg-metadata-tab=source#standard-content) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
+- [**Method**](../peg-metadata/peg-metadata.md?peg-metadata-tab=method#standard-content) – a description of the methodology, pipelines, or softwares used to generate the data.
 
 ## How to fill the metadata template
 
@@ -108,4 +108,4 @@ Describe how each evidence stream or integration was produced.
 - Only one integration column is marked `author_conclusion = True`.
 - All mandatory fields are filled.
 
-If you are unsure about any field, refer back to the [PEGASUS Metadata Standard](../peg-metadata/peg-metadata.md) or [contact us](mailto:help@kp4cd.org).
+If you are unsure about any field, refer back to the [PEG Metadata Standard](../peg-metadata/peg-metadata.md) or [contact us](mailto:help@kp4cd.org).

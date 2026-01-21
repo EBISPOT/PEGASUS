@@ -53,14 +53,14 @@ import TabItem from '@theme/TabItem';
       <tr>
         <td><b>GeneID</b></td>
         <td className="fmt">ENSG[]</td>
-        <td>The gene under consideration in this row (gene-centric evidence). The Ensembl Gene ID is recommended as the primary identifier. Other IDs can be added using <span className="fmt">GeneID_[SOURCE]</span> (e.g. <span className="fmt">GeneID_EntrezID</span>).</td>
+        <td>The gene under consideration in this row (gene-centric evidence). The Ensembl Gene ID is recommended as the primary identifier. Other IDs can be added using <span className="fmt">GeneID_[provider]</span> (e.g. <span className="fmt">GeneID_EntrezID</span>).</td>
         <td className="req req-mand">Mandatory</td>
         <td className="ex">ENSG00000151532</td>
       </tr>
       <tr>
         <td><b>GeneSymbol</b></td>
         <td className="fmt">HGNC</td>
-        <td>The gene under consideration in this row, to which gene centric evidence relates. HGNC Symbol is recommended as the primary gene symbol identifier. Alternative/legacy symbols may be provided via <span className="fmt">GeneSymbol_[SOURCE]</span> (e.g. <span className="fmt">GeneSymbol_alias</span>).</td>
+        <td>The gene under consideration in this row, to which gene centric evidence relates. HGNC Symbol is recommended as the primary gene symbol identifier. Alternative/legacy symbols may be provided via <span className="fmt">GeneSymbol_[provider]</span> (e.g. <span className="fmt">GeneSymbol_alias</span>).</td>
         <td className="req req-mand">Mandatory</td>
         <td className="ex">VTI1A</td>
       </tr>
