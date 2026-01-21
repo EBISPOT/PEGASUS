@@ -75,7 +75,7 @@ More importantly, we listen to the needs of different groups, create standards t
 
 1. [**Introduction**](./peg-overview.md)
 
-   Learn what the [PEG Evidence Matrix](./peg-matrix/peg-matrix-intro.md), [PEG List](./peg-list.md), and [PEG Metadata](./peg-metadata/peg-metadata-intro.md) are, and how they fit together.  
+   Learn what the [PEG Evidence Matrix](./peg-matrix/peg-matrix-intro.md), [PEG List](./peg-list.mdx), and [PEG Metadata](./peg-metadata/peg-metadata-intro.md) are, and how they fit together.  
 
 2. **PEG Standards**  
    Detailed guidance and requirements for reporting PEGs.  

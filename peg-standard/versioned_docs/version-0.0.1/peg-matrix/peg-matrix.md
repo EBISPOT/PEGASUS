@@ -134,12 +134,12 @@ All variant-centric evidence columns are **optional**. However, we suggest to in
       <code>QTL_eQTL_pancreas</code>,<code>TPWAS_TWAS_pvalue</code>. 
       The category must be from the [controlled list](../peg-evidence.md) and defined in the metadata file.</td>
       <td class="req req-opt">optional</td>
-      <td>[variant-centric evidence examples](./peg-matrix-example.md#variant-centric-evidence-examples);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md#gene-centric-evidence-examples)</td>
+      <td>[variant-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=variant);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=gene)</td>
     </tr>
    </tbody>
 </table>
 
-These are not strict requirements. Different categories may call for different types of data, and users can adapt them as needed. For guidance, we provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md#variant-centric-evidence-examples), [gene-centric](./peg-matrix-example.md#gene-centric-evidence-examples), comes with suggested naming patterns and example formats.
+These are not strict requirements. Different categories may call for different types of data, and users can adapt them as needed. For guidance, we provide reference guidelines for the general evidence categories. Each category — [variant-centric](./peg-matrix-example.md?matrix-example-tab=variant), [gene-centric](./peg-matrix-example.md?matrix-example-tab=gene), comes with suggested naming patterns and example formats.
 
 ### Integration Evidence — General Pattern
 
@@ -155,16 +155,16 @@ These are not strict requirements. Different categories may call for different t
   </thead>
   <tbody>
     <tr>
-      <td><code>INT_[xyz]</code></td>
+      <td><code>INT_[details]</code></td>
       <td class="fmt">Bespoke</td>
       <td>
-        Headers may follow the format <code>INT_[xyz]</code>.<br/><br/>
-        <strong>INT</strong> denotes integration evidence; <br/> <code>[xyz]</code> can be a user-defined label.<br/><br/>
-        Provenance and specifics may vary across rows — they should be specified in the metadata file, and if variable, also in the data file.
+        Headers may follow the format <code>INT_[details]</code> (or <code>INT</code> alone).<br/><br/>
+        <strong>INT</strong> indicates integration evidence; <code>[details]</code> is a user-defined suffix when multiple integrations are reported.<br/><br/>
+        For multi-word field names, use CamelCase (e.g., CredibleSetId).<br/><br/>
+        Provenance and integration specifics can differ by row; capture them in the metadata file and, if they vary within the dataset, also in the data file.
       </td>
       <td class="req req-opt">optional</td>
       <td class="ex">[Integration evidence example](./peg-matrix-example.md)</td>
     </tr>
   </tbody>
 </table>
-

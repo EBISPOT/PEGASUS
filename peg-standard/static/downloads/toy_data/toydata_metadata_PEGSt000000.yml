@@ -1,38 +1,38 @@
-dataset_description:
-  peg_source: "PMID:36357675"
-  gwas_source: "PMID:36357675"
-  sample:
-    sample_description: "6,136 Finnish ancestry individuals"
-    sample_size: 6136
-    case_control_numbers: false
-    sample_ancestry: "Finland"
-    sample_ancestry_label: "European"
-  trait_description: "Ascorbic acid 3-sulfate levels"
-  trait_ontology_id: "EFO_0800173"
+#dataset_description
+peg_source: "PMID:36357675"
+gwas_source: "PMID:36357675"
+sample:
+  sample_description: "6,136 Finnish ancestry individuals"
+  sample_size: 6136
+  case_control_numbers: false
+  sample_ancestry: "Finland"
+  sample_ancestry_label: "European"
+trait_description: "Ascorbic acid 3-sulfate levels"
+trait_ontology_id: "EFO_0800173"
 
-genomic_identifier:
-  variant_type: "lead"
-  genome_build: "hg38"
-  variant_information: "The primary variant is the variant with the most significant association p-value in the study."
-  gene_id_source_version: "Ensembl v109"
-  gene_symbol_source_version: "HGNC 2025-07-30"
-  locus_type: "LD"
-  locus_id: "Lead SNP"
+#genomic_identifier:
+variant_type: "lead"
+genome_build: "hg38"
+variant_information: "The primary variant is the variant with the most significant association p-value in the study."
+gene_id_source_version: "Ensembl v109"
+gene_symbol_source_version: "HGNC 2025-07-30"
+locus_type: "LD"
+locus_id: "Lead SNP"
 
 evidence:
-  - evidence_type: "GWAS"
-    evidence_category: "GWAS_signal"
-    evidence_abbreviation: "GWAS"
-    evidence_class: "variant-centric"
-    col:
+  - evidence_stream_name: "GWAS"
+    category: "GWAS_signal"
+    abbreviation: "GWAS"
+    class: "variant-centric"
+    columnsumns:
       - header: "GWAS_pvalue"
         description: "Association p-value for each variant from the GWAS study"
 
-  - evidence_type: "FUNC"
-    evidence_category: "predicted_functional_impact"
-    evidence_abbreviation: "FUNC"
-    evidence_class: "variant-centric"
-    col:
+  - evidence_stream_name: "FUNC"
+    category: "predicted_functional_impact"
+    abbreviation: "FUNC"
+    class: "variant-centric"
+    columns:
       - header: "FUNC_CADD"
         description: "CADD score representing the predicted functional impact of the variant"
     source:
@@ -41,11 +41,11 @@ evidence:
       version: "v1.7"
       url: "https://kircherlab.bihealth.org/download/CADD/v1.7/GRCh38/whole_genome_SNVs.tsv.gz"
 
-  - evidence_type: "eQTL"
-    evidence_category: "molecular_qtl"
-    evidence_abbreviation: "QTL"
-    evidence_class: "variant-centric"
-    col:
+  - evidence_stream_name: "eQTL"
+    category: "molecular_qtl"
+    abbreviation: "QTL"
+    class: "variant-centric"
+    columns:
       - header: "QTL_eQTL_aorta_pvalue"
         description: "p-value from expression QTL (eQTL) analysis in aorta tissue"
     source:
@@ -60,7 +60,7 @@ evidence:
         sex: "mixed"
         age: "mixed"
         species: "Homo sapiens"
-        description: "Bulk aorta tissue samples from healthy adult human donors in GTEx v10. Used for eQTL discovery. Donors aged ~20–70 years, male and female."
+        description: "Bulk aorta tissue samples from healthy adult human donors in GTEx v10. Used for eQTL discovery. Donors aged ~20â€“70 years, male and female."
     method:
       method_mode: "computational"
       software_name: "FastQTL"
@@ -69,11 +69,11 @@ evidence:
       software_url: "https://github.com/francois-a/fastqtl"
     threshold: "qvalue < 0.05"
 
-  - evidence_type: "EXP"
-    evidence_category: "expression"
-    evidence_abbreviation: "EXP"
-    evidence_class: "gene-centric"
-    col:
+  - evidence_stream_name: "EXP"
+    category: "expression"
+    abbreviation: "EXP"
+    class: "gene-centric"
+    columns:
       - header: "EXP_aorta_RPKM"
         description: "Gene expression level in aorta tissue, measured in RPKM"
     source:
@@ -90,13 +90,13 @@ evidence:
         sex: "mixed"
         age: "mixed"
         species: "Homo sapiens"
-        description: "Bulk aorta tissue samples (GTEx v10) from healthy postmortem adult human donors in GTEx v10. Used for RNA expression profiling. Donors aged ~20–70 years, male and female."
+        description: "Bulk aorta tissue samples (GTEx v10) from healthy postmortem adult human donors in GTEx v10. Used for RNA expression profiling. Donors aged ~20â€“70 years, male and female."
 
-  - evidence_type: "PERTURB"
-    evidence_category: "perturbation"
-    evidence_abbreviation: "PERTURB"
-    evidence_class: "gene-centric"
-    col:
+  - evidence_stream_name: "PERTURB"
+    category: "perturbation"
+    abbreviation: "PERTURB"
+    class: "gene-centric"
+    columns:
       - header: "PERTURB_mouse"
         description: "Phenotypic effects of the gene from IMPC knockout mouse models"
     source:
@@ -116,7 +116,7 @@ evidence:
 
 integration:
   - integration_analysis: "pops"
-    col:
+    columns:
       header: "INT_pops"
       description: "Integrated score based on multiple evidence types for the prioritised gene"
     evidence_integrated:
@@ -130,10 +130,10 @@ integration:
     threshold: "score > 3"
 
   - integration_analysis: "author_score"
-    col:
+    columns:
       header: "INT_Combined prediction (author score)"
       description: "Combined prediction based on manual review of all evidence types and PoPs output"
-      author_conclusion: true      
+      author_conclusion: true
     evidence_integrated:
       evidence_stream_type: ["PROX", "REG", "LIT"]
       integrated_analysis: "pops"

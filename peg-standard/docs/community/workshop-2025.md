@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 # Working group 2025
 
-A PEG workshop was held in 2024, and the [materials](./workshops-2024.md) are available for further reference. Building on that foundation, this series of working group meetings is intended to developexplore athe proposed standard. in greater detail.
+A PEG workshop was held in 2024, and the [materials](./workshops-2024.md) are available for further reference. Building on that foundation, this series of working group meetings is intended to explore and develop the proposed standard. in greater detail.
 
 
 ## Aims of the Working group

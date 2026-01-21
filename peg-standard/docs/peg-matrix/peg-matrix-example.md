@@ -7,13 +7,13 @@ hide_table_of_contents: true
 The tables below show **examples** of how PEG evidence matrix columns can be named and formatted.  
 These examples are **not mandatory fields** — they are provided to demonstrate recommended naming patterns, data formats, and reporting styles.  
 
-- Projects may define additional or alternative columns, we recommend following these general conventions.  
+- Projects may define additional or alternative columns, PEGASUS recommend following these general conventions.  
 - **Metadata should provide comprehensive information to understand the data type, provenance, and scale used for each column.**
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs>
+<Tabs queryString="matrix-example-tab">
   <TabItem value="variant" label="Variant-centric evidence example" default>
     <table class="peg-schema">
       <thead>
@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>Proximity</td>
-          <td><code>PROX_nearest_gene</code></td>
+          <td><code>PROX_NearestGene</code></td>
           <td class="fmt">boolean</td>
           <td>Indicates whether the variant is the nearest gene. Details on how distance is derived (e.g. to TSS, to gene footprint) should be documented in the metadata.</td>
           <td class="req req-opt">optional</td>
@@ -69,7 +69,7 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>Fine-mapping</td>
-          <td><code>FM_credible_set_ID</code></td>
+          <td><code>FM_CredibleSetID</code></td>
           <td class="fmt">string</td>
           <td>Identifier of the credible set variant from fine-mapping.</td>
           <td class="req req-opt">optional</td>
@@ -196,7 +196,7 @@ import TabItem from '@theme/TabItem';
           <td class="ex">9</td>
         </tr>
         <tr>
-          <td><code>INT_Combined_prediction_author_score</code></td>
+          <td><code>INT_CombinedPredictionAuthorScore</code></td>
           <td class="fmt">any</td>
           <td>Author-provided integrated prediction score. Units, scale, or categories (e.g. <code>STRONG</code>, <code>WEAK</code>) must be described in the metadata file.</td>
           <td class="req req-opt">optional</td>

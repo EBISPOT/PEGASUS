@@ -5,26 +5,34 @@ hide_table_of_contents: true
 
 # 📋 PEGASUS Metadata Standard
 
-💡 To make it easier to prepare your metadata, we provide a [**pre-prepared Google Sheet template**](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?pli=1&gid=0#gid=0), which guides you through filling in the required fields.  
+The metadata consists of **four primary components**:
+- Dataset Description: descriptors for the whole PEG matrix (trait, source of the GWAS data and publication reference)
+- Genomic Identifiers: details about the variants, genes, or locus included in your dataset.
+- Evidence: explains the evidence columns and their associated categories, and links provenance and analysis methods via source_tag and method_tag.
+- Integration: information about what and how different streams of evidence are combined. 
 
-We also provide detailed explanations for each field, together with example data, in the tables below.
+In addition, there are **two modular components**:
+- Source: citation and provenance information for each evidence stream, including publications, databases, and biosample details.
+- Method: a description of the methodology, pipelines, or softwares used to generate the data.
+
+These modular components can be referenced by multiple evidence entries.
+
+Detailed descriptions of each component are provided in the corresponding tabs below:
 
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Dataset description
-<Tabs>
-<TabItem value="outer1" label="📂 Dataset description">
+<Tabs queryString="peg-metadata-tab">
+<TabItem value="dataset-description" label="📂 Dataset description">
    The dataset description records the `PEG list source`, the `studied trait` and `GWAS source`. If the GWAS is not in the GWAS Catalog, include extra population details such as ancestry and sample size.
-   <Tabs className="inner-tabs">
-     <TabItem value="inner1" label="PEG list">
        <table class="peg-schema">
          <thead>
             <tr>
                <th>Field</th>
                <th>Description</th>
-               <th>Mandatory</th>
+               <th>Requirement</th>
                <th>Data_format</th>
                <th>Example</th>
                </tr>
@@ -33,134 +41,78 @@ import TabItem from '@theme/TabItem';
             <tr>
               <td>peg_source</td>
               <td>Identifier of the origin of the PEG list (e.g., publication, DOI, preprint, URL).</td>
-              <td><span class="req req-mand">Mandatory</span></td>
-              <td class="fmt">PMID, DOI, URL</td>
+              <td><span class="req req-rec">Recommended</span></td>
+              <td class="fmt">string (PMID, DOI, URL)</td>
               <td class="ex">PMID:36357675</td>
             </tr>
-          </tbody>
-        </table>
-      </TabItem>
-      <TabItem value="inner2" label="Trait">
-       <table class="peg-schema">
-           <thead>
-             <tr>
-               <th>Field</th>
-               <th>Description</th>
-               <th>Mandatory</th>
-               <th>Data_format</th>
-               <th>Example</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr>
-               <td>trait_description</td>
-               <td>Free-text description of the phenotype under investigation. Should be concise but clear to a non-specialist. Avoid abbreviations.</td>
-               <td><span class="req req-mand">Mandatory</span></td>
-               <td class="fmt">string</td>
-               <td class="ex">Ascorbic acid 3-sulfate levels</td>
-             </tr>
-             <tr>
-               <td>trait_ontology_id</td>
-               <td>Standard ontology identifier mapped to the trait (e.g., EFO, MONDO, HPO, DOID). Use the most specific term available.</td>
-               <td><span class="req req-opt">Optional</span></td>
-               <td class="fmt">CURIE (ontology prefix:ID)</td>
-               <td class="ex">EFO_0800173</td>
-             </tr>
-           </tbody>
-        </table>
-      </TabItem>
-      <TabItem value="inner3" label="GWAS (If it comes from GWAS Catalog)">
-        <table class="peg-schema">
-          <thead>
             <tr>
-              <th>Field</th>
-              <th>Description</th>
-              <th>Mandatory</th>
-              <th>Data_format</th>
-              <th>Example</th>
-            </tr> 
-          </thead>
-          <tbody>
-           <tr>
+              <td>trait_description</td>
+              <td>Free-text description of the phenotype under investigation. Should be concise but clear to a non-specialist. Avoid abbreviations.</td>
+              <td><span class="req req-mand">Mandatory</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">Ascorbic acid 3-sulfate levels</td>
+            </tr>
+            <tr>
+              <td>trait_ontology_id</td>
+              <td>Standard ontology identifier mapped to the trait (e.g., EFO, MONDO, HPO, DOID). Use the most specific term available.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">EFO_0800173</td>
+            </tr>
+            <tr>
               <td>gwas_source</td>
               <td>Identifier of the GWAS source. Prefer GWAS Catalog accession (GCST); if not available, use PubMed ID or another recognised accession.</td>
-              <td><span class="req req-opt">Recommended</span></td>
-              <td class="fmt">GCST[0-9]+, PMID, other accession ID</td>
+              <td><span class="req req-rec">Recommended</span></td>
+              <td class="fmt">string(GCST[0-9]+, PMID, other accession ID)</td>
               <td class="ex">GCST000001</td>
             </tr>
-          </tbody>
-        </table>
-      </TabItem>
-      <TabItem value="inner4" label="GWAS (other resources)">
-        <table class="peg-schema">
-            <thead>
-              <tr>
-                <th>Field</th>
-                <th>Description</th>
-                <th>Mandatory</th>
-                <th>Data_format</th>
-                <th>Example</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>gwas_source</td>
-                <td>Identifier of the GWAS source. Prefer GWAS Catalog accession (GCST); if not available, use PubMed ID or another recognised accession.</td>
-                <td><span class="req req-opt">Optional</span></td>
-                <td class="fmt">GCST[0-9]+, PMID, other accession ID</td>
-                <td class="ex">GCST000001</td>
-              </tr>
-              <tr>
-                <td>gwas_sample_description</td>
-                <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Detailed description of the GWAS samples (e.g., cohort name, case/control numbers, ancestry).</td>
-                <td><span class="req req-opt">Optional</span></td>
-                <td class="fmt">string</td>
-                <td class="ex">6,136 Finnish ancestry individuals</td>
-              </tr>
-              <tr>
+            <tr>
+              <td>gwas_sample_description</td>
+              <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Detailed description of the GWAS samples (e.g., cohort name, case/control numbers, ancestry).</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">6,136 Finnish ancestry individuals</td>
+            </tr>
+            <tr>
                 <td>gwas_sample_size</td>
                 <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Total number of individuals included in the GWAS analysis.</td>
                 <td><span class="req req-opt">Optional</span></td>
                 <td class="fmt">integer</td>
                 <td class="ex">6136</td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>gwas_case_control_study</td>
                 <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Indicator of whether the GWAS design is case–control (TRUE) or quantitative/other (FALSE).</td>
                 <td><span class="req req-opt">Optional</span></td>
                 <td class="fmt">boolean</td>
                 <td class="ex">FALSE</td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>gwas_sample_ancestry</td>
                 <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Free-text description of participant ancestry, as reported in the original study.</td>
                 <td><span class="req req-opt">Optional</span></td>
                 <td class="fmt">string</td>
                 <td class="ex">Finnish</td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>gwas_sample_ancestry_label</td>
                 <td>Harmonised ancestry label appropriate for the sample. For label definitions, see Morales et al., 2018 (Table 1). Only required if <code>gwas_source</code> is not a GWAS Catalog accession.</td>
                 <td><span class="req req-opt">Optional</span></td>
                 <td class="fmt">string (controlled vocabulary)</td>
                 <td class="ex">European</td>
-              </tr>
+            </tr>
            </tbody>
          </table> 
-      </TabItem>
-    </Tabs>
   </TabItem>
 
-  <TabItem value="outer2" label="🧬 Genomic Identifier">
+  <TabItem value="genomic-identifier" label="🧬 Genomic Identifier">
     Describes how `variants` are selected, which `gene identifier` system and version are used, and how `locus` are defined and named.
-    <Tabs>
-      <TabItem value="inner1" label="Variant">
         <table class="peg-schema">
           <thead>
             <tr>
               <th>Field</th>
               <th>Description</th>
-              <th>Mandatory</th>
+              <th>Requirement</th>
               <th>Data_format</th>
               <th>Example</th>
             </tr>
@@ -169,7 +121,7 @@ import TabItem from '@theme/TabItem';
             <tr>
               <td>variant_type</td>
               <td>Explanation of how the main variant was selected (e.g., lead, sentinel, index, mixed).</td>
-              <td><span class="req req-mand">Recommended</span></td>
+              <td><span class="req req-rec">Recommended</span></td>
               <td class="fmt">string</td>
               <td class="ex">lead</td>
             </tr>
@@ -183,25 +135,10 @@ import TabItem from '@theme/TabItem';
             <tr>
               <td>genome_build</td>
               <td>Genome assembly used to map variants.</td>
-              <td><span class="req req-opt">Recommended</span></td>
+              <td><span class="req req-mand">Mandatory</span></td>
               <td class="fmt">GRCh38, GRCh37, NCBI36, NCBI35, NCBI34</td>
               <td class="ex">GRCh38</td>
             </tr>
-          </tbody>
-        </table>
-      </TabItem>
-      <TabItem value="inner2" label="Gene">
-        <table class="peg-schema">
-          <thead>
-            <tr>
-              <th>Field</th>
-              <th>Description</th>
-              <th>Mandatory</th>
-              <th>Data_format</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
             <tr>
               <td>gene_id_source_version</td>
               <td>Version of the gene identifier source (e.g., Ensembl release).</td>
@@ -223,21 +160,6 @@ import TabItem from '@theme/TabItem';
               <td class="fmt">string</td>
               <td class="ex">/</td>
             </tr>
-          </tbody>
-        </table>
-      </TabItem>
-      <TabItem value="inner3" label="Locus">
-        <table class="peg-schema">
-          <thead>
-            <tr>
-              <th>Field</th>
-              <th>Description</th>
-              <th>Mandatory</th>
-              <th>Data_format</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
             <tr>
               <td>locus_type</td>
               <td>Method used to define locus boundaries (e.g., LD region, ±500kb window, fine-mapped credible set).</td>
@@ -261,178 +183,185 @@ import TabItem from '@theme/TabItem';
             </tr>
           </tbody>
         </table>
-      </TabItem>
-    </Tabs>
   </TabItem>
 
-  <TabItem value="outer3" label="🔎 Evidence">
+  <TabItem value="evidence" label="🔎 Evidence">
     <table class="peg-schema">
       <thead>
         <tr>
           <th>Field</th>
           <th>Description</th>
-          <th>Mandatory</th>
+          <th>Requirement</th>
           <th>Data_format / Allowed values</th>
           <th>Example</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Column_name</td>
-          <td>Unique column name used in the PEG evidence matrix. Should follow a consistent naming convention.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">any, suggest category_stream_[xyz]</td>
-          <td class="ex">QTL_eQTL-pancreas_pvalue</td>
-        </tr>
-        <tr>
-          <td>Column_description</td>
-          <td>Free text explanation of the content in this column.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">string</td>
-          <td class="ex">p-value from eQTL analysis in pancreas tissue</td>
-        </tr>
-        <tr>
-          <td>Stream_name</td>
+          <td>evidence_stream_tag</td>
           <td>Specific analysis stream within the evidence category.</td>
-          <td><span class="req req-opt">Optional</span></td>
-          <td class="fmt">string, e.g. eQTL, pQTL, sQTL, TWAs, PWAS etc.</td>
-          <td class="ex">eQTL</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string (e.g. eQTL, pQTL, sQTL, TWAS, PWAS etc.)</td>
+          <td class="ex">eQTL-pancreas</td>
         </tr>
         <tr>
-          <td>Category</td>
+          <td>evidence_category</td>
           <td>Full evidence category name from the [controlled list](../peg-evidence.md).</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">[Controlled vocabulary](../peg-evidence.md)</td>
           <td class="ex">Molecular QTL</td>
         </tr>
         <tr>
-          <td>Category_abbreviation</td>
+          <td>evidence_category_abbreviation</td>
           <td>Short label assigned from the [controlled list](../peg-evidence.md) of evidence categories.</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">[Controlled vocabulary](../peg-evidence.md)</td>
           <td class="ex">QTL</td>
         </tr>
         <tr>
-          <td>Class</td>
+          <td>variant_or_gene_centric</td>
           <td>Indicates whether the evidence originates from variant-level or gene-level analysis.</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">`variant-centric` or `gene-centric`</td>
           <td class="ex">variant-centric</td>
         </tr>
         <tr>
-          <td>Source_tag</td>
+          <td>source_tag</td>
           <td>Identifier for the data source, created in the **[`source tab`](./peg-metadata.md#source)**.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt"> any( preferred: lowercase with underscores)</td>
+          <td><span class="req req-opt">Optional</span></td>
+          <td class="fmt"> string (preferred: lowercase with underscores)</td>
           <td class="ex">source_gtex_pancreas</td>
         </tr>
         <tr>
-          <td>Method_tag</td>
+          <td>method_tag</td>
           <td>Identifier for the analysis method, created in the **[`method tab`](./peg-metadata.md#method)**.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">any ( preferred: lowercase with underscores)</td>
+          <td><span class="req req-opt">Optional</span></td>
+          <td class="fmt">string (preferred: lowercase with underscores)</td>
           <td class="ex">method_fastqtl</td>
         </tr>
         <tr>
-          <td>Threshold</td>
+          <td>threshold</td>
           <td>Threshold applied to define significance or inclusion criteria.</td>
           <td><span class="req req-opt">Optional</span></td>
           <td class="fmt">logical expression / numeric cutoff</td>
           <td class="ex">&lt; 0.05</td>
         </tr>
         <tr>
-          <td>Notes</td>
+          <td>note</td>
           <td>Additional free text clarifications to aid interpretation.</td>
           <td><span class="req req-opt">Optional</span></td>
-          <td class="fmt">any</td>
+          <td class="fmt">string</td>
           <td class="ex">Adjusted for covariates (age, sex, BMI)</td>
+        </tr>
+        <tr>
+          <td>column_header</td>
+          <td>Unique column name used in the PEG evidence matrix. Should follow a consistent naming convention.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">any, suggest category_stream_[xyz]</td>
+          <td class="ex">QTL_eQTL-pancreas_pvalue</td>
+        </tr>
+        <tr>
+          <td>column_description</td>
+          <td>Free text explanation of the content in this column.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string</td>
+          <td class="ex">p-value from eQTL analysis in pancreas tissue</td>
         </tr>
       </tbody>
     </table>
   </TabItem>
 
-  <TabItem value="outer4" label="🔗 Integration">
+  <TabItem value="integration" label="🔗 Integration">
     <table class="peg-schema">
       <thead>
         <tr>
           <th>Field</th>
           <th>Description</th>
-          <th>Mandatory</th>
+          <th>Requirement</th>
           <th>Data_format / Allowed values</th>
           <th>Example</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Column_name</td>
-          <td>Column name in the PEG evidence matrix. Use a consistent naming convention.</td>
+          <td>integration_tag</td>
+          <td>Author-assigned intregration analysis name that can be cited as evidence in the integrated_analysis_name field.</td>
           <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">INT_[descriptor]</td>
-          <td class="ex">INT_pops</td>
+          <td class="fmt">string</td>
+          <td class="ex">pops</td>
         </tr>
         <tr>
-          <td>Column_description</td>
-          <td>Explanation of the content in this column.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">Free text</td>
-          <td class="ex">Integrated score for prioritised gene using PoPS (gene prioritisation method combining GWAS signals, expression, pathways, and PPI data).</td>
-        </tr>
-        <tr>
-          <td>Integration_analysis</td>
-          <td>Author-assigned analysis name that can be cited as evidence in the integrated_analysis_name field.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">curated, computational, mixed</td>
-          <td class="ex">computational</td>
-        </tr>
-        <tr>
-          <td>Evidence_stream_name</td>
+          <td>evidence_streams_included</td>
           <td>A list of variant-centric or gene-centric evidence stream names combined in the integration.</td>
-          <td><span class="req req-mand">Optional</span></td>
+          <td><span class="req req-opt">Optional</span></td>
           <td class="fmt">List of controlled terms, separated by “|”</td>
           <td class="ex">FUNC &#124; eQTL &#124; pQTL &#124; FM &#124; 3D &#124; PHEWAS &#124; TWAS</td>
         </tr>
         <tr>
-          <td>Integrated_analysis_name</td>
-          <td> A list of Int_tag values from other integration analyses that are used as evidence in this analysis.</td>
-          <td><span class="req req-mand">Optional</span></td>
-          <td class="fmt">List of controlled terms, separated by “|”</td>
-          <td class="ex">FUNC &#124; eQTL &#124; pQTL &#124; FM &#124; 3D &#124; PHEWAS &#124; TWAS</td>
+          <td>integrations_included</td>
+          <td>A list of integration_tag values from other integration analyses that are included in this integration analysis.</td>
+          <td><span class="req req-opt">Optional</span></td>
+          <td class="fmt">List of integration tags, separated by “|”</td>
+          <td class="ex"> pops &#124; flame</td>
         </tr>
         <tr>
-          <td>Method_tag</td>
+          <td>method_tag</td>
           <td>Identifier for the analysis method (from Method tab).</td>
           <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">any (preferred: lowercase with underscores)</td>
+          <td class="fmt">string (preferred: lowercase with underscores)</td>
           <td class="ex">soft_pops</td>
         </tr>
         <tr>
-          <td>Threshold</td>
+          <td>threshold</td>
           <td>Threshold applied to define significance or inclusion criteria.</td>
           <td><span class="req req-opt">Optional</span></td>
           <td class="fmt">logical expression / numeric cutoff</td>
           <td class="ex">&gt; 3</td>
         </tr>
         <tr>
-          <td>Notes</td>
+          <td>note</td>
           <td>Extra details to aid interpretation.</td>
           <td><span class="req req-opt">Optional</span></td>
-          <td class="fmt">any</td>
+          <td class="fmt">string</td>
           <td class="ex">Weighted by tissue-specific relevance</td>
+        </tr>
+        <tr>
+          <td>column_header</td>
+          <td>Column name in the PEG evidence matrix. Use a consistent naming convention.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string (format: INT_[integration_tag]_[descriptor])</td>
+          <td class="ex">INT_pops</td>
+        </tr>
+        <tr>
+          <td>column_description</td>
+          <td>Explanation of the content in this column.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string</td>
+          <td class="ex">Integrated score for prioritised gene using PoPS (gene prioritisation method combining GWAS signals, expression, pathways, and PPI data).</td>
+        </tr>
+        <tr>
+          <td>author_conclusion</td>
+          <td>Indicates when values in this column reflect the authors’ conclusions for defining the PEG list. <br/>
+          NOTE: only **ONE** column per matrix can be assiged as `True`. PEGASUS recommend including the string 'author_conclusion' in the appropirate column header.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">Boolean (True / False)</td>
+          <td class="ex"> True </td>
         </tr>
       </tbody>
     </table>
   </TabItem>
 
-  <TabItem value="outer5" label="📚 Source">
-    The source metadata file mainly contains the `provenance` of source files and detailed `biosample` descriptions.
+  <TabItem value="source" label="📚 Source">
+    If all values in a column originate from the same source and a `source_tag` is used in the `evidence tab`, please reuse the same tag and ensure it complies with the requirements defined in the `source tab` here.<br/><br/>
+    The Source metadata file is primarily intended to capture the provenance of source files and to provide detailed biosample descriptions when this information is not already fully represented in the evidence matrix.
     <Tabs>
-      <TabItem value="inner1" label="Provenance">
+      <TabItem value="provenance" label="Provenance">
         <table class="peg-schema">
           <thead>
             <tr>
               <th>Field</th>
               <th>Description</th>
-              <th>Mandatory</th>
+              <th>Requirement</th>
               <th>Data_format / Allowed values</th>
               <th>Example</th>
             </tr>
@@ -446,55 +375,62 @@ import TabItem from '@theme/TabItem';
               <td class="ex">source_gtex_pancreas</td>
             </tr>
             <tr>
-              <td>Provenance</td>
+              <td>provenance</td>
               <td>Project, database, or lab providing the data.</td>
               <td><span class="req req-mand">Mandatory</span></td>
-              <td class="fmt">
+              <td class="fmt">string</td>
+              <td class="ex">
               • Use <code>lab_internal</code> for unpublished data generated by your lab.<br/>
               • Use <code>publication</code> for published data not deposited in a repository.<br/>
               • Use the official name of the resource (e.g., GTEx, ENCODE, Roadmap, UKB).
               </td>
-              <td class="ex">GTEx</td>
             </tr>
             <tr>
-              <td>File_Name</td>
+              <td>file_name</td>
               <td>Exact filename of the source dataset.</td>
               <td><span class="req req-opt">Optional</span></td>
-              <td class="fmt">any</td>
+              <td class="fmt">string</td>
               <td class="ex">GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_tpm.gct.gz</td>
             </tr>
             <tr>
-              <td>Version</td>
+              <td>version</td>
               <td>Version or release of the dataset.</td>
-              <td><span class="req req-mand">Optional</span></td>
-              <td class="fmt">any</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
               <td class="ex">v8</td>
             </tr>
             <tr>
-              <td>URL</td>
+              <td>url</td>
               <td>Web link to the source file used in the analysis. If multiple files are used, list each on a new line; other columns should remain identical.</td>
-              <td><span class="req req-mand">Optional</span></td>
+              <td><span class="req req-opt">Optional</span></td>
               <td class="fmt">URL</td>
               <td class="ex">https://gtexportal.org/</td>
             </tr>
             <tr>
-              <td>Accession</td>
+              <td>accession_id</td>
               <td>Accession identifier if the source file comes from the repository.</td>
               <td><span class="req req-opt">Optional</span></td>
-              <td class="fmt"> any (e.g., GEO, dbGaP, ENA ID)</td>
+              <td class="fmt"> string </td>
               <td class="ex">phs000424.v8.p2</td>
             </tr>
             <tr>
-              <td>DOI</td>
+              <td>doi</td>
               <td> DOI for the publication containing the source file.</td>
               <td><span class="req req-opt">Optional</span></td>
               <td class="fmt">DOI string</td>
               <td class="ex">10.1038/ng.2653</td>
             </tr>
+            <tr>
+              <td>note</td>
+              <td>Extra details to aid interpretation of the source</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex"> The analysis includes only samples from individuals aged 20–29. </td>
+           </tr>
           </tbody>
         </table>
       </TabItem>
-      <TabItem value="inner2" label="biosample">
+      <TabItem value="biosample" label="biosample">
         <table class="peg-schema">
           <thead>
             <tr>
@@ -506,96 +442,90 @@ import TabItem from '@theme/TabItem';
             </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Tissue</td>
-            <td>Primary tissue sampled (broad anatomical source).</td>
-            <td><span class="req req-mand">Optional</span></td>
-            <td class="fmt">any</td>
-            <td class="ex">pancreas</td>
-          </tr>
-          <tr>
-            <td>Sample_origin</td>
-            <td>Biological origin of the sample.</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">primary-tissue, organoid, cell-line, iPSC-derived, etc.</td>
-            <td class="ex">primary tissue</td>
-          </tr>
-          <tr>
-            <td>Cell_type</td>
-            <td>Specific cell type, if applicable.</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">any</td>
-            <td class="ex">alpha cells</td>
-          </tr>
-          <tr>
-            <td>Cell_line</td>
-            <td>Cell line name if sample_origin = "cell-line".</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">any</td>
-            <td class="ex">HeLa, K562</td>
-          </tr>
-          <tr>
-            <td>Disease</td>
-            <td>Disease status of the donor or sample.</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">healthy or disease name</td>
-            <td class="ex">healthy</td>
-          </tr>
-          <tr>
-            <td>Life_stage</td>
-            <td>Developmental stage of the biosample.</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt"> any (e.g., fetal, adult, embryonic, iPSC)</td>
-            <td class="ex">adult</td>
-          </tr>
-          <tr>
-            <td>Treatment</td>
-            <td>Treatments or perturbations applied prior to or during data generation.</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">any</td>
-            <td class="ex">anti-IgM treated</td>
-          </tr>
-          <tr>
-            <td>Sex</td>
-            <td>Sex composition of samples.</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">male, female, mixed</td>
-            <td class="ex">mixed</td>
-          </tr>
-          <tr>
-            <td>Age</td>
-            <td>Age of donors (number, range, or developmental notation).</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">any</td>
-            <td class="ex">20–70 years</td>
-          </tr>
-          <tr>
-            <td>Species</td>
-            <td>Organism from which the biosample is derived</td>
-            <td><span class="req req-mand">Mandatory</span></td>
-            <td class="fmt">Latin species name</td>
-            <td class="ex">Homo sapiens</td>
-          </tr>
-          <tr>
-            <td>Description</td>
-            <td>Brief summary of sample characteristics and intended use.</td>
-            <td><span class="req req-opt">Optional</span></td>
-            <td class="fmt">any</td>
-            <td class="ex">Bulk pancreas tissue from healthy adult donors in GTEx v8. Used for eQTL discovery. Donors male and female, aged 20–70 years, no treatment.</td>
-          </tr>
-                </tbody>
-              </table>
+            <tr>
+              <td>Tissue</td>
+              <td>Primary tissue sampled (broad anatomical source).</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">pancreas</td>
+            </tr>
+            <tr>
+              <td>sample_origin</td>
+              <td>Biological origin of the sample.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">primary-tissue, organoid, cell-line, iPSC-derived, etc.</td>
+              <td class="ex">primary tissue</td>
+            </tr>
+            <tr>
+              <td>Cell_type</td>
+              <td>Specific cell type, if applicable.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">alpha cells</td>
+            </tr>
+            <tr>
+              <td>cell_line</td>
+              <td>Cell line name if sample_origin = "cell-line".</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">HeLa, K562</td>
+            </tr>
+            <tr>
+              <td>disease</td>
+              <td>Disease status of the donor or sample.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">`healthy` or `disease`</td>
+              <td class="ex">healthy</td>
+            </tr>
+            <tr>
+              <td>life_stage</td>
+              <td>Developmental stage of the biosample.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt"> string (e.g., fetal, adult, embryonic, iPSC)</td>
+              <td class="ex">adult</td>
+            </tr>
+            <tr>
+              <td>treatment</td>
+              <td>Treatments or perturbations applied prior to or during data generation.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">anti-IgM treated</td>
+            </tr>
+            <tr>
+              <td>sex</td>
+              <td>Sex composition of samples.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">male, female, mixed</td>
+              <td class="ex">mixed</td>
+            </tr>
+            <tr>
+              <td>species</td>
+              <td>Organism from which the biosample is derived (Full latin name)</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">Homo sapiens</td>
+            </tr>
+            <tr>
+              <td>description</td>
+              <td>Brief summary of sample characteristics and intended use.</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">any</td>
+              <td class="ex">Bulk pancreas tissue from healthy adult donors in GTEx v8. Used for eQTL discovery. Donors male and female, aged 20–70 years, no treatment.</td>
+            </tr>
+          </tbody>
+        </table>
       </TabItem>
     </Tabs>
   </TabItem>
 
-  <TabItem value="outer6" label="⚙️Method">
+  <TabItem value="method" label="⚙️Method">
+    If the `method_tag` is used in the `evidence tab`, please reuse the same tag and ensure it complies with the requirements defined in the `method tab` here.<br/><br/>
     <table class="peg-schema">
       <thead>
         <tr>
           <th>Field</th>
           <th>Description</th>
-          <th>Mandatory</th>
+          <th>Requirement</th>
           <th>Data_format / Allowed values</th>
           <th>Example</th>
         </tr>
@@ -605,7 +535,7 @@ import TabItem from '@theme/TabItem';
           <td>method_tag</td>
           <td>Unique identifier for the method, used in the PEG evidence and integration metadata.</td>
           <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">free text (lowercase with underscores)</td>
+          <td class="fmt"> string(lowercase with underscores)</td>
           <td class="ex">soft_cadd</td>
         </tr>
         <tr>
@@ -616,17 +546,31 @@ import TabItem from '@theme/TabItem';
           <td class="ex">software</td>
         </tr>
         <tr>
+          <td>method_mode_ontology_term_id</td>
+          <td>
+            <strong>For evidence:</strong><br />
+            • Manual assertion (ECO:0000218)<br />
+            • Automatic assertion (ECO:0000203)<br /><br />
+            <strong>For integration:</strong><br />
+            • Manually integrated combinatorial evidence (ECO:0007674)<br />
+            • Automatically integrated combinatorial evidence (ECO:0007673)
+          </td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string</td>
+          <td class="ex">ECO_0007673</td>
+        </tr>
+        <tr>
           <td>software_name</td>
           <td>Name of the software used (if <code>method_mode = software</code>).</td>
           <td><span class="req req-opt">Optional</span></td>
-          <td class="fmt">any</td>
+          <td class="fmt">string</td>
           <td class="ex">CADD</td>
         </tr>
         <tr>
           <td>software_version</td>
           <td>Version of the software used.</td>
           <td><span class="req req-opt">Optional</span></td>
-          <td class="fmt">any</td>
+          <td class="fmt">string</td>
           <td class="ex">v1.6</td>
         </tr>
         <tr>
@@ -647,8 +591,15 @@ import TabItem from '@theme/TabItem';
           <td>method_description</td>
           <td>Detailed description of the method, workflow, or customisation applied.</td>
           <td><span class="req req-opt">Optional</span></td>
-          <td class="fmt">any</td>
+          <td class="fmt">string</td>
           <td class="ex">Custom scoring model combining eQTL and chromatin interaction data.</td>
+        </tr>
+        <tr>
+          <td>note</td>
+          <td>Extra details to aid interpretation of the method</td>
+          <td><span class="req req-opt">Optional</span></td>
+          <td class="fmt">string</td>
+          <td class="ex">CADD scores were used for variant annotation. Variants with low predicted impact were filtered prior to annotation.</td>
         </tr>
       </tbody>
     </table>
