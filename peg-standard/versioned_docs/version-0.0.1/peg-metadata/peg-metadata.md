@@ -321,14 +321,14 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>Source_tag</td>
-          <td>Identifier for the data source, created in the **[`source tab`](./peg-metadata.md#source)**.</td>
+          <td>Identifier for the data source, created in the **[`source tab`](./peg-metadata.md?peg-metadata-tab=source)**.</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt"> any( preferred: lowercase with underscores)</td>
           <td class="ex">source_gtex_pancreas</td>
         </tr>
         <tr>
           <td>Method_tag</td>
-          <td>Identifier for the analysis method, created in the **[`method tab`](./peg-metadata.md#method)**.</td>
+          <td>Identifier for the analysis method, created in the **[`method tab`](./peg-metadata.md?peg-metadata-tab=method)**.</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">any ( preferred: lowercase with underscores)</td>
           <td class="ex">method_fastqtl</td>
@@ -440,7 +440,7 @@ import TabItem from '@theme/TabItem';
           <tbody>
             <tr>
               <td>source_tag</td>
-              <td>Unique identifier for the source, this tag is referenced in the [evidence metadata](./peg-metadata.md#evidence) and [integration metadata](./peg-metadata.md#integration).</td>
+              <td>Unique identifier for the source, this tag is referenced in the [evidence metadata](./peg-metadata.md?peg-metadata-tab=evidence) and [integration metadata](./peg-metadata.md?peg-metadata-tab=integration).</td>
               <td><span class="req req-mand">Mandatory</span></td>
               <td class="fmt">any (preferred: lowercase with underscores)</td>
               <td class="ex">source_gtex_pancreas</td>

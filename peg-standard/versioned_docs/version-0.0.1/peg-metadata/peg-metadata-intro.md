@@ -51,9 +51,9 @@ The PEG metadata is currently organised into six tabs. The diagram below shows a
 
 Each entity contains fields that capture a different aspect of the dataset:
 
-- [**Dataset description**](./peg-metadata.md#dataset-description) - descriptors for the whole PEG matrix (trait, source of the matrix itself, publication reference, release date, creator)
-- [**Genomic Identifier**](./peg-metadata.md#genomic-identifier) – details about the variants, genes, or locus included in your dataset.
-- [**Evidence**](./peg-metadata.md#evidence) – supporting data types and experimental or computational evidence that link variants to genes or traits.
-- [**Integration**](./peg-metadata.md#integration) – information about how different streams of evidence are combined (e.g., scoring, weighting, prioritisation).
-- [**Source**](./peg-metadata.md#source) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
-- [**Method**](./peg-metadata.md#method) – a description of the methodology, pipelines, or softwares used to generate the data.
+- [**Dataset description**](./peg-metadata.md?peg-metadata-tab=dataset-description) - descriptors for the whole PEG matrix (trait, source of the matrix itself, publication reference, release date, creator)
+- [**Genomic Identifier**](./peg-metadata.md?peg-metadata-tab=genomic-identifier) – details about the variants, genes, or locus included in your dataset.
+- [**Evidence**](./peg-metadata.md?peg-metadata-tab=evidence) – supporting data types and experimental or computational evidence that link variants to genes or traits.
+- [**Integration**](./peg-metadata.md?peg-metadata-tab=integration) – information about how different streams of evidence are combined (e.g., scoring, weighting, prioritisation).
+- [**Source**](./peg-metadata.md?peg-metadata-tab=source) – citation and provenance information for each evidence stream, including publications, databases, and biosample details.
+- [**Method**](./peg-metadata.md?peg-metadata-tab=method) – a description of the methodology, pipelines, or softwares used to generate the data.
