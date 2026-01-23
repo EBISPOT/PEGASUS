@@ -109,7 +109,7 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 ### Evidence — General Pattern
-All variant-centric evidence columns are **optional**. However, PEGASUS suggest to include at least **TWO** evidence to support variant-gene-phenotype relationship.
+All variant-centric evidence columns are **optional**. However, PEGASUS suggest to include at least **TWO** pieces evidence to support variant-gene-phenotype relationship.
 
 **PEGASUS define a general reporting pattern:**
 <table class="peg-schema">

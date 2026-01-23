@@ -325,7 +325,7 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>column_header</td>
-          <td>Column name in the PEG evidence matrix. Use a consistent naming convention.</td>
+          <td>Column name in the PEG evidence matrix.</td>
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">string (format: INT_[integration_tag]_[descriptor])</td>
           <td class="ex">INT_pops</td>

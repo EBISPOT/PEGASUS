@@ -14,11 +14,11 @@ The PEG List is a concise summary of author-prioritised genes, linked transparen
 
 ## How it is derived
 
-Authors select the highest-ranked gene at each locus from the full Evidence Matrix using their specified integration approach (e.g., a combined score or decision rule). This explicit choice makes clear which integration represents the author’s conclusion and preserves a direct link back to the full evidence for reanalysis or benchmarking.
+Authors select the highest-ranked gene at each locus from the full Evidence Matrix using their specified integration approach (i.e. the method corresponding to the column labelled as `author_conclusion = TRUE`). The evidence and/or integration analyses supporting this conclusion are recorded in the PEG list, providing a clear link between the authors’ conclusion and the underlying evidence for reanalysis and benchmarking.
 
 ## Relationship to the Evidence Matrix
 
-- The PEG List does **not** replace the Evidence Matrix; it communicates the author’s prioritisation in a compact, interpretable form.
+- The PEG List does **NOT** replace the Evidence Matrix; it communicates the author’s prioritisation in a compact, interpretable form.
 - Users needing detailed or quantitative interpretation should refer to the underlying matrix, which retains all evaluated genes, evidence streams, and integration logic.
 - Different user groups can work at the level that suits their needs: experimental or translational users may focus on the PEG List for hypothesis generation, while computational users may work directly with the matrix.
 
@@ -72,8 +72,8 @@ Authors select the highest-ranked gene at each locus from the full Evidence Matr
 <table class="peg-schema">
   <thead>
     <tr>
-      <th>Primary Variant ID (rsID)</th>
-      <th>Gene symbol (HGNC)</th>
+      <th>Primary Variant ID</th>
+      <th>GeneSymbol (HGNC)</th>
       <th>GWAS</th>
       <th>PROX</th>
       <th>QTL</th>
@@ -91,7 +91,7 @@ Authors select the highest-ranked gene at each locus from the full Evidence Matr
   </thead>
   <tbody>
     <tr>
-      <td class="fmt">rs1234</td>
+      <td class="fmt">chr1:100000:T:C</td>
       <td>VTI1A</td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="GWAS present" /></td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="PROX present" /></td>
@@ -108,7 +108,7 @@ Authors select the highest-ranked gene at each locus from the full Evidence Matr
       <td class="fmt">STRONG</td>
     </tr>
     <tr>
-      <td class="fmt">rs5432</td>
+      <td class="fmt">chr2:20000:A:G</td>
       <td>ABO</td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="GWAS present" /></td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="PROX present" /></td>

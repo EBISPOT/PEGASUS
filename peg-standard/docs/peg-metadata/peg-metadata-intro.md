@@ -31,6 +31,7 @@ Each piece of evidence may be derived from external data (e.g. public databases 
 
 For detailed information on the attributes for each entity, please refer to the [PEG Metadata Standard](./peg-metadata.md) page.
 
+![Modulisation source and method tab](../img/metadata-serlisation.png)
 A single data source (e.g. GTEx bulk tissue expression data) can generate multiple pieces of evidences (e.g. gene expression patterns in different tissues), while the same method can be applied across multiple sources (e.g. FasteQTL applied to analysis GETx data or eQTLGen data). Modelling **source** and **method** as separate, reusable schema elements reduces duplication and supports consistent provenance, interpretability, and interoperability across PEG datasets.
 
 Each `source` and `method` is defined by a unique identifier (source_tag and method_tag), which can be referenced consistently across the `evidence` and `integration` metadata.

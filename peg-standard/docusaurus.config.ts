@@ -42,6 +42,15 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          // Serve the latest released docs by default, not the current ("next") docs.
+          lastVersion: '0.0.1',
+          versions: {
+            current: {
+              label: 'next',
+              path: 'next',
+              banner: 'unreleased',
+            },
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -105,6 +114,8 @@ const config: Config = {
       ],
     },
     docs: {
+      // Don't remember users' last selected version; always default to latest.
+      versionPersistence: 'none',
       sidebar: {
         autoCollapseCategories: false,
         hideable: true,

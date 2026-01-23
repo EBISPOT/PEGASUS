@@ -21,10 +21,10 @@ PEG Evidence Matrix propose presenting all evidence in a single structured table
     <tr>
       <th class="center vc-group">Primary Variant ID</th>
       <th class="center vc-group">rsID</th>
-      <th class="center gc-group">Gene ID</th>
-      <th class="center gc-group">Gene symbol</th>
-      <th class="center lo-group">Locus range</th>
-      <th class="center lo-group">Locus ID</th>
+      <th class="center gc-group">GeneID</th>
+      <th class="center gc-group">GeneSymbol</th>
+      <th class="center lo-group">Locus Range</th>
+      <th class="center lo-group">LocusID</th>
       <th class="center vc-group">GWAS_pvalue</th>
       <th class="center vc-group">FUNC_CADD</th>
       <th class="center vc-group">QTL_eQTL_aorta_pvalue</th>
@@ -136,8 +136,8 @@ The PEG List distils the matrix into a concise summary, highlighting the stronge
 <table class="peg-schema">
   <thead>
     <tr>
-      <th rowspan="2">rsID</th>
-      <th rowspan="2">Gene symbol</th>
+      <th rowspan="2">Primary Variant ID</th>
+      <th rowspan="2">GeneSymbol</th>
       <th class="center vc-group" colspan="3">Variant-centric</th>
       <th class="center gc-group" colspan="2">Gene-centric</th>
       <th rowspan="2">INT_Combined prediction <br/> (author score)</th>
@@ -152,7 +152,7 @@ The PEG List distils the matrix into a concise summary, highlighting the stronge
   </thead>
   <tbody>
     <tr>
-      <td class="fmt">rs1234</td>
+      <td class="fmt">chr1:100000:T:C</td>
       <td>Gene 1</td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="GWAS present" /></td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="FUNC present" /></td>
@@ -162,7 +162,7 @@ The PEG List distils the matrix into a concise summary, highlighting the stronge
       <td class="fmt">STRONG</td>
     </tr>
     <tr>
-      <td class="fmt">rs5432</td>
+      <td class="fmt">chr2:20000:A:G</td>
       <td>Gene 4</td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="GWAS present" /></td>
       <td class="chk"><input type="checkbox" checked disabled aria-label="FUNC present" /></td>
