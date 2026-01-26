@@ -8,19 +8,20 @@ The PEG List is a concise summary of author-prioritised genes, linked transparen
 
 ## What the PEG List captures
 
-- Shows the gene (identifier and symbol) that the authors consider most likely causal at each locus.
-- Indicates which broad evidence categories were considered when reaching that conclusion, offering a fast overview of evidence types without describing direction or strength.
-- Records the author’s chosen integration or scoring stream so that the selection logic is transparent and reproducible.
+- Shows the gene (identifier and symbol) that the authors consider most likely to be the effector at each locus.
+- Indicates which broad evidence categories were considered when reaching that conclusion, offering a fast overview of evidence types.
+- Records which integration or scoring was used in the final concusion, so that the selection logic is transparent and reproducible.
 
 ## How it is derived
 
-Authors select the highest-ranked gene at each locus from the full Evidence Matrix using their specified integration approach (i.e. the method corresponding to the column labelled as `author_conclusion = TRUE`). The evidence and/or integration analyses supporting this conclusion are recorded in the PEG list, providing a clear link between the authors’ conclusion and the underlying evidence for reanalysis and benchmarking.
+- Authors select the highest-ranked gene at each locus from the full Evidence Matrix using their specified integration approach (i.e. the method corresponding to the column labelled as `author_conclusion = TRUE`).
+- An overview of the evidence and/or integration analyses supporting this conclusion are recorded in the PEG list, in addition to  details in the Evidence Matrix, providing a clear link between the authors’ conclusion and the underlying evidence for reanalysis and benchmarking.
 
 ## Relationship to the Evidence Matrix
 
 - The PEG List does **NOT** replace the Evidence Matrix; it communicates the author’s prioritisation in a compact, interpretable form.
-- Users needing detailed or quantitative interpretation should refer to the underlying matrix, which retains all evaluated genes, evidence streams, and integration logic.
-- Different user groups can work at the level that suits their needs: experimental or translational users may focus on the PEG List for hypothesis generation, while computational users may work directly with the matrix.
+- Users needing detailed, directional or quantitative interpretation should refer to the underlying matrix, which retains all evaluated genes, evidence streams, and integration logic.
+- Different user groups can work at the level that suits their needs: for example experimental or translational users might focus on the PEG List for hypothesis generation, while computational users may work directly with the matrix for detailed analysis.
 
 ## Standard fields
 
