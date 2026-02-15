@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
         <th>Example data</th>
       </tr>
       <tr>
-        <td><b>Primary Variant ID</b></td>
+        <td><b>PrimaryVariantID</b></td>
         <td className="fmt">chr:bp:ref:alt</td>
         <td>Is the variant to which variant-centric evidence relates. Is the primary row ID. Primary variant may be lead variant, variant in LD with lead, or fine mapped SNPs at locus - this should be defined in the metadata file.</td>
         <td className="req req-mand">Mandatory</td>
@@ -84,7 +84,7 @@ import TabItem from '@theme/TabItem';
         <th>Example data</th>
       </tr>
       <tr>
-        <td><b>Locus Range</b></td>
+        <td><b>LocusRange</b></td>
         <td className="fmt">chr:pos:start-end</td>
         <td>The range around the primary variant considered in this analysis.</td>
         <td className="req req-rec">Recommended</td>
