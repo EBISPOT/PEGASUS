@@ -34,9 +34,9 @@ This typically means:
 - Keep gene-centric evidence columns identical for all variants mapped to the same gene when applicable
 
 Minimum identifiers to include:
-- `Primary Variant ID`
-- `Gene ID`
-- `Gene symbol`
+- `PrimaryVariantID`
+- `GeneID`
+- `GeneSymbol`
 
 ## Step-by-step preparation
 
@@ -53,7 +53,7 @@ Minimum identifiers to include:
 
 ### 3) Add integration columns (optional but recommended)
 - Use `INT_[tag]_[detail]`, where `[tag]` is what you assigned in the metadata.
-- Ensure exactly **ONE** integration column is marked as the `author conclusion` in metadata
+- Ensure exactly **ONE** integration column is marked as the `author_conclusion` in metadata
 - Keep integration logic transparent and documented
 
 ### 4) Align with metadata
