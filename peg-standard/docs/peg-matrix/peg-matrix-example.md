@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
       <tbody>
         <tr>
           <td>GWAS</td>
-          <td><code>GWAS_pvalue</code></td>
+          <td><code>Gwas_Pvalue</code></td>
           <td class="fmt">Exponent or −log10</td>
           <td>P-value of the primary variant in the source GWAS. Specify whether exponent (e.g. <code>4×10⁻⁹</code>) or −log10 scale in the metadata file.</td>
           <td class="req req-opt">optional</td>
@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>QTL</td>
-          <td><code>QTL_eQTL_pancreas_pvalue</code></td>
+          <td><code>QTL_eQTL_Pancreas_Pvalue</code></td>
           <td class="fmt">exponent or -log10</td>
           <td>Significance value for eQTL association in pancreas tissue.</td>
           <td class="req req-opt">optional</td>
@@ -53,7 +53,7 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>QTL</td>
-          <td><code>QTL_eQTL_pancreas_CI</code></td>
+          <td><code>QTL_eQTL_Pancreas_CI</code></td>
           <td class="fmt">range</td>
           <td>Confidence interval for the eQTL effect. Define confidence level (e.g. 95%) in metadata.</td>
           <td class="req req-opt">optional</td>
@@ -110,7 +110,7 @@ import TabItem from '@theme/TabItem';
       <tbody>
         <tr>
           <td>TWAS</td>
-          <td><code>TPWAS_TWAS_pvalue</code></td>
+          <td><code>TPWAS_TWAS_Pvalue</code></td>
           <td class="fmt">float</td>
           <td>Transcriptome-wide association study (TWAS) p-value linking gene expression to trait.</td>
           <td class="req req-opt">optional</td>
@@ -120,13 +120,13 @@ import TabItem from '@theme/TabItem';
           <td>Expression</td>
           <td><code>EXP_Adipose_TPM</code></td>
           <td class="fmt">float</td>
-          <td>Expression level of the gene in adipose tissue, reported as Reads Per Million per Kilobase (RPMK) or Transcripts Per Million (TPM).</td>
+          <td>Expression level of the gene in adipose tissue, reported as Reads Per Million per Kilobase (RPKM) or Transcripts Per Million (TPM).</td>
           <td class="req req-opt">optional</td>
           <td class="ex">0.8</td>
         </tr>
         <tr>
           <td>Expression</td>
-          <td><code>EXP_pancreas_TPM</code></td>
+          <td><code>EXP_Pancreas_TPM</code></td>
           <td class="fmt">float</td>
           <td>Expression level of the gene in pancreas tissue, reported as RPMK or TPM.</td>
           <td class="req req-opt">optional</td>
@@ -134,7 +134,7 @@ import TabItem from '@theme/TabItem';
         </tr>
         <tr>
           <td>Perturbation</td>
-          <td><code>PERTURB_mouse</code></td>
+          <td><code>PERTURB_Mouse</code></td>
           <td class="fmt">Free text / ontology terms</td>
           <td>Observed phenotype in mouse perturbation models (e.g., knockout, overexpression). Terms can be free text or ontology labels, defined in metadata.</td>
           <td class="req req-opt">optional</td>
@@ -189,14 +189,14 @@ import TabItem from '@theme/TabItem';
       </thead>
       <tbody>
         <tr>
-          <td><code>INT_pops</code></td>
+          <td><code>INT_Pops</code></td>
           <td class="fmt">float</td>
           <td>Population count or weighted metric used in integration scoring. Define precise meaning and provenance in the metadata file.</td>
           <td class="req req-opt">optional</td>
           <td class="ex">9</td>
         </tr>
         <tr>
-          <td><code>INT_CombinedPredictionAuthorScore</code></td>
+          <td><code>INT_AuthorScore</code></td>
           <td class="fmt">any</td>
           <td>Author-provided integrated prediction score. Units, scale, or categories (e.g. <code>STRONG</code>, <code>WEAK</code>) must be described in the metadata file.</td>
           <td class="req req-opt">optional</td>

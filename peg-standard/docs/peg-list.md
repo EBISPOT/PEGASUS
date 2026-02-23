@@ -59,7 +59,7 @@ The PEG List is a concise summary of author-prioritised genes, linked transparen
       <td class="ex">TRUE</td>
     </tr>
     <tr>
-      <td><span class="fmt">INT_Combined_prediction (author conclusion)</span></td>
+      <td><span class="fmt">INT_AuthorConclusion</span></td>
       <td class="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
       <td>Integrated gene prioritisation outcome, derived from the integration column in the matrix with `author_conclusion = TRUE` in the metadata.</td>
       <td><span class="req req-mand">Mandatory</span></td>

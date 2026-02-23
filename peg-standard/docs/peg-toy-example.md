@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 8
 ---
 # Toy Data (PEGASUS Framework applied) 🎠 
 
@@ -140,7 +140,7 @@ The PEG List distils the matrix into a concise summary, highlighting the stronge
       <th rowspan="2">GeneSymbol</th>
       <th class="center vc-group" colspan="3">Variant-centric</th>
       <th class="center gc-group" colspan="2">Gene-centric</th>
-      <th rowspan="2">INT_Combined_prediction_Author Score</th>
+      <th rowspan="2">INT_AuthorScore</th>
     </tr>
     <tr>
       <th class="center">GWAS</th>
@@ -197,7 +197,7 @@ import TabItem from '@theme/TabItem';
           <th>trait_ontology_id</th>
           <th>peg_source</th>
           <th>gwas_source</th>
-          <th>sample_description</th>
+          <th>gwas_sample_description</th>
           <th>sample_size</th>
           <th>case_control_study</th>
           <th>sample_ancestry</th>
@@ -229,7 +229,7 @@ import TabItem from '@theme/TabItem';
           <th>genome_build</th>
           <th>gene_id_source_version</th>
           <th>gene_symbol_source_version</th>
-          <th>info</th>
+          <th>gene_info</th>
           <th>locus_type</th>
           <th>locus_id</th>
           <th>locus_info</th>
@@ -360,8 +360,8 @@ import TabItem from '@theme/TabItem';
           <td>NA</td>
         </tr>
         <tr>
-          <td>CombinedPrediction</td>
-          <td>INT_CombinedPrediction_AuthorScore</td>
+          <td>AuthorScore</td>
+          <td>INT_AuthorScore</td>
           <td>Combined prediction based on manual review of all evidence types and PoPS output</td>
           <td>True</td>
           <td>PROX | REG | LIT | PoPS</td>
@@ -386,7 +386,7 @@ import TabItem from '@theme/TabItem';
           <th>file_name</th>
           <th>version</th>
           <th>url</th>
-          <th>accesstion</th>
+          <th>accession_id</th>
           <th>doi</th>
           <th>sample_origin</th>
           <th>tissue</th>
@@ -530,7 +530,7 @@ import TabItem from '@theme/TabItem';
           <td>NA</td>
         </tr>
         <tr>
-          <td>method_customise</td>
+          <td>method_customised</td>
           <td>manual</td>
           <td>NA</td>
           <td>NA</td>
@@ -551,7 +551,6 @@ import TabItem from '@theme/TabItem';
     </table>
   </TabItem>
 </Tabs> 
-
 
 ### PEG Metadata in YAML (suitable for reader)
 Using YAML for metadata keeps all information on one page in a structured format, so users can easily search and extract the details they need, and is both human and machine-readable. 
@@ -591,3 +590,13 @@ import CodeBlock from '@theme/CodeBlock';
     }}
   </BrowserOnly>
 </details>
+
+## Download Data
+
+If you would like to download the data to investigate further, we provide the following resources:
+
+1. **Schema**: <a href="./static/downloads/standard/PEGASUS-v0.0.2.xlsx" download>PEGASUS-v0.0.2.xlsx</a>
+2. **Submission template**: <a href="https://github.com/jiyue1214/PEGASUS_metadata_template/raw/main/templates/metadata_peg_template.xlsx" download>Metadata_Template-v0.0.2</a>
+3. **Example data**:
+   - Toy data: [Download ZIP](http://download-directory.github.io/?url=https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/toy_data) · [Browse on GitHub](https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/toy_data)
+   - Real data: [Download ZIP](http://download-directory.github.io/?url=https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/real_data) · [Browse on GitHub](https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/real_data)
