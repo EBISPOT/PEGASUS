@@ -38,13 +38,6 @@ import TabItem from '@theme/TabItem';
           </thead>
           <tbody>
             <tr>
-              <td>peg_source</td>
-              <td>Identifier of the origin of the PEG list (e.g., publication, DOI, preprint, URL).</td>
-              <td><span class="req req-rec">Recommended</span></td>
-              <td class="fmt">string (PMID, DOI, URL)</td>
-              <td class="ex">PMID:36357675</td>
-            </tr>
-            <tr>
               <td>trait_description</td>
               <td>Free-text description of the phenotype under investigation. Should be concise but clear to a non-specialist. Avoid abbreviations.</td>
               <td><span class="req req-mand">Mandatory</span></td>
@@ -57,6 +50,13 @@ import TabItem from '@theme/TabItem';
               <td><span class="req req-opt">Optional</span></td>
               <td class="fmt">string</td>
               <td class="ex">EFO_0800173</td>
+            </tr>
+            <tr>
+              <td>peg_source</td>
+              <td>Identifier of the origin of the PEG list (e.g., publication, DOI, preprint, URL).</td>
+              <td><span class="req req-rec">Recommended</span></td>
+              <td class="fmt">string (PMID, DOI, URL)</td>
+              <td class="ex">PMID:36357675</td>
             </tr>
             <tr>
               <td>gwas_source</td>
@@ -195,6 +195,20 @@ import TabItem from '@theme/TabItem';
         </tr>
       </thead>
       <tbody>
+      <tr>
+          <td>column_header</td>
+          <td>Unique column name used in the PEG evidence matrix. Should follow a consistent naming convention.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">any, suggest category_stream_[xyz]</td>
+          <td class="ex">QTL_eQTL-pancreas_pvalue</td>
+        </tr>
+        <tr>
+          <td>column_description</td>
+          <td>Free text explanation of the content in this column.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string</td>
+          <td class="ex">p-value from eQTL analysis in pancreas tissue</td>
+        </tr>
         <tr>
           <td>evidence_stream_tag</td>
           <td>Specific analysis stream within the evidence category.</td>
@@ -251,20 +265,6 @@ import TabItem from '@theme/TabItem';
           <td class="fmt">string</td>
           <td class="ex">Adjusted for covariates (age, sex, BMI)</td>
         </tr>
-        <tr>
-          <td>column_header</td>
-          <td>Unique column name used in the PEG evidence matrix. Should follow a consistent naming convention.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">any, suggest category_stream_[xyz]</td>
-          <td class="ex">QTL_eQTL-pancreas_pvalue</td>
-        </tr>
-        <tr>
-          <td>column_description</td>
-          <td>Free text explanation of the content in this column.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">string</td>
-          <td class="ex">p-value from eQTL analysis in pancreas tissue</td>
-        </tr>
       </tbody>
     </table>
   </TabItem>
@@ -287,6 +287,28 @@ import TabItem from '@theme/TabItem';
           <td><span class="req req-mand">Mandatory</span></td>
           <td class="fmt">string</td>
           <td class="ex">pops</td>
+        </tr>
+        <tr>
+          <td>column_header</td>
+          <td>Column name in the PEG evidence matrix.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string (format: INT_[integration_tag]_[descriptor])</td>
+          <td class="ex">INT_pops</td>
+        </tr>
+        <tr>
+          <td>column_description</td>
+          <td>Explanation of the content in this column.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">string</td>
+          <td class="ex">Integrated score for prioritised gene using PoPS (gene prioritisation method combining GWAS signals, expression, pathways, and PPI data).</td>
+        </tr>
+        <tr>
+          <td>author_conclusion</td>
+          <td>Indicates when values in this column reflect the authors’ conclusions for defining the PEG list. <br/>
+          NOTE: only **ONE** column per matrix can be assiged as `True`. PEGASUS recommend including the string 'author_conclusion' in the appropirate column header.</td>
+          <td><span class="req req-mand">Mandatory</span></td>
+          <td class="fmt">Boolean (True / False)</td>
+          <td class="ex"> True </td>
         </tr>
         <tr>
           <td>evidence_streams_included</td>
@@ -322,28 +344,6 @@ import TabItem from '@theme/TabItem';
           <td><span class="req req-opt">Optional</span></td>
           <td class="fmt">string</td>
           <td class="ex">Weighted by tissue-specific relevance</td>
-        </tr>
-        <tr>
-          <td>column_header</td>
-          <td>Column name in the PEG evidence matrix.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">string (format: INT_[integration_tag]_[descriptor])</td>
-          <td class="ex">INT_pops</td>
-        </tr>
-        <tr>
-          <td>column_description</td>
-          <td>Explanation of the content in this column.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">string</td>
-          <td class="ex">Integrated score for prioritised gene using PoPS (gene prioritisation method combining GWAS signals, expression, pathways, and PPI data).</td>
-        </tr>
-        <tr>
-          <td>author_conclusion</td>
-          <td>Indicates when values in this column reflect the authors’ conclusions for defining the PEG list. <br/>
-          NOTE: only **ONE** column per matrix can be assiged as `True`. PEGASUS recommend including the string 'author_conclusion' in the appropirate column header.</td>
-          <td><span class="req req-mand">Mandatory</span></td>
-          <td class="fmt">Boolean (True / False)</td>
-          <td class="ex"> True </td>
         </tr>
       </tbody>
     </table>
@@ -440,13 +440,6 @@ import TabItem from '@theme/TabItem';
           </thead>
           <tbody>
             <tr>
-              <td>Tissue</td>
-              <td>Primary tissue sampled (broad anatomical source).</td>
-              <td><span class="req req-opt">Optional</span></td>
-              <td class="fmt">string</td>
-              <td class="ex">pancreas</td>
-            </tr>
-            <tr>
               <td>sample_origin</td>
               <td>Biological origin of the sample.</td>
               <td><span class="req req-opt">Optional</span></td>
@@ -454,7 +447,14 @@ import TabItem from '@theme/TabItem';
               <td class="ex">primary tissue</td>
             </tr>
             <tr>
-              <td>Cell_type</td>
+              <td>tissue</td>
+              <td>Primary tissue sampled (broad anatomical source).</td>
+              <td><span class="req req-opt">Optional</span></td>
+              <td class="fmt">string</td>
+              <td class="ex">pancreas</td>
+            </tr>
+            <tr>
+              <td>cell_type</td>
               <td>Specific cell type, if applicable.</td>
               <td><span class="req req-opt">Optional</span></td>
               <td class="fmt">string</td>

@@ -18,9 +18,13 @@ import TabItem from '@theme/TabItem';
         <th>Example data</th>
       </tr>
       <tr>
-        <td><b>Primary Variant ID</b></td>
+        <td><b>PrimaryVariantID</b></td>
         <td className="fmt">chr:bp:ref:alt</td>
-        <td>Is the variant to which variant-centric evidence relates. Is the primary row ID. Primary variant may be lead variant, variant in LD with lead, or fine mapped SNPs at locus - this should be defined in the metadata file.</td>
+        <td>
+              * Is the variant to which variant-centric evidence relates.<br/><br/>
+              * Is the primary row ID.<br/><br/>
+              * Primary variant may be lead variant, variant in LD with lead, or fine mapped SNPs at locus - this should be defined in the metadata file.<br/><br/>
+          </td>
         <td className="req req-mand">Mandatory</td>
         <td className="ex">chr10:114754071:T:C</td>
       </tr>
@@ -28,13 +32,13 @@ import TabItem from '@theme/TabItem';
         <td><b>rsID</b></td>
         <td className="fmt">rs[]</td>
         <td>The rsID of the primary variant.</td>
-        <td className="req req-opt">optional</td>
+        <td className="req req-opt">Optional</td>
         <td className="ex">rs1234</td>
       </tr>
       <tr>
         <td><b>Var_[xyz]</b></td>
         <td className="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
-        <td>Other columns relating to variant identification may be added, PEGASUS recommend using the format <span className="fmt">VAR_[xyz]</span> and should be defined in the metadata file.</td>
+        <td>Other columns relating to variant identification may be added, PEGASUS recommend using the format <span className="fmt">Var_[xyz]</span> and should be defined in the metadata file.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">bespoke</td>
       </tr>
@@ -84,7 +88,7 @@ import TabItem from '@theme/TabItem';
         <th>Example data</th>
       </tr>
       <tr>
-        <td><b>Locus Range</b></td>
+        <td><b>LocusRange</b></td>
         <td className="fmt">chr:pos:start-end</td>
         <td>The range around the primary variant considered in this analysis.</td>
         <td className="req req-rec">Recommended</td>
@@ -92,7 +96,7 @@ import TabItem from '@theme/TabItem';
       </tr>
       <tr>
         <td><b>LocusID</b></td>
-        <td className="fmt">any</td>
+        <td className="fmt">Bespoke</td>
         <td> An internal or curated ID for the region considered. PEGASUS recommend the associated variant  (<span className="fmt">chr:bp</span> or <span className="fmt">rsID</span>); internal IDs may be e.g. 'Locus 1, Locus 2'.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">chr10:114754071:T:C</td>
@@ -100,7 +104,7 @@ import TabItem from '@theme/TabItem';
       <tr>
         <td><b>Locus_[xyz]</b></td>
         <td className="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
-        <td>Other columns relating to the gene may be added, PEGASUS recommend using the header format <span className="fmt">Locus_[xyz]</span>, and should be defined in the metadata file.</td>
+        <td>Other columns relating to the locus may be added, PEGASUS recommend using the header format <span className="fmt">Locus_[xyz]</span>, and should be defined in the metadata file.</td>
         <td className="req req-opt">Optional</td>
         <td className="ex">bespoke</td>
       </tr>
@@ -130,7 +134,7 @@ All variant-centric evidence columns are **optional**. However, PEGASUS suggest 
       `Category`: Use the abbreviated category name from the [evidence categories listed](../peg-evidence.md) in controlled list.<br/><br/>
       `(stream)` is optional and is only required when multiple evidence streams are used within a single category (e.g. QTL_eqtl).<br/><br/>
       `[details]` is a user-defined suffix that reflects the content of the data.<br/><br/>
-      For any field consisting of multiple words, please use **CamelCase**. For example, credible set id should be written as `CredibleSetId`.<br/><br/> If no category in the list are applicable, please use `Other_[CustomisedCategory]_(stream)_[details]`</td>
+      For any field consisting of multiple words, please use **CamelCase**. For example, credible set id should be written as `CredibleSetID`.<br/><br/> If no category in the list are applicable, please use `Other_[CustomisedCategory]_(stream)_[details]`</td>
       <td class="req req-opt">Optional</td>
       <td>[variant-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=variant);<br/><br/>[gene-centric evidence examples](./peg-matrix-example.md?matrix-example-tab=gene)</td>
     </tr>

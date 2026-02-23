@@ -7,7 +7,7 @@ hide_table_of_contents: true
 💡 To make data submission easier, we provide an Excel template with six tabs (one per entity type), specifically designed to help submitters capture the relevant fields efficiently.
 
 :::tip
-[📊 Download metadata google sheet template](https://docs.google.com/spreadsheets/d/1-qn2jM3Ptk-qdvotQkRAQZQ2tRHV7cvg2j6KFLrf5nM/edit?gid=0#gid=0)
+<a href="https://github.com/jiyue1214/PEGASUS_metadata_template/raw/main/templates/metadata_peg_template.xlsx" download>📊 Download metadata template - v0.0.2</a>
 :::
 
 If you have questions about any attribute for each entity, we also provide detailed explanations [here](../peg-metadata/peg-metadata.md#standard-content). We are more than happy to hear from you — please feel free to contact us if you have further questions.

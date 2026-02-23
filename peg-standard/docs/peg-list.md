@@ -37,14 +37,14 @@ The PEG List is a concise summary of author-prioritised genes, linked transparen
   </thead>
   <tbody>
     <tr>
-      <td>variant_id</td>
+      <td>PrimaryVariantID</td>
       <td class="fmt">chr:pos:ref:alt</td>
       <td>Variant identifier</td>
       <td><span class="req req-mand">Mandatory</span></td>
       <td class="ex">chr10:114754071:T:C</td>
     </tr>
     <tr>
-      <td>Gene symbol</td>
+      <td>GeneSymbol</td>
       <td class="fmt">HGNC</td>
       <td>HGNC gene symbol associated with the variant</td>
       <td><span class="req req-mand">Mandatory</span></td>
@@ -59,7 +59,7 @@ The PEG List is a concise summary of author-prioritised genes, linked transparen
       <td class="ex">TRUE</td>
     </tr>
     <tr>
-      <td><span class="fmt">INT_Combined_prediction (author conclusion)</span></td>
+      <td><span class="fmt">INT_AuthorConclusion</span></td>
       <td class="fmt">Bespoke<br/><br/>(Any data type, as long as it is used consistently within the column.)</td>
       <td>Integrated gene prioritisation outcome, derived from the integration column in the matrix with `author_conclusion = TRUE` in the metadata.</td>
       <td><span class="req req-mand">Mandatory</span></td>
@@ -73,8 +73,8 @@ The PEG List is a concise summary of author-prioritised genes, linked transparen
 <table class="peg-schema">
   <thead>
     <tr>
-      <th>Primary Variant ID</th>
-      <th>GeneSymbol (HGNC)</th>
+      <th>PrimaryVariantID</th>
+      <th>GeneSymbol</th>
       <th>GWAS</th>
       <th>PROX</th>
       <th>QTL</th>
@@ -87,7 +87,7 @@ The PEG List is a concise summary of author-prioritised genes, linked transparen
       <th>KNOW</th>
       <th>LIT</th>
       <th>DRUG</th>
-      <th>INT_Combined prediction (author score)</th>
+      <th>INT_CombinedPrediction_AuthorScore</th>
     </tr>
   </thead>
   <tbody>

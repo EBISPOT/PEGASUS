@@ -17,7 +17,7 @@ When scientists run a genome-wide association study (GWAS), they often find many
 - Which gene does that variant influence?
 - And how does that gene’s altered activity contribute to disease?
 
-### Why Predicted Effector Effector Genes matter:
+### Why Predicted Effector Genes matter:
 
 - Variant → Phenotype: GWAS tells us that certain variants are statistically associated with a trait at the population level. But statistics alone don’t prove how the variant causes the phenotype.
 

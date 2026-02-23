@@ -1,142 +1,143 @@
-dataset_description:
-  peg_source: "PMID:36357675"
-  gwas_source: "PMID:36357675"
-  sample:
-    sample_description: "6,136 Finnish ancestry individuals"
-    sample_size: 6136
-    case_control_numbers: false
-    sample_ancestry: "Finland"
-    sample_ancestry_label: "European"
-  trait_description: "Ascorbic acid 3-sulfate levels"
-  trait_ontology_id: "EFO_0800173"
+DatasetDescription:
+- trait_description: type 2 diabetes
+  trait_ontology_id: EFO_0800173
+  gwas_source: PMID:36357675
+  peg_source: PMID:36357675
+  gwas_samples_description: 6,136 Finnish ancestry individuals
+  gwas_sample_size: 6136
+  gwas_case_control_study: false
+  gwas_sample_ancestry: Finland
+  gwas_sample_ancestry_label: European
+GenomicIdentifier:
+- variant_type: lead
+  genome_build: GRCh38
+  variant_information: The primary variant is the variant with the most significant
+    association p-value in the study
+  gene_id_source_version: Ensembl v109
+  gene_symbol_source_version: HGNC 2025-07-30
+  locus_type: LD
+  locus_id: Lead SNP
+Evidence:
+- column_header: GWAS_pvalue
+  column_description: Association p-value for each variant from the GWAS study
+  evidence_category: Genome-wide association (GWAS) signal
+  evidence_category_abbreviation: GWAS
+  variant_or_gene_centric: variant-centric
+- column_header: FUNC_CADD
+  column_description: CADD score representing the predicted functional impact of the
+    variant
+  evidence_category: Predicted functional impact
+  evidence_category_abbreviation: FUNC
+  variant_or_gene_centric: variant-centric
+  source_tag: source_cadd
+  source:
+    source_tag: source_cadd
+    provenance: CADD
+    file_name: All possible SNVs of GRCh38/hg38 incl. all annotations
+    version: v1.7
+    url: https://kircherlab.bihealth.org/download/CADD/v1.7/GRCh38/whole_genome_SNVs.tsv.gz
+- column_header: QTL_eQTL_aorta_pvalue
+  column_description: p-value from expression QTL (eQTL) analysis in aorta tissue
+  evidence_stream_tag: eQTL
+  evidence_category: Molecular QTL
+  evidence_category_abbreviation: QTL
+  variant_or_gene_centric: variant-centric
+  source_tag: source_gtex_aorta_qtl
+  method_tag: soft_fastqtl
+  threshold: qvalue < 0.05
+  source:
+    source_tag: source_gtex_aorta_qtl
+    provenance: GTEx
+    file_name: GTEx_Analysis_v10_eQTL.tar
+    version: v10
+    url: https://storage.googleapis.com/adult-gtex/bulk-qtl/v10/single-tissue-cis-qtl/GTEx_Analysis_v10_eQTL.tar
+    sample_origin: aorta
+    tissue: primary tissue
+    disease: healthy
+    life_stage: adult
+    sex: mixed
+    species: Homo sapiens
+  method:
+    method_tag: soft_fastqtl
+    method_mode: software
+    method_mode_ontology_term_id: ECO_0000203
+    software_name: FastQTL
+    software_version: v1.0
+    software_url: https://github.com/francois-a/fastqtl
+    software_doi: 10.1093/BIOINFORMATICS/BTV722
+- column_header: EXP_aorta_RPKM
+  column_description: Gene expression level in aorta tissue, measured in RPKM
+  evidence_category: Expression
+  evidence_category_abbreviation: EXP
+  variant_or_gene_centric: gene-centric
+  source_tag: source_gtex_aorta_rna
+  source:
+    source_tag: source_gtex_aorta_rna
+    provenance: GTEx
+    file_name: GTEx_Analysis_v10_RNASeQCv2.4.2_gene_tpm.gct.gz
+    version: v10
+    url: https://storage.googleapis.com/adult-gtex/bulk-gex/v10/rna-seq/GTEx_Analysis_v10_RNASeQCv2.4.2_gene_tpm.gct.gz
+    sample_origin: aorta
+    tissue: primary tissue
+    disease: healthy
+    life_stage: adult
+    sex: mixed
+    species: Homo sapiens
+- column_header: PERTURB_mouse
+  column_description: Phenotypic effects of the gene from IMPC knockout mouse models
+  evidence_category: Perturbation
+  evidence_category_abbreviation: PERTURB
+  variant_or_gene_centric: gene-centric
+  source_tag: source_impc
+  source:
+    source_tag: source_impc
+    provenance: IMPC
+    file_name: IMPC_genotype_phenotype.csv.gz
+    version: '"23"'
+    url: https://ftp.ebi.ac.uk/pub/databases/impc/all-data-releases/release-01.0/csv/
+    sample_origin: multiple
+    tissue: IMPC mouse knockout models
+    life_stage: mixed
+    treatment: gene knockout
+    sex: mixed
+    species: Mus musculus
+Integration:
+- integration_tag: INT_pops
+  column_header: Integrated score based on multiple evidence types for the prioritised
+    gene
+  column_description: pops
+  author_conclusion: false
+  evidence_streams_included: FUNC | eQTL | pQTL | FM | 3D | PHEWAS | TWAS
+  method_tag: soft_pops
+  threshold: '>3'
+  method:
+    method_tag: soft_pops
+    method_mode: software
+    method_mode_ontology_term_id: ECO_0000203
+    software_name: PoPS
+    software_version: v1.0
+    software_url: https://github.com/FinucaneLab/pops
+    software_doi: 10.1038/s41588-023-01443-6
+- integration_tag: INT_author_score
+  column_header: Combined prediction based on manual review of all evidence types
+    and PoPS output
+  column_description: author_score
+  author_conclusion: true
+  evidence_streams_included: PROX | REG | LIT | PoPS
+  integrations_included: pops
+  method_tag: method_customised
+  method:
+    method_tag: method_customised
+    method_mode: manual
+    method_mode_ontology_term_id: ECO_0000203
+    method_description: 'An integrated prediction derived from expert review of all
+      evidence types together with PoPS output. The strength of support for a gene
+      is classified as weak, medium, or strong based on professional judgement:
 
-genomic_identifier:
-  variant_type: "lead"
-  genome_build: "hg38"
-  variant_information: "The primary variant is the variant with the most significant association p-value in the study."
-  gene_id_source_version: "Ensembl v109"
-  gene_symbol_source_version: "HGNC 2025-07-30"
-  locus_type: "LD"
-  locus_id: "Lead SNP"
+      • Weak — variant-centric evidence does not support the gene.
 
-evidence:
-  - evidence_type: "GWAS"
-    evidence_category: "GWAS_signal"
-    evidence_abbreviation: "GWAS"
-    evidence_class: "variant-centric"
-    col:
-      - header: "GWAS_pvalue"
-        description: "Association p-value for each variant from the GWAS study"
+      • Medium — variant-centric evidence supports the gene, but gene-centric evidence
+      is lacking.
 
-  - evidence_type: "FUNC"
-    evidence_category: "predicted_functional_impact"
-    evidence_abbreviation: "FUNC"
-    evidence_class: "variant-centric"
-    col:
-      - header: "FUNC_CADD"
-        description: "CADD score representing the predicted functional impact of the variant"
-    source:
-      provenance: "CADD"
-      file_name: "All possible SNVs of GRCh38/hg38 incl. all annotations"
-      version: "v1.7"
-      url: "https://kircherlab.bihealth.org/download/CADD/v1.7/GRCh38/whole_genome_SNVs.tsv.gz"
-
-  - evidence_type: "eQTL"
-    evidence_category: "molecular_qtl"
-    evidence_abbreviation: "QTL"
-    evidence_class: "variant-centric"
-    col:
-      - header: "QTL_eQTL_aorta_pvalue"
-        description: "p-value from expression QTL (eQTL) analysis in aorta tissue"
-    source:
-      provenance: "GTEx"
-      file_name: "GTEx_Analysis_v10_eQTL"
-      version: "v10"
-      url: "https://storage.googleapis.com/adult-gtex/bulk-qtl/v10/single-tissue-cis-qtl/GTEx_Analysis_v10_eQTL.tar"
-      biosample:
-        tissue: "aorta"
-        sample_origin: "primary tissue"
-        life_stage: "adult"
-        sex: "mixed"
-        age: "mixed"
-        species: "Homo sapiens"
-        description: "Bulk aorta tissue samples from healthy adult human donors in GTEx v10. Used for eQTL discovery. Donors aged ~20–70 years, male and female."
-    method:
-      method_mode: "computational"
-      software_name: "FastQTL"
-      software_version: "v1.0"
-      software_doi: "10.1093/BIOINFORMATICS/BTV722"
-      software_url: "https://github.com/francois-a/fastqtl"
-    threshold: "qvalue < 0.05"
-
-  - evidence_type: "EXP"
-    evidence_category: "expression"
-    evidence_abbreviation: "EXP"
-    evidence_class: "gene-centric"
-    col:
-      - header: "EXP_aorta_RPKM"
-        description: "Gene expression level in aorta tissue, measured in RPKM"
-    source:
-      provenance: "GTEx"
-      file_name: "GTEx_Analysis_v10_RNASeQCv2.4.2_gene_tpm.gct.gz"
-      version: "v10"
-      url: "https://storage.googleapis.com/adult-gtex/bulk-gex/v10/rna-seq/GTEx_Analysis_v10_RNASeQCv2.4.2_gene_tpm.gct.gz"
-      biosample:
-        tissue: "aorta tissue"
-        sample_origin: "primary tissue"
-        disease: "healthy"
-        life_stage: "adult"
-        treatment: "none"
-        sex: "mixed"
-        age: "mixed"
-        species: "Homo sapiens"
-        description: "Bulk aorta tissue samples (GTEx v10) from healthy postmortem adult human donors in GTEx v10. Used for RNA expression profiling. Donors aged ~20–70 years, male and female."
-
-  - evidence_type: "PERTURB"
-    evidence_category: "perturbation"
-    evidence_abbreviation: "PERTURB"
-    evidence_class: "gene-centric"
-    col:
-      - header: "PERTURB_mouse"
-        description: "Phenotypic effects of the gene from IMPC knockout mouse models"
-    source:
-      provenance: "IMPC"
-      file_name: "IMPC_genotype_phenotype.csv.gz"
-      version: "23"
-      url: "https://ftp.ebi.ac.uk/pub/databases/impc/all-data-releases/release-01.0/csv/"
-      biosample:
-        tissue: "multiple"
-        sample_origin: "IMPC mouse knockout models"
-        life_stage: "mixed"
-        treatment: "gene knockout"
-        sex: "mixed"
-        age: "mixed"
-        species: "Mus musculus"
-        description: "Mice with single-gene knockouts generated by the IMPC project"
-
-integration:
-  - integration_analysis: "pops"
-    col:
-      header: "INT_pops"
-      description: "Integrated score based on multiple evidence types for the prioritised gene"
-    evidence_integrated:
-      evidence_stream_name: ["fun_prediction", "eQTL", "pQTL", "fine_map", "3d", "PheWAS", "twas"]
-    method:
-      method_mode: "computational"
-      software_name: "PoPS"
-      software_version: "v1.0"
-      software_url: "https://github.com/FinucaneLab/pops"
-      software_doi: "10.1038/s41588-023-01443-6"
-    threshold: "score > 3"
-
-  - integration_analysis: "author_score"
-    col:
-      header: "INT_Combined prediction (author score)"
-      description: "Combined prediction based on manual review of all evidence types and PoPs output"
-      author_conclusion: true      
-    evidence_integrated:
-      evidence_stream_type: ["PROX", "REG", "LIT"]
-      integrated_analysis: "pops"
-    method:
-      method_mode: "manual"
-      method_description: "Combined prediction based on manual review of all evidence types and PoPs output, and classify the strength (weak, medium, strong) based on professional judgement"
+      • Strong — both variant-centric and gene-centric evidence show consistent positive
+      support for the gene.'

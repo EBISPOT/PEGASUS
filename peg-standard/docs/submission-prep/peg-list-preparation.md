@@ -43,7 +43,7 @@ It should include:
 
 ### 2) Build identifier columns
 - Use a consistent variant identifier (`variant_id` or rsID)
-- Use HGNC gene symbols for the `Gene symbol` column
+- Use HGNC gene symbols for the `GeneSymbol` column
 - Ensure the genome build and variant format match the matrix
 
 ### 3) Add evidence category columns

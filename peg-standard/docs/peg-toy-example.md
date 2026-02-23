@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 8
 ---
 # Toy Data (PEGASUS Framework applied) 🎠 
 
@@ -19,11 +19,11 @@ PEG Evidence Matrix propose presenting all evidence in a single structured table
 <table class="peg-schema">
   <thead>
     <tr>
-      <th class="center vc-group">Primary Variant ID</th>
+      <th class="center vc-group">PrimaryVariantID</th>
       <th class="center vc-group">rsID</th>
       <th class="center gc-group">GeneID</th>
       <th class="center gc-group">GeneSymbol</th>
-      <th class="center lo-group">Locus Range</th>
+      <th class="center lo-group">LocusRange</th>
       <th class="center lo-group">LocusID</th>
       <th class="center vc-group">GWAS_pvalue</th>
       <th class="center vc-group">FUNC_CADD</th>
@@ -31,7 +31,7 @@ PEG Evidence Matrix propose presenting all evidence in a single structured table
       <th class="center gc-group">EXP_aorta_RPKM</th>
       <th class="center gc-group">PERTURB_mouse</th>
       <th class="center int-group">INT_pops</th>
-      <th class="center int-group">INT_Combined prediction (author score)</th>
+      <th class="center int-group">INT_CombinedPrediction_AuthorScore</th>
     </tr>
   </thead>
   <tbody>
@@ -136,11 +136,11 @@ The PEG List distils the matrix into a concise summary, highlighting the stronge
 <table class="peg-schema">
   <thead>
     <tr>
-      <th rowspan="2">Primary Variant ID</th>
+      <th rowspan="2">PrimaryVariantID</th>
       <th rowspan="2">GeneSymbol</th>
       <th class="center vc-group" colspan="3">Variant-centric</th>
       <th class="center gc-group" colspan="2">Gene-centric</th>
-      <th rowspan="2">INT_Combined prediction <br/> (author score)</th>
+      <th rowspan="2">INT_AuthorScore</th>
     </tr>
     <tr>
       <th class="center">GWAS</th>
@@ -193,11 +193,11 @@ import TabItem from '@theme/TabItem';
     <table class="peg-schema">
       <thead>
         <tr>
-          <th>peg_source</th>
-          <th>gwas_source</th>
           <th>trait_description</th>
           <th>trait_ontology_id</th>
-          <th>sample_description</th>
+          <th>peg_source</th>
+          <th>gwas_source</th>
+          <th>gwas_sample_description</th>
           <th>sample_size</th>
           <th>case_control_study</th>
           <th>sample_ancestry</th>
@@ -206,10 +206,10 @@ import TabItem from '@theme/TabItem';
       </thead>
       <tbody>
         <tr>
-          <td class="ex">PMID:36357675</td>
-          <td class="ex">PMID:36357675</td>
           <td class="ex">Ascorbic acid 3-sulfate levels</td>
           <td class="ex">EFO_0800173</td>
+          <td class="ex">PMID:36357675</td>
+          <td class="ex">PMID:36357675</td>
           <td class="ex">6,136 Finnish ancestry individuals</td>
           <td class="ex">6136</td>
           <td class="ex">False</td>
@@ -225,11 +225,11 @@ import TabItem from '@theme/TabItem';
       <thead>
         <tr>
           <th>variant_type</th>
-          <th>genome_build</th>
           <th>variant_information</th>
+          <th>genome_build</th>
           <th>gene_id_source_version</th>
           <th>gene_symbol_source_version</th>
-          <th>info</th>
+          <th>gene_info</th>
           <th>locus_type</th>
           <th>locus_id</th>
           <th>locus_info</th>
@@ -238,8 +238,8 @@ import TabItem from '@theme/TabItem';
       <tbody>
         <tr>
           <td>lead</td>
-          <td>GRCh38</td>
           <td>The primary variant is the variant with the most significant association p-value in the study</td>
+          <td>GRCh38</td>
           <td>Ensembl v109</td>
           <td>HGNC 2025-07-30</td>
           <td>NA</td>
@@ -257,14 +257,14 @@ import TabItem from '@theme/TabItem';
         <tr>
           <th>column_header</th>
           <th>column_description</th>
-          <th>stream_name</th>
-          <th>category</th>
-          <th>category_abbreviation</th>
-          <th>class</th>
+          <th>evidence_stream_tag</th>
+          <th>evidence_category</th>
+          <th>evidence_category_abbreviation</th>
+          <th>variant_or_gene_centric</th>
           <th>source_tag</th>
           <th>method_tag</th>
           <th>threshold</th>
-          <th>notes</th>
+          <th>note</th>
         </tr>
       </thead>
       <tbody>
@@ -336,21 +336,23 @@ import TabItem from '@theme/TabItem';
     <table class="peg-schema">
       <thead>
         <tr>
+          <th>integration_tag</th>
           <th>column_header</th>
           <th>column_description</th>
-          <th>integration_analysis</th>
-          <th>evidence_stream_name</th>
-          <th>integrated_analysis_name</th>
+          <th>author_conclusion</th>
+          <th>evidence_streams_included</th>
+          <th>integrations_included</th>
           <th>method_tag</th>
           <th>threshold</th>
-          <th>notes</th>
+          <th>note</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <td>pops</td>
           <td>INT_pops</td>
           <td>Integrated score based on multiple evidence types for the prioritised gene</td>
-          <td>pops</td>
+          <td>False</td>
           <td>FUNC | eQTL | pQTL | FM | 3D | PHEWAS | TWAS</td>
           <td>NA</td>
           <td>soft_pops</td>
@@ -358,9 +360,10 @@ import TabItem from '@theme/TabItem';
           <td>NA</td>
         </tr>
         <tr>
-          <td>INT_Combined prediction (author score)</td>
+          <td>AuthorScore</td>
+          <td>INT_AuthorScore</td>
           <td>Combined prediction based on manual review of all evidence types and PoPS output</td>
-          <td>author_score</td>
+          <td>True</td>
           <td>PROX | REG | LIT | PoPS</td>
           <td>pops</td>
           <td>method_customised</td>
@@ -383,17 +386,16 @@ import TabItem from '@theme/TabItem';
           <th>file_name</th>
           <th>version</th>
           <th>url</th>
-          <th>accesstion</th>
+          <th>accession_id</th>
           <th>doi</th>
-          <th>tissue</th>
           <th>sample_origin</th>
+          <th>tissue</th>
           <th>cell_type</th>
           <th>cell_line</th>
           <th>disease</th>
           <th>life_stage</th>
           <th>treatment</th>
           <th>sex</th>
-          <th>age</th>
           <th>species</th>
           <th>description</th>
         </tr>
@@ -503,6 +505,7 @@ import TabItem from '@theme/TabItem';
           <th>software_url</th>
           <th>software_doi</th>
           <th>method_description</th>
+          <th>note</th>
         </tr>
       </thead>
       <tbody>
@@ -514,6 +517,7 @@ import TabItem from '@theme/TabItem';
           <td><a href="https://github.com/francois-a/fastqtl">link</a></td>
           <td>10.1093/BIOINFORMATICS/BTV722</td>
           <td>NA</td>
+          <td>NA</td>
         </tr>
         <tr>
           <td>soft_pops</td>
@@ -523,9 +527,10 @@ import TabItem from '@theme/TabItem';
           <td><a href="https://github.com/FinucaneLab/pops">link</a></td>
           <td>10.1038/s41588-023-01443-6</td>
           <td>NA</td>
+          <td>NA</td>
         </tr>
         <tr>
-          <td>method_customise</td>
+          <td>method_customised</td>
           <td>manual</td>
           <td>NA</td>
           <td>NA</td>
@@ -540,12 +545,12 @@ import TabItem from '@theme/TabItem';
                • <b>Strong</b> — both variant-centric and gene-centric evidence show consistent positive support for the gene.</p>
             </details>
           </td>
+          <td>NA</td>
         </tr>
       </tbody>
     </table>
   </TabItem>
 </Tabs> 
-
 
 ### PEG Metadata in YAML (suitable for reader)
 Using YAML for metadata keeps all information on one page in a structured format, so users can easily search and extract the details they need, and is both human and machine-readable. 
@@ -585,3 +590,13 @@ import CodeBlock from '@theme/CodeBlock';
     }}
   </BrowserOnly>
 </details>
+
+## Download Data
+
+If you would like to download the data to investigate further, we provide the following resources:
+
+1. **Schema**: <a href="./static/downloads/standard/PEGASUS-v0.0.2.xlsx" download>PEGASUS-v0.0.2.xlsx</a>
+2. **Submission template**: <a href="https://github.com/jiyue1214/PEGASUS_metadata_template/raw/main/templates/metadata_peg_template.xlsx" download>Metadata_Template-v0.0.2</a>
+3. **Example data**:
+   - Toy data: [Download ZIP](http://download-directory.github.io/?url=https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/toy_data) · [Browse on GitHub](https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/toy_data)
+   - Real data: [Download ZIP](http://download-directory.github.io/?url=https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/real_data) · [Browse on GitHub](https://github.com/jiyue1214/PEGASUS_metadata_template/tree/main/test_data/real_data)
