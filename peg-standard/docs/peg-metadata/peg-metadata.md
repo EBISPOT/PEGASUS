@@ -53,49 +53,49 @@ import TabItem from '@theme/TabItem';
             </tr>
             <tr>
               <td>peg_source</td>
-              <td>Identifier of the origin of the PEG list (e.g., publication, DOI, preprint, URL).</td>
+              <td>Identifier of the origin of the PEG list (e.g., PubMed ID, DOI, preprint, URL). Use "unpublished" if not publicly available. </td>
               <td><span class="req req-rec">Recommended</span></td>
-              <td class="fmt">string (PMID, DOI, URL)</td>
+              <td class="fmt">string (PMID, DOI, URL or "unpublished")</td>
               <td class="ex">PMID:36357675</td>
             </tr>
             <tr>
               <td>gwas_source</td>
-              <td>Identifier of the GWAS source. Prefer GWAS Catalog accession (GCST); if not available, use PubMed ID or another recognised accession.</td>
-              <td><span class="req req-rec">Recommended</span></td>
-              <td class="fmt">string(GCST[0-9]+, PMID, other accession ID)</td>
+              <td>Identifier of the GWAS source. Prefer GWAS Catalog accession (GCST); if not available, use PubMed ID, DOI, or another recognised accession. Use "unpublished" if not publicly available.</td>
+              <td><span class="req req-mand">Mandatory</span></td>
+              <td class="fmt">string(GCST[0-9]+, other accession ID, PMID, DOI, URL or "unpublished")</td>
               <td class="ex">GCST000001</td>
             </tr>
             <tr>
               <td>gwas_sample_description</td>
-              <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Detailed description of the GWAS samples (e.g., cohort name, case/control numbers, ancestry).</td>
-              <td><span class="req req-opt">Optional</span></td>
+              <td>Detailed description of the GWAS samples (e.g., cohort name, case/control numbers, ancestry).</td>
+              <td><span class="req req-mand">Mandatory</span> if <code>gwas_source</code> is **NOT** a GWAS Catalog accession.</td>
               <td class="fmt">string</td>
               <td class="ex">6,136 Finnish ancestry individuals</td>
             </tr>
             <tr>
                 <td>gwas_sample_size</td>
-                <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Total number of individuals included in the GWAS analysis.</td>
-                <td><span class="req req-opt">Optional</span></td>
+                <td>Total number of individuals included in the GWAS analysis.</td>
+                <td><span class="req req-mand">Mandatory</span> if <code>gwas_source</code> is **NOT** a GWAS Catalog accession.</td>
                 <td class="fmt">integer</td>
                 <td class="ex">6136</td>
             </tr>
             <tr>
                 <td>gwas_case_control_study</td>
-                <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Indicator of whether the GWAS design is case–control (TRUE) or quantitative/other (FALSE).</td>
-                <td><span class="req req-opt">Optional</span></td>
+                <td>Indicator of whether the GWAS design is case–control (TRUE) or quantitative/other (FALSE).</td>
+                <td><span class="req req-mand">Mandatory</span> if <code>gwas_source</code> is **NOT** a GWAS Catalog accession.</td>
                 <td class="fmt">boolean</td>
                 <td class="ex">FALSE</td>
             </tr>
             <tr>
                 <td>gwas_sample_ancestry</td>
-                <td>Only required if <code>gwas_source</code> is not a GWAS Catalog accession. Free-text description of participant ancestry, as reported in the original study.</td>
-                <td><span class="req req-opt">Optional</span></td>
+                <td>Free-text description of participant ancestry, as reported in the original study.</td>
+                <td><span class="req req-mand">Mandatory</span> if <code>gwas_source</code> is **NOT** a GWAS Catalog accession.</td>
                 <td class="fmt">string</td>
                 <td class="ex">Finnish</td>
             </tr>
             <tr>
                 <td>gwas_sample_ancestry_label</td>
-                <td>Harmonised ancestry label appropriate for the sample. For label definitions, see Morales et al., 2018 (Table 1). Only required if <code>gwas_source</code> is not a GWAS Catalog accession.</td>
+                <td>Harmonised ancestry label appropriate for the sample. For label definitions, see Morales et al., 2018 ([Table 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC5815218/table/Tab1/?report=objectonly)).</td>
                 <td><span class="req req-opt">Optional</span></td>
                 <td class="fmt">string (controlled vocabulary)</td>
                 <td class="ex">European</td>
@@ -140,14 +140,14 @@ import TabItem from '@theme/TabItem';
             <tr>
               <td>gene_id_source_version</td>
               <td>Version of the gene identifier source (e.g., Ensembl release).</td>
-              <td><span class="req req-opt">Optional</span></td>
+              <td><span class="req req-rec">Recommended</span></td>
               <td class="fmt">string</td>
               <td class="ex">Ensembl v109</td>
             </tr>
             <tr>
               <td>gene_symbol_source_version</td>
               <td>Version of the gene symbol reference authority (e.g., HGNC release).</td>
-              <td><span class="req req-opt">Optional</span></td>
+              <td><span class="req req-rec">Recommended</span></td>
               <td class="fmt">string</td>
               <td class="ex">HGNC 2025-07-30</td>
             </tr>
