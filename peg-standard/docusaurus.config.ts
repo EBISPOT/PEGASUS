@@ -43,12 +43,20 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Serve the latest released docs by default, not the current ("next") docs.
-          lastVersion: '0.0.1',
+          lastVersion: '0.0.2.0',
           versions: {
             current: {
               label: 'next',
               path: 'next',
               banner: 'unreleased',
+            },
+            '0.0.2.0': {
+              label: '0.0.2.0 (latest)',
+            },
+            '0.0.1.0': {
+              label: '0.0.1.0',
+              path: '0.0.1.0',
+              banner: 'unmaintained',
             },
           },
           // Please change this to your repo.
@@ -102,8 +110,23 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          type: 'docsVersionDropdown',
+          type: 'dropdown',
+          label: 'Versions',
           position: 'left',
+          items: [
+            {
+              label: '0.0.2.0 (latest)',
+              to: '/docs/home',
+            },
+            {
+              label: '0.0.1.0',
+              to: '/docs/0.0.1.0/home',
+            },
+            {
+              label: 'next',
+              to: '/docs/next/home',
+            },
+          ],
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
