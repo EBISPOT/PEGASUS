@@ -29,7 +29,7 @@ The following standards define the minimal requirements for a PEG Matrix:
       &nbsp;&nbsp;&nbsp;&nbsp;- Include evidence for every gene considered, not just the top candidate(s).
 
 5. **Per gene evidence summary (author’s conclusion)**  
-      &nbsp;&nbsp;&nbsp;&nbsp;- Provide a cumulative weight-of-evidence score or a qualitative conclusion. This column is mandatory and must be labelled as `author_conclusion=True` in the metadata. It acts as the primary key linking the PEG matrix and the PEG list.
+      &nbsp;&nbsp;&nbsp;&nbsp;- Provide a cumulative weight-of-evidence score or a qualitative conclusion. This column is mandatory and must be labelled as `author_conclusion=True` in the metadata. It acts as the primary key linking the PEG matrix and the PEG list. can considering select highest gene from each locus. 
 
 ## PEG Evidence Matrix Suggestions (Best Practices)
 In addition to the **MUST FOLLOW** standards above, the following suggestions are recommended to improve interoperability and interpretability of PEG matrices:
